@@ -83,6 +83,7 @@ lower = \relative c' {
   % line 5 --------
   \key a \major
   \repeat volta 2 {
+    \grace s8
     <a, e'>8 r <a' cis e>4 r | r q r |
     <a, e'>8 r <a' cis e>4 r | r q r |
     <e, e'>8 r <gis' d' e>4 r |
