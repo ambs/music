@@ -89,7 +89,75 @@ upper = \relative c'' {
 
   % page 3 - line 2 -----
   b2 c4 | d2 e4 | b2 c4 | d2 e4 | fis2 cis4 | e dis cis | dis b dis | d! a c! |
+
+  % page 3 - line 2 -----
+  b2 c4 | d2 e4 | b2 c4 | d2 e4 | b2 g'4 | fis2 e4 | fis d e | c a ais |
+
+  % page 3 - line 2 -----
+  b2 c4 | d2 e4 | b2 c4 | d2 e4| fis2 cis4 | e dis cis| dis fis, cis' | b ais b |
+
+  % page 3 - line 2 -----
+  <<
+    { \voiceOne c!2 a!4 | d2 b4 | c2 a4 | d2 b4 | c2 a4 | e'2 cis4 | }
+    \new Voice { \voiceTwo r4 <d, fis>2 ~ | q4 <d f!>2 |
+        r4 <d fis!>2 ~ | q4 <d f!>2 | r4 <d fis!>2 | r4 <e g>2 | }
+  >> \oneVoice 
+  d'4 b' g | e d b |
+
+
+  % page 4 - line 1 -----
+  <<
+    { \voiceOne c2 a4 | d2 b4 | c2 a4 | d2 b4 | c2 a4 | e'2 cis4 | }
+    \new Voice { \voiceTwo
+        r4 <d, fis>2 ~ | q4 <d f!>2 | r4 <d fis!>2 ~ | q4 <d f!>2 | 
+        r4 <d fis!>2 ~ | q4 <e g>2 
+      }
+  >> \oneVoice
+  fis'4 e d | c! a ais |
+
+  % page 4 - line 2 -----
+  b2 c4 | d2 e4 | b2 c4 | d2 e4 | b2 g'4 | fis2 e4 | fis d e | c a ais |
+
+  % page 4 - line 3 -----
+  b2 c4 | d2 e4 | b2 b'4 | a2 g4 | fis d e | c a fis | g d' b | g' r r |
+
+  % page 4 - line 4 -----
+  \acciaccatura e8 <e g> r r4 \acciaccatura dis8 <dis fis>8 r |
+  \acciaccatura e8 <e g> r r4 \acciaccatura dis8 <dis fis>8 r |
+  \acciaccatura e8 <e g> r r4 \acciaccatura dis8 <dis fis>8 r |
+  \acciaccatura e8 <e g> r r4 \acciaccatura dis8 <dis fis>8 r |
+  \acciaccatura e8 <e g> r r4 
+       \ottava #1 \acciaccatura dis'8 <dis fis>8 r |
+
+  % page 4 - line 5 -------
+  \acciaccatura e8 <e g> r r4 \acciaccatura dis8 <dis fis>8 r |
+  \acciaccatura e8 <e g> r r4 \acciaccatura dis8 <dis fis>8 r |
+  \acciaccatura e8 <e g> r r4 \acciaccatura dis8 <dis fis>8 r |
+  \acciaccatura e8 <e g> r r4 \acciaccatura d!8 <d fis>8 r |
+  \acciaccatura cis8 <cis e> r r4 \acciaccatura b8 <b d>8 r |
+
+
+  % page 5 - line 1 -------
+  \ottava #0
+  \acciaccatura a8 <a cis> r r4 \acciaccatura g8 <g b> r |
+  \acciaccatura fis8 <fis a> r r4 \acciaccatura f!8 <f gis> r |
+  \acciaccatura e8 <e g!> r r4 \acciaccatura d8 <d fis> r |
+  \acciaccatura cis8 <cis e> r r4 \acciaccatura b8 <b d> r |
+  \acciaccatura a8 <a cis> r r4 \acciaccatura g8 <g b> r |
+  \acciaccatura fis8 <fis a> r r4 \acciaccatura f!8 <f gis> r |
+
+  % page 5 - line 2 ---------
+  \acciaccatura e8 <e g!> r <dis fis> r <e g> r |
+  <e g> r <dis fis> r <e g> r |
+  <e g> r <dis fis> r <e g> r |
+  <e g> r <dis fis> r <e g> r |
+  <eis gis> r <disis fisis> r <eis gis> r |
+  <eis gis> r <disis fisis> r <eis gis> r |
 }
+
+
+
+%%% LOWER VOICE
 
 lower = \relative c' {
   \clef bass
@@ -175,7 +243,55 @@ lower = \relative c' {
   g,8 r <d' g b>2 | b8 r <d g b>2 |
   fis,8 r <fis' ais e'>2 | fis,8 r <fis' ais e'>2 | 
   b,8 r <fis' b dis>2 | d,!8 r <d' fis a c!>2 |
+
+  % page 3 - line 3 -----
+  g,8 r <d' g b>2  | d,8 r <d' g b>2 |
+  g,8 r <d' g b>2  | d,8 r <d' g b>2 |
+  g,8 r <d' g b>2  | d,8 r <d' g b>2 |
+  a8 r <d fis c'>2 | d,8 r <d' fis c'>2 |
+  
+  % page 3 - line 4 -----
+  g,8 r <d' g b>2  | d,8 r <d' g b>2 |
+  g,8 r <d' g b>2  | b8 r <d g b>2 |
+  fis,8 r <fis' ais e'>2 | fis,8 r <fis' ais e'>2 |
+  b,8 r <fis' b dis>2 | b,8 r <fis' b dis>2 |
+
+  % page 3 - line 5 -----
+  d,!8 r <d' a' c!>2 ~ | q4 <d gis b>2 |
+  d,8 r <d' a' c>2 ~ | q4 <d gis b>2 |
+  d,8 r <d' a' c>2 | r4 <d bes' cis>2 | 
+  d,8 r \clef treble <b'' d g>2 ~ | q4 <gis b f'!>2 |
+
+
+  \clef bass
+  % page 4 - line 1 -----
+  d,8 r <d' a' c>2 ~ | q4 <d gis b>2 | d,8 r <d' a' c>2 ~ | q4 <d gis b>2 |
+  d,8 r <d' a' c>2 ~ | q4 <d g bes cis>2 | <d fis a c!>2. ~ | q4 r r |
+
+  % page 4 - line 2 -----
+  g,8 r <d' g b>2 | d,8 r <d' g b>2 |
+  g,8 r <d' g b>2 | d,8 r <d' g b>2 |
+  % I think this g was a typo in the original...!?
+  g,8 r <d' g b>2 | d,8 r <d' g b>2 |
+  a8 r <d fis c'>2 | d,8 r <d' fis c'>2 |
+
+  % page 4 - line 3 -----
+  g,8 r <d' g b>2 | d,8 r <d' g b>2 | g,8 r <d' g b>2 | d,8 r <d' g b>2 |
+  a8 r <d fis c'>2 | d,8 r <d' fis a c>2 | g,8 r <d' g b>2 | <g,, g'>4 r r |
+  % page 4 - line 4 -----
+  <e'' e,>8 r <g b e>4 r | r q r | r q r | r q r |
+  <e e,>8 r <g bes d e>4 r |
+  % page 4 - line 5 -----
+  r q r | r q r | r q r | <a, a,>8 r <g' a cis>4 r | r q r |
+
+  % page 5 - line 1 ------
+  r q r | r q r | <a, a,>8 r <g' a cis>4 r | r q r | r q r | r q r |
+  % page 5 - line 2 ------
+  \repeat unfold 4 { r2. } <cis, b'>2. ~ | q ~ |
 }
+
+
+%%%% DYNAMICS
 
 dynamics = {
   % line 1
@@ -213,10 +329,33 @@ dynamics = {
 
   % page 3, line 1 --------
   s4\p s2 s2. s2. s2. s4\< s2 s2 s2\! s4\> s2.  s4\!
-
   % page 3, line 2 --------
   s4\p s2 s2. s2. s2. s4\< s2 s2 s2\! s4\> s2  s4\! s4
+  % page 3, line 3 --------
+  s4\p s2 s2. s2. s2. s4\< s2 s2 s2\! s4\> s2  s4\! s4
+  % page 3, line 4 --------
+  s4\p s2 s2. s2. s2. s4\< s2 s2 s2\! s4\> s2  s4\! s4
+  % page 3, line 5 --------
+  s4\p s2 s2. s2. s2. s4\< s2 s2 s2\! s4\> s2  s4\! s4
 
+  % page 4, line 1 --------
+  s4\p s2 s2. s2. s2. s4\< s2 s2 s2\! s4\> s2  s4\! s4
+  % page 4, line 2 --------
+  s4\pp s2 s2. s2. s2. s4\< s2 s2 s2\! s4\> s2  s4\! s4
+  % page 4, line 3 --------
+  s4\p s2 s2. s4\< s2 s2 s4\! s4 s4\> s2 s4 s4\! s2.\p s2.
+  % page 4, line 4 --------
+  s2.\f s2. s2. s2. s2. 
+  % page 4, line 5 --------
+  \repeat unfold 5 { s2. }
+
+  % page 5, line 1 -------
+  s2. s2. s4 s2-\markup{\italic Di-}
+  s4 s2-\markup{\italic mi-} s4 s2-\markup{\italic nuen-}
+  s4 s2-\markup{\italic do.}
+
+  % page 5, line 2 -------
+  s2.\pp s2. s2. s2. s2.\pp s2.
 }
 
 pedal = {
@@ -249,19 +388,41 @@ pedal = {
 
   % page 2, line 3
   \repeat unfold 4 { s4\sustainOn s2 s2 s4\sustainOff }
-
   % page 2, line 4
   \repeat unfold 4 { s4\sustainOn s2 s2 s4\sustainOff }
-
   % page 2, line 5
   \repeat unfold 4 { s4\sustainOn s2 s2 s4\sustainOff }
 
 
   % page 3, line 1
   \repeat unfold 8 { s2. }
-
   % page 3, line 2
   \repeat unfold 8 { s2. }
+  % page 3, line 3
+  \repeat unfold 8 { s2. }
+  % page 3, line 4
+  \repeat unfold 8 { s2. }
+  % page 3, line 5
+  \repeat unfold 8 { s2. }
+
+
+  % page 4, line 1
+  \repeat unfold 8 { s2. }
+  % page 4, line 2
+  \repeat unfold 8 { s2. }
+  % page 4, line 3
+  \repeat unfold 8 { s2. }
+  % page 4, line 4
+  \repeat unfold 5 { s2. }
+  % page 4, line 5
+  \repeat unfold 5 { s2. }
+
+
+  % page 5, line 1
+  \repeat unfold 5 { s2. }
+  % page 5, line 2
+  \repeat unfold 6 { s2. }
+
 }
 
 \score {
