@@ -80,7 +80,15 @@ upper = \relative c'' {
 
   % page 2 - line 5 ------
   e2 g4 | fis2 e4 | d2 d'4 | cis2 b4 | cis a b | g e fis | d a e' |
-  d cis c!
+  d cis c! \bar "||"
+
+
+  % page 3 - line 1 -----
+  \key g \major 
+  b2 c4 | d2 e4 | b2 c4 | d2 e4 | b2 g'4 | fis2 e4 | fis d e | c a ais |
+
+  % page 3 - line 2 -----
+  b2 c4 | d2 e4 | b2 c4 | d2 e4 | fis2 cis4 | e dis cis | dis b dis | d! a c! |
 }
 
 lower = \relative c' {
@@ -153,6 +161,20 @@ lower = \relative c' {
   <a, d,>4 <fis' a d>2 ~ | q4 q2 |
   <a, a,>4 <g' a cis>2 ~ | q4 q2 |
   <a, d,>4 <fis' a d>2   | <d d,>4 r r 
+
+
+  % page 3 - line 1 -----
+  \key g \major
+  g,8 r <d' g b>2 | d,8 r <d' g b>2 |
+  g,8 r <d' g b>2 | d,8 r <d' g b>2 |
+  g,8 r <d' g b>2 | d,8 r <d' g b>2 |
+  a8 r <d fis c'>2 | d,8 r <d' fis c'>2 |
+
+  % page 3 - line 2 -----
+  g,8 r <d' g b>2 | d,8 r <d' g b>2 |
+  g,8 r <d' g b>2 | b8 r <d g b>2 |
+  fis,8 r <fis' ais e'>2 | fis,8 r <fis' ais e'>2 | 
+  b,8 r <fis' b dis>2 | d,!8 r <d' fis a c!>2 |
 }
 
 dynamics = {
@@ -180,13 +202,21 @@ dynamics = {
   \repeat unfold 6 { s2. }
 
   % page 2, line 3
-  s4\pp s2 \repeat unfold 5 { s2. }
+  s4\pp s2 \repeat unfold 6 { s2. }
 
   % page 2, line 4
-  \repeat unfold 8 { s2. }
+  \repeat unfold 9 { s2. }
 
   % page 2, line 5
-  \repeat unfold 8 { s2. }
+  \repeat unfold 9 { s2. }
+
+
+  % page 3, line 1 --------
+  s4\p s2 s2. s2. s2. s4\< s2 s2 s2\! s4\> s2.  s4\!
+
+  % page 3, line 2 --------
+  s4\p s2 s2. s2. s2. s4\< s2 s2 s2\! s4\> s2  s4\! s4
+
 }
 
 pedal = {
@@ -226,6 +256,12 @@ pedal = {
   % page 2, line 5
   \repeat unfold 4 { s4\sustainOn s2 s2 s4\sustainOff }
 
+
+  % page 3, line 1
+  \repeat unfold 8 { s2. }
+
+  % page 3, line 2
+  \repeat unfold 8 { s2. }
 }
 
 \score {
