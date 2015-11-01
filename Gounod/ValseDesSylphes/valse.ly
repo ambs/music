@@ -6,6 +6,17 @@
   composer = "Charles GOUNOD"
   dedication = "à sa fille Jeanne GOUNOD"
   meter = "Tempo di Walz"
+  copyright = \markup \left-align \center-column {
+    \line {
+	  	"© 2015 Alberto Simões"}
+  	\line {
+  		\epsfile #Y #2 #"cc-by-sa.eps" "Licensed under a Creative Commons Attribution-ShareAlike 4.0 International License."
+  	}
+  }
+  tagline = \markup \left-align \center-column {
+  	\line { "Original document from IMSLP (http://imslp.org)" }
+  	\line { "Transcribed with GNU LilyPond (http://lilypond.org)" }
+  }
 }
 
 upper = \relative c'' {
@@ -153,6 +164,52 @@ upper = \relative c'' {
   <e g> r <dis fis> r <e g> r |
   <eis gis> r <disis fisis> r <eis gis> r |
   <eis gis> r <disis fisis> r <eis gis> r |
+
+  % page 5 - line 3 --------
+  <fis! a> r <eis gis> r <fis a> r |
+  <fis a> r <eis gis> r <fis a> r \bar "||"
+  \key d \major
+  << { \voiceOne r4  } \new Voice { \voiceTwo cis8 r }
+  >> \oneVoice <g' b>8 r <g a> r | r4 <g e'>8 r <g a> r |
+  << { \voiceOne r4  } \new Voice { \voiceTwo cis,8 r }
+  >> \oneVoice <g' b>8 r <g a> r | r4 <g e'>8 r <g a> r |
+
+  % page 5 - line 4 ----------
+  r4 <g a>8 r <g bes> r | <g a> r <g b!> r <g a> r |
+  <g c> r <g a> r <g c> r | <g a> r <g cis!> r <g a> r 
+  \repeat volta 2 {
+  	d'2 e4 | fis2 g4 | a2 b4 |
+
+  % page 5 - line 5 ---------
+    a2 fis4 | d2 e4 | fis \acciaccatura a8 g4 fis | e a fis | e r a,	
+  }
+  
+  e'2 g4 | fis2 e4 | d2 fis4
+  
+  % page 6 - line 1 --------
+  a2 b4 | a2 e4 | g fis e | fis e d | b cis d | e2 g4 | fis2 e4 | d2 d'4 |
+  % page 6 - line 2 --------
+  cis2 b4 | cis4 a b | g e fis | d r d | 
+  <ees fis a> c! <ees fis a> |
+  <d f gis> b <d f gis> |
+  <ees fis! a> c <ees fis a> |
+  <e! g bes> cis! <e g bes> |
+  % page 6 - line 3 --------
+  <f! gis b!> d <f gis b!> | <fis! a c!> ees <fis a c> |
+  <g a cis!> e! <g a cis> | <fis a d> r d, |
+  <ees fis a> c! <ees fis a> | <d f! gis!> b <d f gis> |
+  <ees! fis! a> c! <ees fis a>
+  % page 6 - line 4 ---------
+  <e! g bes> cis! <e g bes> | <f! gis! b!> d <f gis b> |
+  <fis! a c!> ees <fis a c> | <g a cis!> e! <g a cis> |
+  <fis a d> <fis d'> <a e'> | r <d fis> <e a> | r <fis d'> <a e'> |
+  \ottava #1
+  r <d fis> <e a>
+
+  % page 6 - line 5 ---------
+  r <fis d'> <e a> | r <d fis> <a e'> | \ottava #0
+  r <fis d'> <e a> | r <d fis> <a e'> |
+  <fis d'> r r | <a cis e a> r r | <d fis a d> r r \bar "|."
 }
 
 
@@ -288,6 +345,47 @@ lower = \relative c' {
   r q r | r q r | <a, a,>8 r <g' a cis>4 r | r q r | r q r | r q r |
   % page 5 - line 2 ------
   \repeat unfold 4 { r2. } <cis, b'>2. ~ | q ~ |
+  % page 5 - line 3 ----------
+  <cis a'>2. ~ | q \bar "||"
+  \key d \major
+  <a e'>8 r r4 r | <e' g cis>8 r r4 r4 |
+  <e a,>8 r r4 r | <e g cis>8 r r4 r |
+  % page 5 - line 4 ----------
+  <<
+  	{ \voiceOne s2. | d'2. | dis2.| e2. }
+  	\new Voice {
+  		\voiceTwo a,2. ~ | a2. ~ | a2. ~ | a2.
+  	}
+  >> \oneVoice
+  \repeat volta 2 {
+  	<a, d,>4 <fis' a d>2 ~ | q4 q2 |
+  	<a, d,>4 <fis' a d>2 ~ |
+  % page 5 - line 5 -------------
+    q4 q2 | <a, d,>4 <fis' a d>2 ~ | q4 q2 |
+    <a, a,>4 <g' a cis>2 ~ | q4 q2 
+  }
+  
+  <a, a,>4 <g' a cis>2 ~ | q4 q2 |
+  <a, d,>4 <fis' a d>2 ~ |
+  % page 6 - line 1 --------
+  q4 q2 | <a, a,>4 <g' a cis>2 ~ | q4 q2 |
+  <a, d,>4 <fis' a d>2 ~ | q4 q2 | 
+  <a, a,>4 <g' a cis>2 ~ | q4 q2 |
+  <a, d,>4 <fis' a d>2 ~ |
+  % page 6 - line 3 --------
+  q4 q2 | <a, a,>4 <g' a cis>2 ~ | q4 q2 | \break d,4 <fis' a d> r |
+  r \clef treble <d' fis a> r | r <d f gis> r | r <d fis! a> r | r <d g bes> r |
+  % page 6 - line 3 --------
+  r <d gis b!> r | r <d a' c!> r | r <d a' cis!> r |
+  r \clef bass <d,, d'> r |
+  r <d' fis a> r | r <d f! gis!> r | r <d fis! a> r |
+  % page 6 - line 4 --------
+  r <d g bes> r | r <d gis b!> r | r <d a' c!> r |
+  r <d a' cis!> r | <d a' d> r \clef treble <a' e'> |
+  <d fis> r <a e'> | <fis d'> r <a e'> | <d fis> r <a e'>
+  % page 6 - line 5 --------
+  <fis d'> r <a e'> | <d fis> r <a e'> | <fis d'> r <a e'> | <d fis> r <a e'> |
+  <fis d'> r r | \clef bass <a a,> r r | <d, d,> r r \bar "|."
 }
 
 
@@ -304,25 +402,19 @@ dynamics = {
 
   % line 3
   \repeat unfold 9 { s2. }
-
   % line 4
   \repeat unfold 9 { s2. }
-
   % line 5
   \repeat unfold 5 { s2. }
 
   % page 2, line 1
   \repeat unfold 5 { s2. }
-
   % page 2, line 2
   \repeat unfold 6 { s2. }
-
   % page 2, line 3
   s4\pp s2 \repeat unfold 6 { s2. }
-
   % page 2, line 4
   \repeat unfold 9 { s2. }
-
   % page 2, line 5
   \repeat unfold 9 { s2. }
 
@@ -353,9 +445,28 @@ dynamics = {
   s2. s2. s4 s2-\markup{\italic Di-}
   s4 s2-\markup{\italic mi-} s4 s2-\markup{\italic nuen-}
   s4 s2-\markup{\italic do.}
-
   % page 5, line 2 -------
   s2.\pp s2. s2. s2. s2.\pp s2.
+  % page 5, line 3 -------
+  s2. s2. s2. s2. s2. s2. 
+  % page 5, line 4 -------
+  s2.\pp s2. s2. s2. 
+  s2.\pp s2. s2. 
+  % page 5, line 5 -------
+  \repeat unfold 8 { s2. }
+
+
+  % page 6, line 1 -------
+  \repeat unfold 8 { s2. }
+  % page 6, line 2 -------
+  s2. s2. s2. s2 s4-\markup{\italic Staccato e \dynamic pp} s2. s2. s2. s2.
+  % page 6 - line 3 --------
+  \repeat unfold 7 { s2. }
+  % page 6 - line 4 --------
+  \repeat unfold 5 { s2. }
+  s2.-\markup{\italic Accelerando.} s2. s4\< s4 s4\!
+  % page 6 - line 5 --------
+  s2. s4\> s2 s2 s4\! s2. s2.\p s2.\pp
 }
 
 pedal = {
@@ -422,7 +533,25 @@ pedal = {
   \repeat unfold 5 { s2. }
   % page 5, line 2
   \repeat unfold 6 { s2. }
+  % page 5, line 3
+  \repeat unfold 6 { s2. }
+  % page 5, line 4
+  \repeat unfold 5 { s2. }
+  s4\sustainOn s2 s2 s4\sustainOff s4\sustainOn s2
+  % page 5, line 5
+  s2 s4\sustainOff s4\sustainOn s2 s2 s4\sustainOff
+  s4\sustainOn s2 s2 s4\sustainOff s4\sustainOn s2 s2 s4\sustainOff
+  s4\sustainOn s2
 
+  % page 6 - line 1 --------
+  s2 s4\sustainOff s4\sustainOn s2 s2 s4\sustainOff s4\sustainOn s2 s2 s4\sustainOff
+  s4\sustainOn s2 s2 s4\sustainOff s4\sustainOn s2 
+  % page 6 - line 2 --------
+  s2 s4\sustainOff s4\sustainOn s2 s2 s4\sustainOff \repeat unfold 5 { s2. }
+  % page 6 - line 3 --------
+  \repeat unfold 7 { s2. }
+  % page 6 - line 4 --------
+  \repeat unfold 8 { s2. }
 }
 
 \score {
