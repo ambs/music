@@ -14,8 +14,9 @@
   	}
   }
   tagline = \markup \left-align \center-column {
-  	\line { "Original document from IMSLP (http://imslp.org)" }
-  	\line { "Transcribed with GNU LilyPond (http://lilypond.org)" }
+    \line { "Thank you to Michael Gerdau for proofreading."}
+  	\line { "Original document from IMSLP (http://imslp.org)." }
+  	\line { "Typeset with GNU LilyPond (http://lilypond.org)." }
   }
 }
 
@@ -50,26 +51,26 @@ upper = \relative c'' {
   \repeat volta 2 { 
 
     \acciaccatura a8 <a cis> r r4 \acciaccatura a'8 <a cis> r |
-    \acciaccatura gis8 <gis b> r r4 \acciaccatura fis8 <fis a> r |
+    \acciaccatura gis!8 <gis b> r r4 \acciaccatura fis8 <fis a> r |
     \acciaccatura e8 <e gis> r r4 \acciaccatura d8 <d fis> r |
     \acciaccatura cis8 <cis e> r r4 \acciaccatura c8 <c dis> r |
     \acciaccatura b8 <b d!> r 
-    \acciaccatura cis8 <cis e> r \acciaccatura e <e gis> r |
+    \acciaccatura cis!8 <cis e> r \acciaccatura e <e gis> r |
 
   % page 2 - line 1 --------
     \acciaccatura d8 <d fis> r \acciaccatura cis <cis e> r
     \acciaccatura c!8 <c dis> r |
-    \acciaccatura b8 <b d!> r \acciaccatura cis <cis e> r
+    \acciaccatura b8 <b d!> r \acciaccatura cis! <cis e> r
     \acciaccatura e <e gis> r |
     \acciaccatura d <d fis> r \acciaccatura cis <cis e> r 
     \acciaccatura b <b d> r |
     \acciaccatura a <a cis> r r4 \acciaccatura a'8 <a cis> r |
-    \acciaccatura gis8 <gis b> r r4 \acciaccatura fis8 <fis a> r |
+    \acciaccatura gis!8 <gis b> r r4 \acciaccatura fis8 <fis a> r |
 
   % page 2 - line 2 --------
     \acciaccatura e8 <e gis> r r4 \acciaccatura d8 <d fis> r8 |
     \acciaccatura cis8 <cis e> r r4 \acciaccatura c!8 <c dis> r |
-    \acciaccatura b <b d> r \acciaccatura cis <cis e> r 
+    \acciaccatura b <b d!> r \acciaccatura cis! <cis e> r 
     \acciaccatura e <e gis> r |
     \acciaccatura d8 <d fis> r \acciaccatura b <b d> r 
     \acciaccatura gis8 <gis b> r |
@@ -91,7 +92,7 @@ upper = \relative c'' {
 
   % page 2 - line 5 ------
   e2 g4 | fis2 e4 | d2 d'4 | cis2 b4 | cis a b | g e fis | d a e' |
-  d cis c! \bar "||"
+  d cis! c! \bar "||"
 
 
   % page 3 - line 1 -----
@@ -195,7 +196,7 @@ upper = \relative c'' {
   <ees fis! a> c <ees fis a> |
   <e! g bes> cis! <e g bes> |
   % page 6 - line 3 --------
-  <f! gis b!> d <f gis b!> | <fis! a c!> ees <fis a c> |
+  <f! gis b!> d <f gis b> | <fis! a c!> ees <fis a c> |
   <g a cis!> e! <g a cis> | <fis a d> r d, |
   <ees fis a> c! <ees fis a> | <d f! gis!> b <d f gis> |
   <ees! fis! a> c! <ees fis a>
@@ -344,7 +345,7 @@ lower = \relative c' {
   % page 5 - line 1 ------
   r q r | r q r | <a, a,>8 r <g' a cis>4 r | r q r | r q r | r q r |
   % page 5 - line 2 ------
-  \repeat unfold 4 { r2. } <cis, b'>2. ~ | q ~ |
+  \repeat unfold 4 { R1*3/4 } <cis, b'>2. ~ | q _~ |
   % page 5 - line 3 ----------
   <cis a'>2. ~ | q \bar "||"
   \key d \major
@@ -354,7 +355,7 @@ lower = \relative c' {
   <<
   	{ \voiceOne s2. | d'2. | dis2.| e2. }
   	\new Voice {
-  		\voiceTwo a,2. ~ | a2. ~ | a2. ~ | a2.
+  		\voiceTwo <a, cis>2. ~ | a2. ~ | a2. ~ | a2.
   	}
   >> \oneVoice
   \repeat volta 2 {
@@ -410,9 +411,9 @@ dynamics = {
   % page 2, line 1
   \repeat unfold 5 { s2. }
   % page 2, line 2
-  \repeat unfold 6 { s2. }
+  \repeat unfold 7 { s2. }
   % page 2, line 3
-  s4\pp s2 \repeat unfold 6 { s2. }
+  s4\pp s2 \repeat unfold 5 { s2. }
   % page 2, line 4
   \repeat unfold 9 { s2. }
   % page 2, line 5
@@ -426,14 +427,14 @@ dynamics = {
   % page 3, line 3 --------
   s4\p s2 s2. s2. s2. s4\< s2 s2 s2\! s4\> s2  s4\! s4
   % page 3, line 4 --------
-  s4\p s2 s2. s2. s2. s4\< s2 s2 s2\! s4\> s2  s4\! s4
+  s4\p s2 s2. s2. s2. s2\< s2 s4 s2\! s4\> s2  s4\! s4
   % page 3, line 5 --------
-  s4\p s2 s2. s2. s2. s4\< s2 s2 s2\! s4\> s2  s4\! s4
+  s4\p s2 s2. s2. s2. s4 s4\< s4 s2 s2\! s4\> s2  s4\! s4
 
   % page 4, line 1 --------
-  s4\p s2 s2. s2. s2. s4\< s2 s2 s2\! s4\> s2  s4\! s4
+  s4\p s2 s2. s2. s2. s4 s4\< s4 s2 s2\! s4\> s2  s4 s4\! 
   % page 4, line 2 --------
-  s4\pp s2 s2. s2. s2. s4\< s2 s2 s2\! s4\> s2  s4\! s4
+  s4\pp s2 s2. s2. s2. s4\< s2 s2 s2\! s4\> s2  s4 s4\! 
   % page 4, line 3 --------
   s4\p s2 s2. s4\< s2 s2 s4\! s4 s4\> s2 s4 s4\! s2.\p s2.
   % page 4, line 4 --------
