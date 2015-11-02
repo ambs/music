@@ -14,7 +14,7 @@
   	}
   }
   tagline = \markup \left-align \center-column {
-    \line { "Thank you to Michael Gerdau for proofreading."}
+    \line { "Thank you to Michael Gerdau and Abraham Lee for proofreading."}
   	\line { "Original document from IMSLP (http://imslp.org)." }
   	\line { "Typeset with GNU LilyPond (http://lilypond.org)." }
   }
