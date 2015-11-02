@@ -1,6 +1,10 @@
 
 \version "2.18.2"
 
+\paper {
+   max-systems-per-page = 6
+}
+
 \header {
   title = "La Valse des Sylphes"
   composer = "Charles GOUNOD"
@@ -374,7 +378,8 @@ lower = \relative c' {
   <a, a,>4 <g' a cis>2 ~ | q4 q2 |
   <a, d,>4 <fis' a d>2 ~ |
   % page 6 - line 3 --------
-  q4 q2 | <a, a,>4 <g' a cis>2 ~ | q4 q2 | \break d,4 <fis' a d> r |
+  q4 q2 | <a, a,>4 <g' a cis>2 ~ | q4 q2 | 
+   d,4 <fis' a d> r |
   r \clef treble <d' fis a> r | r <d f gis> r | r <d fis! a> r | r <d g bes> r |
   % page 6 - line 3 --------
   r <d gis b!> r | r <d a' c!> r | r <d a' cis!> r |
@@ -583,6 +588,10 @@ pedal = {
     \new Dynamics = "Dynamics_pedal" \pedal
   >>
   \layout { 
+    \context {
+      \Score
+      \override SpacingSpanner.base-shortest-duration = #(ly:make-moment 1/12)
+    }
     \set Score.doubleRepeatType = #":|.|:"
   }
   \midi { }
