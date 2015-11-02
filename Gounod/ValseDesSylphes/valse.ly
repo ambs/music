@@ -389,17 +389,32 @@ lower = \relative c' {
   <fis d'> r r | \clef bass <a a,> r r | <d, d,> r r \bar "|."
 }
 
+do = #(make-dynamic-script (markup #:normal-text #:italic "do"))
 
 %%%% DYNAMICS
 
 dynamics = {
   % line 1
-  s2.\p s4 s2-\markup{\italic Cre-} s2.-\markup{\italic{scen-}}
-  s2.-\markup{\italic{do.}} s2.\f s2. s2. s2.-\markup{\italic{Di-}}
-
+  \set crescendoSpanner = #'text
+  \set crescendoText = \markup \italic "Cre"
+  s2.\p s4 s2\< 
+  \set crescendoText = \markup \italic "scen"
+  s4 s4\< s4
+  s4 s4\do s4 s2.\f s2. s2. 
+  \set decrescendoSpanner = #'text
+  \set decrescendoText = \markup \italic "Di"
+  s4 s4\> s4
+  \set decrescendoText = \markup \italic "mi"
   % line 2
-  s2.-\markup{\italic{mi-}} s2.-\markup{\italic{nuen-}} s2.-\markup{\italic{do.}}
+  s4 s4\> s4 
+  \set decrescendoText = \markup \italic "nuen"
+  s4\> s2 s4 s4\do s4
   s2.\p s2.\p s2. s2. s2. s2.
+
+
+  \set crescendoSpanner = #'hairpin
+  \set decrescendoSpanner = #'hairpin
+
 
   % line 3
   \repeat unfold 9 { s2. }
@@ -443,9 +458,14 @@ dynamics = {
   \repeat unfold 5 { s2. }
 
   % page 5, line 1 -------
-  s2. s2. s4 s2-\markup{\italic Di-}
-  s4 s2-\markup{\italic mi-} s4 s2-\markup{\italic nuen-}
-  s4 s2-\markup{\italic do.}
+  \set decrescendoSpanner = #'text
+  \set decrescendoText = \markup \italic "Di"
+  s2. s2. s4 s4\> s4
+  \set decrescendoText = \markup \italic "mi"
+  s4 s4\> s4 s4 
+  \set decrescendoText = \markup \italic "nuen"
+  s4\> s4 s4 s4\do s4
+  \set decrescendoSpanner = #'hairpin
   % page 5, line 2 -------
   s2.\pp s2. s2. s2. s2.\pp s2.
   % page 5, line 3 -------
@@ -465,7 +485,7 @@ dynamics = {
   \repeat unfold 7 { s2. }
   % page 6 - line 4 --------
   \repeat unfold 5 { s2. }
-  s2.-\markup{\italic Accelerando.} s2. s4\< s4 s4\!
+  s2.^\markup{\italic Accelerando.} s2. s4\< s4 s4\!
   % page 6 - line 5 --------
   s2. s4\> s2 s2 s4\! s2. s2.\p s2.\pp
 }
@@ -562,6 +582,8 @@ pedal = {
     \new Staff = "lower" \lower
     \new Dynamics = "Dynamics_pedal" \pedal
   >>
-  \layout { }
+  \layout { 
+    \set Score.doubleRepeatType = #":|.|:"
+  }
   \midi { }
 }
