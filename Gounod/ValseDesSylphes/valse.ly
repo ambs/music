@@ -18,7 +18,7 @@
   	}
   }
   tagline = \markup \left-align \center-column {
-    \line { "Thank you to Michael Gerdau and Abraham Lee for proofreading."}
+    \line { "Thank you to Michael Gerdau, Abraham Lee and Brian Barker for proofreading."}
   	\line { "Original document from IMSLP (http://imslp.org)." }
   	\line { "Typeset with GNU LilyPond (http://lilypond.org)." }
   }
@@ -31,7 +31,7 @@ upper = \relative c'' {
   \time 3/4
 
   % line 1 ----
-  r4 a fis | r cis' a | r e' cis | r g' e | 
+  r4 a e | r cis' a | r e' cis | r g' e | 
   b' a g | e' d cis | g' fis e | d cis b |
 
   % line 2 ----
@@ -441,7 +441,7 @@ dynamics = {
 
 
   % page 3, line 1 --------
-  s4\p s2 s2. s2. s2. s4\< s2 s2 s2\! s4\> s2.  s4\!
+  s4\p s2 s2. s2. s2. s4\< s2 s2 s2\! s4\> s2  s4\! s4
   % page 3, line 2 --------
   s4\p s2 s2. s2. s2. s4\< s2 s2 s2\! s4\> s2  s4\! s4
   % page 3, line 3 --------

@@ -5,7 +5,7 @@
 
    * Originally from [IMSLP](http://imslp.org/wiki/La_valse_des_sylphes_%28Gounod,_Charles%29).
    * Transcribed by Alberto Simões.
-   * Proofread by Michael Gerdau and Abraham Lee.
+   * Proofread by Michael Gerdau, Brian Barker and Abraham Lee.
 
 --------
 
