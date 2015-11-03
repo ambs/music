@@ -40,7 +40,18 @@ upper = \relative c'' {
   d2 e4 d8.[ cis16] |
 
   %% page 1, line 2
+  fis4. d8 a4 r |
+  e' e,8.[ cis'16] b8[ cis d e] |
+  <<
+    { \voiceOne a,2 ~ a8 r a8.[ a16] }
+    \new Voice {
+      \voiceTwo r4 <fis d> <g! b,> <e cis> 
+    } >> \oneVoice
+  fis'2 ~ fis8[ e d cis] |
+  %%%%% MEASURE 10
+  e[ d cis b] d[ c! b a] |
 
+  %% page 1, line 3
 }
 
 lower = \relative c {
@@ -60,6 +71,18 @@ lower = \relative c {
   >> \oneVoice
   <d,, d'>4 <fis' a d> <g a cis> r |
 
+  %% page 1, line 2
+  <d d,>4 <fis a d> <a d fis> <fis a d> |
+  <e e,> <e a cis> <e gis b d> r |
+  \mergeDifferentlyHeadedOn
+  \mergeDifferentlyDottedOn
+  << { \voiceOne <cis e a>4 a8.[ fis'16] e8[ fis g! a] }
+   \new Voice { \voiceTwo a,4 a a a } >>
+  \oneVoice
+  <d fis a d>4 <fis a d> d, <fis' ais e'> |
+  %%%%% MEASURE 10
+  b4 <fis b d> d, <d' fis a c!> |
+
 }
 
 
@@ -70,7 +93,9 @@ dynamics = {
 
   %% page 1, line 1
   \partial 16 s16\ff | s1 | s1 |
-  s4. s8\p s8\< s4 s8 | s8\! s8 s8\> s8 s8\! s8 s4\p |
+  s4. s8\p s8\< s4 s8 | s8 s8\> s8 s8 s8\! s8 s4\p | s1 |
+  %% page 1, line 2
+  s1 | s1 | s8\< s4. s8\> s4 s8\! | s1 | s1 |
 }
 
 
