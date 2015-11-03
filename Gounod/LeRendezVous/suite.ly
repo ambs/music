@@ -30,12 +30,35 @@ upper = \relative c'' {
   \key d \major
   \time 4/4
 
+  %% page 1, line 1
+
+  \partial 16 <cis e a>16 | 
+  q2 r4 r8. <e a cis>16 |
+  q2 r4 r8. <g a cis e>16 |
+  q4 ~ q8 r <cis,, e a>2\( |
+  <d a' b>2 <g a cis>4\) a8.[ a16] |
+  d2 e4 d8.[ cis16] |
+
+  %% page 1, line 2
+
 }
 
-lower = \relative c'' {
+lower = \relative c {
   \clef bass
   \key d \major
   \time 4/4
+
+  %% page 1, line 1
+  \partial 16 <a a'>16 |
+  q2 r4 r8. q16 |
+  q2 r4 r8. q16 |
+  <<
+    { \voiceTwo q4 r g'2\( | fis e4 r \)}
+    \new Voice {
+      \voiceOne r4 a2-> a4-> ~ | a4 a4-> ~ a4 r 
+    }
+  >> \oneVoice
+  <d,, d'>4 <fis' a d> <g a cis> r |
 
 }
 
@@ -44,7 +67,10 @@ lower = \relative c'' {
 %%%% DYNAMICS
 
 dynamics = {
- 
+
+  %% page 1, line 1
+  \partial 16 s16\ff | s1 | s1 |
+  s4. s8\p s8\< s4 s8 | s8\! s8 s8\> s8 s8\! s8 s4\p |
 }
 
 
