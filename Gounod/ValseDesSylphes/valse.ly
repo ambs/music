@@ -116,7 +116,7 @@ upper = \relative c'' {
   <<
     { \voiceOne c!2 a!4 | d2 b4 | c2 a4 | d2 b4 | c2 a4 | e'2 cis4 | }
     \new Voice { \voiceTwo r4 <d, fis>2 ~ | q4 <d f!>2 |
-        r4 <d fis!>2 ~ | q4 <d f!>2 | r4 <d fis!>2 | r4 <e g>2 | }
+        r4 <d fis!>2 ~ | <d fis>4 <d f!>2 | r4 <d fis!>2 | r4 <e g>2 | }
   >> \oneVoice 
   d'4 b' g | e d b |
 
@@ -125,8 +125,8 @@ upper = \relative c'' {
   <<
     { \voiceOne c2 a4 | d2 b4 | c2 a4 | d2 b4 | c2 a4 | e'2 cis4 | }
     \new Voice { \voiceTwo
-        r4 <d, fis>2 ~ | q4 <d f!>2 | r4 <d fis!>2 ~ | q4 <d f!>2 | 
-        r4 <d fis!>2 ~ | q4 <e g>2 
+        r4 <d, fis>2 ~ | q4 <d f!>2 | r4 <d fis!>2 ~ | <d fis>4 <d f!>2 | 
+        r4 <d fis!>2 ~ | <d fis>4 <e g>2 
       }
   >> \oneVoice
   fis'4 e d | c! a ais |
@@ -319,7 +319,7 @@ lower = \relative c' {
   b,8 r <fis' b dis>2 | b,8 r <fis' b dis>2 |
 
   % page 3 - line 5 -----
-  d,!8 r <d' a' c!>2 ~ | q4 <d gis b>2 |
+  d,!8 r <d' a' c!>2 ~ | <d a' c>4 <d gis b>2 |
   d,8 r <d' a' c>2 ~ | q4 <d gis b>2 |
   d,8 r <d' a' c>2 | r4 <d bes' cis>2 | 
   d,8 r \clef treble <b'' d g>2 ~ | q4 <gis b f'!>2 |
@@ -328,7 +328,7 @@ lower = \relative c' {
   \clef bass
   % page 4 - line 1 -----
   d,8 r <d' a' c>2 ~ | q4 <d gis b>2 | d,8 r <d' a' c>2 ~ | q4 <d gis b>2 |
-  d,8 r <d' a' c>2 ~ | q4 <d g bes cis>2 | <d fis a c!>2. ~ | q4 r r |
+  d,8 r <d' a' c>2 ~ | q4 <d g bes cis>2 | <d fis a c!>2. ~ | <d fis a c>4 r r |
 
   % page 4 - line 2 -----
   g,8 r <d' g b>2 | d,8 r <d' g b>2 |
