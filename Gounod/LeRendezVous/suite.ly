@@ -1,5 +1,5 @@
 
-\version "2.18.2"
+\version "2.19.30"
 
 % \paper {
 %    max-systems-per-page = 6
@@ -25,82 +25,27 @@
   % }
 }
 
-upper = \relative c'' {
-  \clef treble
-  \key d \major
-  \time 4/4
 
-  %% page 1, line 1
 
-  \partial 16 <cis e a>16 | 
-  q2 r4 r8. <e a cis>16 |
-  q2 r4 r8. <g a cis e>16 |
-  q4 ~ q8 r <cis,, e a>2\( |
-  <d a' b>2 <g a cis>4\) a8.[ a16] |
-  d2 e4 d8.[ cis16] |
+\include "intro.ly"
+\include "valse1.ly"
 
-  %% page 1, line 2
-  fis4. d8 a4 r |
-  e' e,8.[ cis'16] b8[ cis d e] |
-  <<
-    { \voiceOne a,2 ~ a8 r a8.[ a16] }
-    \new Voice {
-      \voiceTwo r4 <fis d> <g! b,> <e cis> 
-    } >> \oneVoice
-  fis'2 ~ fis8[ e d cis] |
-  %%%%% MEASURE 10
-  e[ d cis b] d[ c! b a] |
-
-  %% page 1, line 3
+upper = { %\introUpper 
+    \firstValseUpper
 }
 
-lower = \relative c {
-  \clef bass
-  \key d \major
-  \time 4/4
-
-  %% page 1, line 1
-  \partial 16 <a a'>16 |
-  q2 r4 r8. q16 |
-  q2 r4 r8. q16 |
-  <<
-    { \voiceTwo q4 r g'2\( | fis e4 r \)}
-    \new Voice {
-      \voiceOne r4 a2-> a4-> ~ | a4 a4-> ~ a4 r 
-    }
-  >> \oneVoice
-  <d,, d'>4 <fis' a d> <g a cis> r |
-
-  %% page 1, line 2
-  <d d,>4 <fis a d> <a d fis> <fis a d> |
-  <e e,> <e a cis> <e gis b d> r |
-  \mergeDifferentlyHeadedOn
-  \mergeDifferentlyDottedOn
-  << { \voiceOne <cis e a>4 a8.[ fis'16] e8[ fis g! a] }
-   \new Voice { \voiceTwo a,4 a a a } >>
-  \oneVoice
-  <d fis a d>4 <fis a d> d, <fis' ais e'> |
-  %%%%% MEASURE 10
-  b4 <fis b d> d, <d' fis a c!> |
-
+lower = { %\introLower 
+    \firstValseLower
 }
 
-
-
-%%%% DYNAMICS
-
-dynamics = {
-
-  %% page 1, line 1
-  \partial 16 s16\ff | s1 | s1 |
-  s4. s8\p s8\< s4 s8 | s8 s8\> s8 s8 s8\! s8 s4\p | s1 |
-  %% page 1, line 2
-  s1 | s1 | s8\< s4. s8\> s4 s8\! | s1 | s1 |
+dynamics = { 
+  %\introDynamics 
+  \firstValseDynamics
 }
-
 
 \score {
   \new PianoStaff <<
+    \set PianoStaff.instrumentName = "Piano"
     \new Staff = "upper" \upper
     \new Dynamics = "Dynamics_pf" \dynamics
     \new Staff = "lower" \lower
@@ -112,5 +57,7 @@ dynamics = {
     }
     \set Score.doubleRepeatType = #":|.|:"
   }
-  \midi { }
+  \midi {
+      \tempo 2 = 60
+  }
 }
