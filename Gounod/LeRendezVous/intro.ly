@@ -5,7 +5,7 @@ introUpper = \relative c'' {
   \key d \major
   \time 4/4
 
-  \tempo "Large (Introduction)"
+  \tempo "Large"
   %% page 1, line 1
 
   \partial 16 <cis e a>16 | 
@@ -124,5 +124,23 @@ introDynamics = {
   \set decrescendoText = \markup \italic "rall."
   s2.\> s2.\! \bar "|."
 
+}
 
+\score {
+  \new PianoStaff <<
+    \set PianoStaff.instrumentName = "Piano"
+    \new Staff = "upper" \introUpper
+    \new Dynamics = "Dynamics_pf" \introDynamics
+    \new Staff = "lower" \introLower
+  >>
+  \layout { 
+    \context {
+      \Score
+      \override SpacingSpanner.base-shortest-duration = #(ly:make-moment 1/12)
+    }
+    \set Score.doubleRepeatType = #":|.|:"
+  }
+  \header {
+    piece = "Introduction"
+  }
 }

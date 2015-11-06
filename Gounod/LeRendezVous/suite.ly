@@ -1,9 +1,9 @@
 
 \version "2.19.30"
 
-% \paper {
-%    max-systems-per-page = 6
-% }
+\paper {
+   max-systems-per-page = 6
+}
 
 \header {
   title = "Le Rendez-Vous"
@@ -30,34 +30,22 @@
 \include "intro.ly"
 \include "valse1.ly"
 
-upper = { %\introUpper 
-    \firstValseUpper
-}
-
-lower = { %\introLower 
-    \firstValseLower
-}
-
-dynamics = { 
-  %\introDynamics 
-  \firstValseDynamics
-}
-
 \score {
   \new PianoStaff <<
-    \set PianoStaff.instrumentName = "Piano"
-    \new Staff = "upper" \upper
-    \new Dynamics = "Dynamics_pf" \dynamics
-    \new Staff = "lower" \lower
-  >>
-  \layout { 
-    \context {
-      \Score
-      \override SpacingSpanner.base-shortest-duration = #(ly:make-moment 1/12)
+    \new Staff = "upper" {
+      \introUpper
+      \firstValseUpper
     }
-    \set Score.doubleRepeatType = #":|.|:"
-  }
+    \new Dynamics = "Dynamics_pf" {
+      \introDynamics
+      \firstValseDynamics
+    }
+    \new Staff = "lower" {
+      \introLower
+      \firstValseLower
+    }
+  >>
   \midi {
-      \tempo 2 = 60
+    \tempo 4 = 72
   }
 }
