@@ -25,27 +25,32 @@
   % }
 }
 
+do = #(make-dynamic-script (markup #:normal-text #:italic "do"))
 
 
-\include "intro.ly"
-\include "valse1.ly"
+%\include "intro.ly"
+%\include "valse1.ly"
+\include "valse2.ly"
 
 \score {
   \new PianoStaff <<
     \new Staff = "upper" {
-      \introUpper
-      \firstValseUpper
+ %     \introUpper
+%      \firstValseUpper
+      \secondValseUpper
     }
     \new Dynamics = "Dynamics_pf" {
-      \introDynamics
-      \firstValseDynamics
+%      \introDynamics
+ %     \firstValseDynamics
+ \secondValseDynamics
     }
     \new Staff = "lower" {
-      \introLower
-      \firstValseLower
+%      \introLower
+ %     \firstValseLower
+      \secondValseLower
     }
   >>
   \midi {
-    \tempo 4 = 72
+    \tempo 4 = 120
   }
 }

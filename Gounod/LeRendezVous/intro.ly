@@ -92,7 +92,6 @@ introLower = \relative c {
 }
 
 
-do = #(make-dynamic-script (markup #:normal-text #:italic "do"))
 
 %%%% DYNAMICS
 
