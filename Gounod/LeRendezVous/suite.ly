@@ -30,24 +30,28 @@ do = #(make-dynamic-script (markup #:normal-text #:italic "do"))
 
 %\include "intro.ly"
 %\include "valse1.ly"
-\include "valse2.ly"
+%\include "valse2.ly"
+\include "valse3.ly"
 
 \score {
   \new PianoStaff <<
     \new Staff = "upper" {
  %     \introUpper
 %      \firstValseUpper
-      \secondValseUpper
+ %     \secondValseUpper
+      \thirdValseUpper
     }
     \new Dynamics = "Dynamics_pf" {
 %      \introDynamics
  %     \firstValseDynamics
- \secondValseDynamics
+ %\secondValseDynamics
+       \thirdValseDynamics
     }
     \new Staff = "lower" {
 %      \introLower
  %     \firstValseLower
-      \secondValseLower
+     % \secondValseLower
+       \thirdValseLower
     }
   >>
   \midi {

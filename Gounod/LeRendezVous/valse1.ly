@@ -143,7 +143,7 @@ firstValseDynamics = {
 
 \score {
   \new PianoStaff <<
-    \set PianoStaff.instrumentName = "Valse"
+    \set PianoStaff.instrumentName = "Valse 1"
     \new Staff = "upper" \firstValseUpper
     \new Dynamics = "Dynamics_pf" \firstValseDynamics
     \new Staff = "lower" \firstValseLower
@@ -154,9 +154,6 @@ firstValseDynamics = {
       \override SpacingSpanner.base-shortest-duration = #(ly:make-moment 1/12)
     }
     \set Score.doubleRepeatType = #":|.|:"
-  }
-  \header {
-    piece = "Nº 1"
   }
 }
 
