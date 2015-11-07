@@ -16,6 +16,23 @@ secondValseUpper = \relative c'' {
   \acciaccatura { cis16[ d] } cis4. b8 cis4 | d2. ~ | d4( cis c!) |
   <g b>2._>|q_>|q_>~|b8[( c d g fis e)] |
 
+  % P 1 L 4
+  <<
+  { \voiceOne d2. | d2 e4 | e2. ~ | e8[( d c b a d)]}
+    \new Voice {
+      \voiceTwo a2. | g | fis2. | s2. 
+    }
+  >> \oneVoice <g b>2._> | q_> | q_> ~ |
+
+  % P 1 L 5
+  b8^([ c d g fis e)] |
+  <<
+    {\voiceOne d2 e4 | \acciaccatura {fis16[ g]} fis4. e8 fis4 | g2. ~| g4 }
+    \new Voice {
+      \voiceTwo a,2.|c2. | b2. ~ |b4 
+    }
+  >> \oneVoice r4 r
+
 }
 
 secondValseLower = \relative c' {
@@ -32,6 +49,13 @@ secondValseLower = \relative c' {
   % P 1 L 3
   a <e' g> q|<d fis> a fis|d r r|g <b d> q|d, <b' d> q|g <b d> q|d, <b' d> q|
 
+  % P 1 L 4 
+  fis <a c d> q|e <a c d> q|d, <a' c d> q|fis <a c d> q|g <b d> q|d, <b' d> q|g <b d> q|
+
+  % P 1 L 5
+  d, <b' d> q|fis <a c d> q|d, <a' c d> q|g <b d> q|g, r r
+
+
 }
 
 
@@ -46,6 +70,12 @@ secondValseDynamics = {
   \set crescendoText = \markup \italic "cresc."
   \set decrescendoText = \markup \italic "dim."
   s4\< s2. s2.\f s4 s4\> s4 s2.\p s2. s2. s2.
+  \set crescendoSpanner = #'hairpin
+  \set decrescendoSpanner = #'hairpin
+  s2. s8\< s2 s8\! s2. s2.\> s2.\p s2. s2.
+  \set crescendoSpanner = #'text
+  \set crescendoText = \markup \italic "cresc."
+  s2. s2. s4 s4\< s s2.\f s2.
 }
 
 \score {
