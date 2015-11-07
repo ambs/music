@@ -10,19 +10,18 @@
   subtitle = "Suite de Valses"
   composer = "Charles GOUNOD"
 
-%  meter = "Tempo di Walz"
-  % copyright = \markup \left-align \center-column {
-  %   \line {
-	 %  	"© 2015 Alberto Simões"}
-  % 	\line {
-  % 		\epsfile #Y #2 #"cc-by-sa.eps" "Licensed under a Creative Commons Attribution-ShareAlike 4.0 International License."
-  % 	}
-  % }
-  % tagline = \markup \left-align \center-column {
+  copyright = \markup \left-align \center-column {
+     \line {
+	   	"© 2015 Alberto Simões"}
+     	\line {
+    		\epsfile #Y #2 #"cc-by-sa.eps" "Licensed under a Creative Commons Attribution-ShareAlike 4.0 International License."
+   	}
+  }
+  tagline = \markup \left-align \center-column {
   %   \line { "Thank you to Michael Gerdau, Abraham Lee and Brian Barker for proofreading."}
-  % 	\line { "Original document from IMSLP (http://imslp.org)." }
-  % 	\line { "Typeset with GNU LilyPond (http://lilypond.org)." }
-  % }
+   	\line { "Original document from IMSLP (http://imslp.org)." }
+   	\line { "Typeset with GNU LilyPond (http://lilypond.org)." }
+  }
 }
 
 do = #(make-dynamic-script (markup #:normal-text #:italic "do"))
@@ -34,6 +33,9 @@ to = #(make-dynamic-script (markup #:normal-text #:italic "to"))
 \include "valse1.ly"
 \include "valse2.ly"
 \include "valse3.ly"
+\include "valse4.ly"
+\include "coda.ly"
+
 
 \score {
   \new PianoStaff <<
@@ -42,18 +44,24 @@ to = #(make-dynamic-script (markup #:normal-text #:italic "to"))
       \firstValseUpper s4
       \secondValseUpper
       \thirdValseUpper
+      \fourthValseUpper
+      \codaUpper
     }
     \new Dynamics = "Dynamics_pf" {
       \introDynamics
       \firstValseDynamics s4
       \secondValseDynamics
       \thirdValseDynamics
+      \fourthValseDynamics
+      \codaDynamics
     }
     \new Staff = "lower" {
       \introLower
       \firstValseLower s4
       \secondValseLower
       \thirdValseLower
+      \fourthValseLower
+      \codaLower
     }
   >>
   \midi {
