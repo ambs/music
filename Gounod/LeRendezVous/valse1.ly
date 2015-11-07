@@ -139,6 +139,7 @@ firstValseDynamics = {
     s8 s8\< s2 s2.\ff s2
   }
   s4\p \repeat unfold 15 { s2. } s2.\mf
+  \repeat unfold 15 { s2. } s2
 }
 
 \score {
