@@ -44,7 +44,7 @@ firstValseUpper = \relative c'' {
   e,8([ g] a4)^> ~ | a8[ a_( gis a gis a] |
 
   % page 2, line 3
-  b4)-. e,8[( g!] a4^>) ~ | a8[ a_( gis a gis a] | b4) d,8[( fis] a4)^> ~ |
+  b4)-. e,8[( g!] a4^>) ~ | a8[ a_( gis a gis a] | b4)-. d,8[( fis] a4)^> ~ |
   a8[ a_( gis a b a] | d4)-. d,8[_( fis] d'4^> | cis-.) d,8[_( fis] cis'4 | b4)-.
   e,8[( g] a4^>) ~ |
 
@@ -152,7 +152,7 @@ firstValseDynamics = {
   \layout { 
     \context {
       \Score
-      \override SpacingSpanner.base-shortest-duration = #(ly:make-moment 1/12)
+      \override SpacingSpanner.base-shortest-duration = #(ly:make-moment 1/9)
     }
     \set Score.doubleRepeatType = #":|.|:"
   }
