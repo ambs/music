@@ -38,11 +38,10 @@ introUpper = \relative c'' {
   a8[^\markup{Cadenza ad lib.} a, bes a d cis fis e]
   g4 ~ g8[ cis, d cis fis e a g] bes4 ~ bes8[ a b a cis a e' cis]
   g'4 ~ g16[ fis e dis fis e d cis b a g fis e d]
-  cis4 \acciaccatura { d16[ cis \once \omit Accidental b] 
+  cis4 \acciaccatura { d16[ cis \once \omit Accidental b] }
+      \omit Score.MetronomeMark   \tempo 4=120
    } \tuplet 3/2 { cis8[ e g]} \cadenzaOff
-    \omit Score.MetronomeMark
-    \tempo 4=120
-}
+  
   \tuplet 3/2 { b4 cis,8 } \tuplet 3/2 { bes'4 cis,8 }  \bar "||"
 
   %% page 1, remaining line 4
