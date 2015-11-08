@@ -33,16 +33,22 @@ introUpper = \relative c'' {
   a2~   
   \magnifyMusic #(magstep -2) {
     \cadenzaOn
+    \omit Score.MetronomeMark
+    \tempo 4=180
   a8[^\markup{Cadenza ad lib.} a, bes a d cis fis e]
   g4 ~ g8[ cis, d cis fis e a g] bes4 ~ bes8[ a b a cis a e' cis]
   g'4 ~ g16[ fis e dis fis e d cis b a g fis e d]
-  cis4 \acciaccatura { d16[ cis b] } \tuplet 3/2 { cis8[ e g]} \cadenzaOff}
+  cis4 \acciaccatura { d16[ cis \once \omit Accidental b] 
+   } \tuplet 3/2 { cis8[ e g]} \cadenzaOff
+    \omit Score.MetronomeMark
+    \tempo 4=120
+}
   \tuplet 3/2 { b4 cis,8 } \tuplet 3/2 { bes'4 cis,8 }  \bar "||"
 
   %% page 1, remaining line 4
   \time 3/4
-  \tempo "Mouv. de valse" \stemUp
-  a'4 cis,8[( e] cis'4) | b2_>( a4) | r d,8[( e] b'4) | a2_>( gis4) |
+  \stemUp
+  a'4^\markup{\concat{Mouv\super t}. de valse} cis,8[( e] cis'4)-. | b2_>( a4) | r d,8[( e] b'4)-. | a2_>( gis4) |
   %% page 1, line 5
   \stemNeutral
   g!4 e8[( g] cis4) | g8[( cis] e4) cis8[( e] | 
@@ -60,7 +66,7 @@ introLower = \relative c {
   q2 r4 r8. q16 |
   q2 r4 r8. q16 |
   <<
-    { \voiceTwo q4 r g'2\( | fis e4 r \)}
+    { \voiceTwo q4 r g'2\( | fis e4 \) r }
     \new Voice {
       \voiceOne r4 a2-> a4-> ~ | a4 a4-> ~ a4 r 
     }
@@ -77,12 +83,12 @@ introLower = \relative c {
   \oneVoice
   <d fis a d>4 <fis a d> d, <fis' ais e'> |
   %%%%% MEASURE 10
-  b4 <fis b d> d, <d' fis a c!> |
+  b,4 <fis' b d> d, <d' fis a c!> |
 
   %% page 1, line 3
   <g, b d g>4 <g b d> <a d fis> <b d g> |
   <a d fis a> r r2 |
-  <a cis e g>2 s1 s1 s1 s1 s1 r2\fermata s8 \bar "||"
+  <a cis e g>2 s1 s1 s1 s1 s1 s8 r2\fermata \bar "||"
   %% page 1, remaining line 4
   \time 3/4
   <a cis>2. ~ | q | <b d>2. ~ | q |
@@ -109,7 +115,7 @@ introDynamics = {
   \set crescendoText = \markup \italic "scen"
   s4\< s2 s8 s8\do 
   \set crescendoSpanner = #'hairpin
-  s2\f s1 s1 s1 s1 s1 s2^\markup{\italic dim.} s8 
+  s2\f s1 s1 s1 s1 s1 s8 s2^\markup{\italic dim.} 
   %% page 1, remaining line 4
   s2.\p s2. s2. s2.
   %% page 1, line 5
