@@ -143,7 +143,7 @@ thirdValseDynamics = {
     s2.\p s2. s2. s2. s2. s2. s2.
     \set crescendoSpanner = #'text
     \set crescendoText = \markup \italic "cresc."
-    s2. s2. s2. s2.\< s4 s8\! s4. s2.
+    s2. s2. s2. s2.\<  s8 s8\! s2 s2.
     \set decrescendoSpanner = #'text
     \set decrescendoText = \markup \italic "dim."
     s2. s2. s2.\> s2.\p
@@ -189,13 +189,13 @@ thirdValseDynamics = {
     s2. s4  s2.\> s2.\p
     \set crescendoSpanner = #'hairpin
     \set decrescendoSpanner = #'hairpin
-    s2.\< s2.\!
-    s2.\> s2.\p s2.\< s2.\! s2.\> s4\!
+    s2.\< s2.\! s4
+    s2\> s2.\! s2.\< s2.\! s2.\> s4\!
     \set crescendoSpanner = #'text
     \set crescendoText = \markup \italic "cre"
-    s2\< s2. s2.
+    s2\< s2. 
     \set crescendoText = \markup \italic "scen"
-    s2.\< s2.
+    s2.\< s2. s2.
     \set crescendoText = \markup \italic "do"
     s2.\< s2.\f s2.
 
