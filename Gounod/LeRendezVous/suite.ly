@@ -2,7 +2,7 @@
 \version "2.19.30"
 
 \paper {
-   max-systems-per-page = 6
+   max-systems-per-page = 7
 }
 
 \header {
@@ -30,10 +30,19 @@ to = #(make-dynamic-script (markup #:normal-text #:italic "to"))
 
 
 \include "intro.ly"
+\pageBreak
+
 \include "valse1.ly"
+\pageBreak
+
 \include "valse2.ly"
+\pageBreak
+
 \include "valse3.ly"
+\pageBreak
+
 \include "valse4.ly"
+
 \include "coda.ly"
 
 

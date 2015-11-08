@@ -4,16 +4,16 @@ secondValseUpper = \relative c'' {
   \clef treble
   \key g \major
   \time 3/4
-  <g b>2._> | q_> | q_> ~ | b8[( c d g fis e)] | 
+  <g b>2._> | q_> | q_> ^~ | b8[( c d g fis e)] | 
   <<
     { \voiceOne d2. | d2 e4 | e2. ~ | e8[( d c b a d)]}
     \new Voice {
       \voiceTwo a2. | g | fis2. | s2. 
     }
-  >> \oneVoice <g b>2._> | q_> | q_> ~ | b8[( ais b cis d e)] | fis2 d4 |
+  >> \oneVoice <g b>2._> | q_> | q_> ^~ | b8[( ais b cis d e)] | fis2 d4 |
 
   % P 1 L 3
-  \acciaccatura { cis16[ d] } cis4. b8 cis4 | d2. ~ | d4( cis c!) |
+  \acciaccatura { cis16[ d] } cis!4. b8 cis4 | d2. ~ | d4( cis c!) |
   <g b>2._>|q_>|q_>~|b8[( c d g fis e)] |
 
   % P 1 L 4
@@ -22,7 +22,7 @@ secondValseUpper = \relative c'' {
     \new Voice {
       \voiceTwo a2. | g | fis2. | s2. 
     }
-  >> \oneVoice <g b>2._> | q_> | q_> ~ |
+  >> \oneVoice <g b>2._> | q_> | q_> ^~ |
 
   % P 1 L 5
   b8^([ c d g fis e)] |
@@ -54,17 +54,17 @@ secondValseUpper = \relative c'' {
     { g2. ~ | g4( g, a)}
   }
   \bar "||"
-  <g b>2._> | q_> | q_> ~ | b8[( c d g fis e)] | 
+  <g b>2._> | q_> | q_> ^~ | b8[( c d g fis e)] | 
   <<
     { \voiceOne d2. | d2 e4 | e2. ~ | e8[( d c b a d)]}
     \new Voice {
       \voiceTwo a2. | g | fis2. | s2. 
     }
-  >> \oneVoice <g b>2._> | q_> | q_> ~ | b8[( ais b cis d e)] | fis2 d4 |
+  >> \oneVoice <g b>2._> | q_> | q_> ^~ | b8[( ais b cis d e)] | fis2 d4 |
 
   % P 1 L 3
-  \acciaccatura { cis16[ d] } cis4. b8 cis4 | d2. ~ | d4( cis c!) |
-  <g b>2._>|q_>|q_>~|b8[( c d g fis e)] |
+  \acciaccatura { cis16[ d] } cis!4. b8 cis4 | d2. ~ | d4( cis c!) |
+  <g b>2._>|q_>|q_>^~|b8[( c d g fis e)] |
 
   % P 1 L 4
   <<
@@ -72,7 +72,7 @@ secondValseUpper = \relative c'' {
     \new Voice {
       \voiceTwo a2. | g | fis2. | s2. 
     }
-  >> \oneVoice <g b>2._> | q_> | q_> ~ |
+  >> \oneVoice <g b>2._> | q_> | q_> ^~ |
 
   % P 1 L 5
   b8^([ c d g fis e)] |
@@ -185,7 +185,7 @@ secondValseDynamics = {
   s8\< s2 s8\! s2. s8\> s2 s8 s2.\p s2. s2. s2.
   \set crescendoSpanner = #'text
   \set crescendoText = \markup \italic "cresc."
-  s4 s4\< s4 s2. s2.\f
+  s4 s4 s4 s2.\<  s2.\f
 
 }
 
@@ -199,7 +199,7 @@ secondValseDynamics = {
   \layout { 
     \context {
       \Score
-      \override SpacingSpanner.base-shortest-duration = #(ly:make-moment 1/12)
+      \override SpacingSpanner.base-shortest-duration = #(ly:make-moment 1/9)
     }
     \set Score.doubleRepeatType = #":|.|:"
   }

@@ -152,9 +152,11 @@ firstValseDynamics = {
   \layout { 
     \context {
       \Score
-      \override SpacingSpanner.base-shortest-duration = #(ly:make-moment 1/9)
+      \override SpacingSpanner.base-shortest-duration = #(ly:make-moment 1/8)
     }
     \set Score.doubleRepeatType = #":|.|:"
   }
 }
+
+
 
