@@ -22,7 +22,7 @@ codaUpper = \relative c'' {
     a8[ a( gis a gis a] | b4)-. e,8[( g] b4^> | cis)-.
     e,8[( g] cis4^> | d2.) ~ |
 
-    d4 r cis,8[( d] d'4) b,8[( d] b'4) gis2.^> ( | a4) a,8[( cis] a'4^>) |
+    d4 r cis,8[( d] b'4) b,8[( d] b'4) gis2.^> ( | a4) a,8[( cis] a'4^>) |
     e2.^> ( |fis4) a,8[( b]  fis'4^>| fis)-. a,8[\( b] fis'4^> | e gis,8[ b e d]
 
     cis[ a b cis d e] | b'4\) b,8[( d] b'4) | gis2.^> ( | a4)
@@ -37,7 +37,7 @@ codaUpper = \relative c'' {
       a8[ a_( gis a gis a] | b4)-. d,8[_( fis] a4)^> ~ |   a8[ a_( gis a b a] | 
 
         d4-.) d,8[_( fis] d'4^> | cis4)-. d,8[_( fis] cis'4^>|b4)-.
-    e,8[_( g] a4)^> ~ | a8[ a_( gis a gis a]|b4)-. e,8[_( g!] b4^>|cis)-.
+    e,8[_( g] a4)^> ~ | a8[ a_( gis a gis a]|b4)-. e,8[_( g!] b4^>)_(|cis)-.
     e,8[_( g] cis4^> | d2.)
 
    r8 a'8([ gis a b a] | d4)-. d,8[( fis] d'4^> | cis)-.
@@ -47,7 +47,7 @@ codaUpper = \relative c'' {
 
  a8[ a( gis a b a] | d4)-. d,8[( fis] d'4^>| cis4)-.
     d,8[( fis] cis'4^> | b4)-. e,8[( g] a4^>) ~ |
-    a8[ a( gis a gis a] | b4)-. e,8[( g] b4^> | cis)-.
+    a8[ a( gis a gis a] | b4)-. e,8[\( g] b4(^> | cis)\)-.
     e,8[( g] cis4^> )
 
     \bar "||"
@@ -115,7 +115,7 @@ codaLower = \relative c {
     \clef bass 
     <<
       { \voiceOne  \crossStaff { <fis, a>2. }}
-        \new Voice { \voiceTwo  <d d,>2. }
+        \new Voice { \voiceTwo  <d d,>2._\fermata }
         >>
         \bar "|."
 }
@@ -132,7 +132,7 @@ codaDynamics = {
 
     \repeat unfold 8 { s2. }
 
-    s2.\mf \repeat unfold 7 { s2. }
+    s8 s2\mf s8 \repeat unfold 7 { s2. }
 
     \repeat unfold 8 { s2. }
 
@@ -149,7 +149,7 @@ codaDynamics = {
   %%
 
   s4\f \repeat unfold 8 { s2. }
-  \repeat unfold 7 { s2. } s2.\ff
+  \repeat unfold 7 { s2. } s8 s2\ff s8
   \repeat unfold 8 { s2. }
   \set crescendoText = \markup \italic "poco"
   s2\<

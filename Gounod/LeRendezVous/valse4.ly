@@ -1,3 +1,6 @@
+
+sm = \tweak #'font-size #-3 \etc 
+
 fourthValseUpper = \relative c'' {
   \clef treble
   \key g \major
@@ -7,14 +10,19 @@ fourthValseUpper = \relative c'' {
 
   fis'4( e c) | b2. | b4( c d) | d2( g,4)| g'( fis e) | e2( d4) | d( e eis) |
 
-  fis2( a,4) | e'!( b cis | d2.) | <b b'>4( <c! c'!> <d d'>) | q2( <g, g'>4) |
-  q( <b b'> <e e'>) | <e e'>2( <d d'>4) |
+  fis2( a,4) | e'!( b cis | d2.) | %\smallerOctaves { 
+    <b \sm b'>4( <c! \sm c'!> <d \sm d'>) | q2( <g, \sm g'>4) |
+  q( <b \sm b'> <e \sm e'>) | <e \sm e'>2( <d \sm d'>4) |
 
-  <c c'>4( <d d'> <e e'>) | q2( <fis, fis'>4) | <fis' fis'>4( <e e'> <c c'>) |
-  <b b'>2. | q4( <c c'> <d d'>) | q2( <g, g'>4) | <g' g'>( <fis fis'> <e e'>) |
+  <c \sm c'>4( <d \sm d'> <e \sm e'>) | q2( <fis, \sm fis'>4) | <fis' \sm fis'>4( 
+    <e \sm e'> <c \sm c'>) |
+  <b \sm b'>2. | q4( <c \sm c'> <d \sm d'>) | q2( <g, \sm g'>4) | <g' \sm g'>( 
+    <fis \sm fis'> <e \sm e'>) |
 
-  <e e'>2( <d d'>4) | <c c'>4( <d d'> <e e'>) | q2^>( <fis, fis'>4) |
-  <c' c'>4( <b b'> <a a'>) | <g g'> \acciaccatura a'8 g4-. \acciaccatura a8 g4-. |
+  <e \sm e'>2( <d \sm d'>4) | <c \sm c'>4( <d \sm d'> <e \sm e'>) | q2^>( <fis, \sm fis'>4) |
+  <c' \sm c'>4( <b \sm b'> <a \sm a'>) | <g \sm g'> 
+    %}
+     \acciaccatura a'8 g4-. \acciaccatura a8 g4-. |
   \acciaccatura a8 g4-. \acciaccatura a8 g4-. \acciaccatura a8 g4-. | d'2^> d4^> ~ |
 
   %%% ---
