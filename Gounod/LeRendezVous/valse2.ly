@@ -4,7 +4,7 @@ secondValseUpper = \relative c'' {
   \clef treble
   \key g \major
   \time 3/4
-  <g b>2._> | q_> | q_> ^~ | b8[( c d g fis e)] | 
+  <g b>2._> | q_> | q(_> ^~ | b8[ c d g fis e)] | 
   <<
     { \voiceOne d2. | d2 e4 | e2. ~ | e8[( d c b a d)]}
     \new Voice {
