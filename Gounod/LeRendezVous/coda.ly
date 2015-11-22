@@ -154,7 +154,7 @@ codaDynamics = {
   \set crescendoText = \markup \italic "poco"
   s2\<
   \set crescendoText = \markup \italic "ral"
-  s1
+  s1\<
   \set crescendoText = \markup \italic "len"
   s4 s2\< s2
   \set crescendoText = \markup \italic "tan"

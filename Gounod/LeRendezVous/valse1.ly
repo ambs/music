@@ -128,17 +128,17 @@ firstValseLower = \relative c {
 %%%% DYNAMICS
 
 firstValseDynamics = {
-  s4\p | \repeat unfold 15 { s2. } s2.\mf
+  s4\p | \repeat unfold 15 { s2. } s8 s2\mf s8
   \repeat unfold 15 { s2. } s2 
 
   \repeat volta 2 {
     s4\ff s2. s2. s2. s2. s2.\p s2.
     \set crescendoSpanner = #'text
-    \set crescendoText = \markup \italic "cresc."
+    \set crescendoText = \markup \whiteout \italic "cresc."
     s4 s4 s4\< s2. s2.\ff s2. s2. s2. s2.\p
-    s8 s8\< s2 s2.\ff s2
+    s8 s8\< s2 s16 s2\ff s8. s2
   }
-  s4\p \repeat unfold 15 { s2. } s2.\mf
+  s4\p \repeat unfold 15 { s2. } s16 s2\mf s8.
   \repeat unfold 15 { s2. } s2
 }
 

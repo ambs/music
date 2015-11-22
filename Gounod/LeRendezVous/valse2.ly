@@ -147,7 +147,7 @@ secondValseDynamics = {
   s2.\p s2. s2. s2. s2. s8\< s2 s8\! 
   s2. s2.\> s2.\p s2. s2. s2. s2
   \set crescendoSpanner = #'text
-  \set crescendoText = \markup \italic "cresc."
+  \set crescendoText = \markup \whiteout\italic "cresc."
   \set decrescendoSpanner = #'text
   \set decrescendoText = \markup \italic "dim."
   s4\< s2. s2.\f s4 s4\> s4 s2.\p s2. s2. s2.
@@ -174,7 +174,7 @@ secondValseDynamics = {
   \set crescendoSpanner = #'hairpin
   s8\< s2 s8\! s2. s8\> s2 s8 s2.\p s2. s2. s2.
   \set crescendoSpanner = #'text
-  \set crescendoText = \markup \italic "cresc."
+  \set crescendoText = \markup \whiteout\italic "cresc."
   s2 s4\< s2. s2.\f
   \set decrescendoSpanner = #'text
   \set decrescendoText = \markup \italic "dim."
