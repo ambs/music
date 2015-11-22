@@ -108,7 +108,7 @@ firstValseLower = \relative c {
 
   % page 2, line 3
   cis <e g a> q|a, <e' g a> q|d <fis a> q|a, <fis' a> q|d <fis a> q|
-  a, <f' a> q|cis <e g a> q |
+  a, <fis' a> q|cis <e g a> q |
 
   % page 2, line 4
   a, <e' g a> q | cis <e g a> q | a, <e' g a> q | d < fis a> q | d, r r |

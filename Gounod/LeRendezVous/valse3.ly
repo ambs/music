@@ -172,7 +172,7 @@ thirdValseDynamics = {
   s2 s4\<
   \set crescendoText = \markup \italic "mol"  
   s8 s4.\< s4 s4. s4.\to
-  s2.\f
+  \once \override DynamicText.X-offset = #-4  s2.\f
 
   \set decrescendoSpanner = #'text
   \set decrescendoText = \markup \italic "dim."
