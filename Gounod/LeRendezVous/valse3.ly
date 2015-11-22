@@ -47,10 +47,10 @@ thirdValseUpper = \relative c'' {
   fis[-. g-. a-. b-. cis-. d]-.
 
   %% page 2, line 1
-  a4-. gis8[( b] a4) ~ | a4 gis8[( b] a4) ~ |
-  a4 gis8[( b] a4) ~ | a4 gis8[( b] a4) ~ |
-  a4 dis8[( fis] e4) ~ | e4 dis8[( fis] e4) ~ |
-  e8[( cis a b e, fis]
+  a4-. gis8[( b] a4 ~ | a4) gis8[( b] a4 ~ |
+  a4) gis8[( b] a4 ~ | a4) gis8[( b] a4 ~ |
+  a4) dis8[( fis] e4 ~ | e4) dis8[( fis] e4 ~ |
+  e8[)( cis a b e, fis]
 
   %% page 2, line 2
   g!8[ cis, d e b cis]) \bar "||"

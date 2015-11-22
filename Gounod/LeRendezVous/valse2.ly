@@ -4,28 +4,28 @@ secondValseUpper = \relative c'' {
   \clef treble
   \key g \major
   \time 3/4
-  <g b>2._> | q_> | q(_> ^~ | b8[ c d g fis e)] | 
+ \voiceOne <g b>2._> | q_> | q(_> ^~ | b8[ c d g fis e)] | 
   <<
-    { \voiceOne d2. | d2 e4 | e2. ~ | e8[( d c b a d)]}
+    { \voiceOne d2. | d2 e4 | e2.( ~ | e8[ d c b a d)]}
     \new Voice {
       \voiceTwo a2. | g | fis2. | s2. 
     }
-  >> \oneVoice <g b>2._> | q_> | q_> ^~ | b8[( ais b cis d e)] | fis2 d4 |
+  >> \voiceOne <g b>2._> | q_> | q(_> ^~ | b8[ ais b cis d e)] | fis2 d4 |
 
   % P 1 L 3
-  \acciaccatura { cis16[ d] } cis!4. b8 cis4 | d2. ~ | d4( cis c!) |
-  <g b>2._>|q_>|q_>~|b8[( c d g fis e)] |
+  \acciaccatura { cis16[ d] } cis!4. b8 cis4 | d2.( ~ | d4 cis c!) |
+  \voiceOne <g b>2._>|q_>|q(_>~|b8[ c d g fis e)] |
 
   % P 1 L 4
   <<
-  { \voiceOne d2. | d2 e4 | e2. ~ | e8[( d c b a d)]}
+  { \voiceOne d2. | d2 e4 | e2.( ~ | e8[ d c b a d)]}
     \new Voice {
       \voiceTwo a2. | g | fis2. | s2. 
     }
-  >> \oneVoice <g b>2._> | q_> | q_> ^~ |
+  >> \voiceOne <g b>2._> | q_> | q(_> ^~ |
 
   % P 1 L 5
-  b8^([ c d g fis e)] |
+  b8[ c d g fis e)] |
   <<
     {\voiceOne d2 e4 | \acciaccatura {fis16[ g]} fis4. e8 fis4 | g2. ~| g4 }
     \new Voice {
@@ -35,47 +35,47 @@ secondValseUpper = \relative c'' {
 
   \repeat volta 2 {
     <<
-      {\voiceOne g'2.\( | fis |d2.\)~|}
+      {\voiceOne g'2.\( | fis |d2.\)(~|}
       \new Voice {
         \voiceTwo r4 <b e> q|r <a c> q|r <g b> q|
       }
     >>\oneVoice
-    d'8[( b c d e fis] | g4)-. g8([ b,] g'4 | fis)-. fis8[( ais,] fis'4 | d2.)~|
-    d8[ (d e fis g a] | b4)-. b8([ d,] b'4->) ~ |
+    d'8[ b c d e fis] | g4)-. g8([ b,] g'4 | fis)-. fis8[( ais,] fis'4 | d2.)(~|
+    d8[ d e fis g a] | b4)-. b8([ d,] b'4-> ~ |
 
     %P2L1
-    b4-. a8[( c,] a'4^>) ~ | a4-. g8[( b,] g'4)^> ~ |
-    g8[ b,( c d e b] | c4) e2^> ~ | 
-    e8([ fis g a b fis] |
+    b4)-. a8[( c,] a'4^> ~ | a4)-. g8[( b,] g'4^> ~ |
+    g8)[ b,( c d e b] | c4) e2(^> ~ | 
+    e8[ fis g a b fis] |
   }
   \alternative {
-    { g2.) ~ | g8[ b,( c d e fis)] }
+    { g2. ~ | g8)[ b,( c d e fis)] }
     % L2 P 2
-    { g2. ~ | g4( g, a)}
+    { g2.( ~ | g4 g, a)}
   }
   \bar "||"
-  <g b>2._> | q_> | q_> ^~ | b8[( c d g fis e)] | 
+ \voiceOne <g b>2._> | q_> | q(_> ^~ | b8[ c d g fis e)] | 
   <<
-    { \voiceOne d2. | d2 e4 | e2. ~ | e8[( d c b a d)]}
+    { \voiceOne d2. | d2 e4 | e2.( ~ | e8[ d c b a d)]}
     \new Voice {
       \voiceTwo a2. | g | fis2. | s2. 
     }
-  >> \oneVoice <g b>2._> | q_> | q_> ^~ | b8[( ais b cis d e)] | fis2 d4 |
+  >> \voiceOne <g b>2._> | q_> | q(_> ^~ | b8[ ais b cis d e)] | fis2 d4 |
 
   % P 1 L 3
-  \acciaccatura { cis16[ d] } cis!4. b8 cis4 | d2. ~ | d4( cis c!) |
-  <g b>2._>|q_>|q_>^~|b8[( c d g fis e)] |
+  \acciaccatura { cis16[ d] } cis!4. b8 cis4 | d2.( ~ | d4 cis c!) |
+ \voiceOne <g b>2._>|q_>|q(_>^~|b8[ c d g fis e)] |
 
   % P 1 L 4
   <<
-  { \voiceOne d2. | d2 e4 | e2. ~ | e8[( d c b a d)]}
+  { \voiceOne d2. | d2 e4 | e2.( ~ | e8[ d c b a d)]}
     \new Voice {
       \voiceTwo a2. | g | fis2. | s2. 
     }
-  >> \oneVoice <g b>2._> | q_> | q_> ^~ |
+  >> \voiceOne <g b>2._> | q_> | q(_> ^~ |
 
   % P 1 L 5
-  b8^([ c d g fis e)] |
+  b8[ c d g fis e)] |
   <<
     {\voiceOne d2 e4 | \acciaccatura {fis16[ g]} fis4. e8 fis4 | g2. ~| g4 }
     \new Voice {
