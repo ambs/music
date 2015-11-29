@@ -51,7 +51,7 @@ introUpper = \relative c'' {
   %% page 1, line 5
   \stemNeutral
   g!4 e8[( g] cis4) | g8[( cis] e4) cis8[( e] | 
-  g8[) fis e d cis b] | a[ gis g fis e d] | cis2 d4 | e f fis | g2. | gis \bar "."
+  g8[) fis e d cis b] | a[ gis g fis e d] | cis2 d4 | e f fis | g2. | gis2 \bar "|."
 
 }
 
@@ -93,7 +93,8 @@ introLower = \relative c {
   <a cis>2. ~ | q | <b d>2. ~ | q |
   %% page 1, line 5
   \stemUp
-  <cis e>2. ~ | <cis e>4 r r \repeat unfold 6 { | R1*3/4 } \bar "|."
+  <cis e>2. ~ | <cis e>4 r r \repeat unfold 5 { | R1*3/4 } 
+  | R1*2/4 \bar "|."
 }
 
 
@@ -126,7 +127,7 @@ introDynamics = {
   \set decrescendoText = \markup \italic "e"
   s4 s4\> s4
   \set decrescendoText = \markup \italic "rall."
-  s2.\> s2.\! \bar "|."
+  s2.\> s2\! \bar "|."
 
 }
 
