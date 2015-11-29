@@ -4,25 +4,25 @@ secondValseUpper = \relative c'' {
   \clef treble
   \key g \major
   \time 3/4
- \voiceOne <g b>2._> | q_> | q(_> ^~ | b8[ c d g fis e)] | 
+  <g b>2._> | q_> | q(_> ^~ | b8[ c d g fis e)] | 
   <<
-    { \voiceOne d2. | d2 e4 | e2.( ~ | e8[ d c b a d)]}
+    { \voiceOne d2. | d2 e4 | e2.( ~ }
     \new Voice {
-      \voiceTwo a2. | g | fis2. | s2. 
-    }
-  >> \voiceOne <g b>2._> | q_> | q(_> ^~ | b8[ ais b cis d e)] | fis2 d4 |
+      \voiceTwo a,2. | g | fis2. }
+  >> \oneVoice 
+  e'8[ d c b a d)] | <g, b>2._> | q_> | q(_> ^~ | b8[ ais b cis d e)] | fis2 d4 |
 
   % P 1 L 3
   \acciaccatura { cis16[ d] } cis!4. b8 cis4 | d2.( ~ | d4 cis c!) |
-  \voiceOne <g b>2._>|q_>|q(_>~|b8[ c d g fis e)] |
+  \oneVoice <g b>2._>|q_>|q(_>~|b8[ c d g fis e)] |
 
   % P 1 L 4
   <<
-  { \voiceOne d2. | d2 e4 | e2.( ~ | e8[ d c b a d)]}
+  { \voiceOne d2. | d2 e4 | e2.( ~  }
     \new Voice {
-      \voiceTwo a2. | g | fis2. | s2. 
+      \voiceTwo a,2. | g | fis2. 
     }
-  >> \voiceOne <g b>2._> | q_> | q(_> ^~ |
+  >> \oneVoice e'8[ d c b a d)] | <g, b>2._> | q_> | q(_> ^~ |
 
   % P 1 L 5
   b8[ c d g fis e)] |
@@ -54,25 +54,26 @@ secondValseUpper = \relative c'' {
     { g2.( ~ | g4 g, a)}
   }
   \bar "||"
- \voiceOne <g b>2._> | q_> | q(_> ^~ | b8[ c d g fis e)] | 
+ \oneVoice <g b>2._> | q_> | q(_> ^~ | b8[ c d g fis e)] | 
   <<
-    { \voiceOne d2. | d2 e4 | e2.( ~ | e8[ d c b a d)]}
+    { \voiceOne d2. | d2 e4 | e2.( ~ }
     \new Voice {
-      \voiceTwo a2. | g | fis2. | s2. 
+      \voiceTwo a,2. | g | fis2. 
     }
-  >> \voiceOne <g b>2._> | q_> | q(_> ^~ | b8[ ais b cis d e)] | fis2 d4 |
+  >> \oneVoice
+  e'8[ d c b a d)] | <g, b>2._> | q_> | q(_> ^~ | b8[ ais b cis d e)] | fis2 d4 |
 
   % P 1 L 3
   \acciaccatura { cis16[ d] } cis!4. b8 cis4 | d2.( ~ | d4 cis c!) |
- \voiceOne <g b>2._>|q_>|q(_>^~|b8[ c d g fis e)] |
+ \oneVoice <g b>2._>|q_>|q(_>^~|b8[ c d g fis e)] |
 
   % P 1 L 4
   <<
-  { \voiceOne d2. | d2 e4 | e2.( ~ | e8[ d c b a d)]}
+  { \voiceOne d2. | d2 e4 | e2.( ~ }
     \new Voice {
-      \voiceTwo a2. | g | fis2. | s2. 
+      \voiceTwo a,2. | g | fis2. 
     }
-  >> \voiceOne <g b>2._> | q_> | q(_> ^~ |
+  >> \oneVoice | e'8[ d c b a d)] | <g, b>2._> | q_> | q(_> ^~ |
 
   % P 1 L 5
   b8[ c d g fis e)] |

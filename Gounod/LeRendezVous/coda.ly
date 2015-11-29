@@ -4,26 +4,26 @@ codaUpper = \relative c'' {
   \time 3/4
  
   \repeat volta 2 {
-    \partial 4 a4( | d)-. d,8[_( fis] d'4^> | cis4)-. d,8[_( fis] cis'4^> | b4)-.
-    e,8[( g] a4  | a8)[ a_( gis a gis a] | b4)-. e,8[_( g!] a4^> ~ |
-      a8)[ a_( gis a gis a] | b4)-. d,8[_( fis] a4^> ~ |
+    \partial 4 a4( | d)-! d,8[_( fis] d'4^> | cis4)-! d,8[_( fis] cis'4^> | b4)-!
+    e,8[( g] a4  | a8)[ a_( gis a gis a] | b4)-! e,8[_( g!] a4^> ~ |
+      a8)[ a_( gis a gis a] | b4)-! d,8[_( fis] a4^> ~ |
 
-    a8)[ a_( gis a b a] | d4-.) d,8[_( fis] d'4^> | cis4)-. d,8[_( fis] cis'4^>|b4)-.
-    e,8[_( g] a4^> ~ | a8)[ a_( gis a gis a]|b4)-. e,8[_( g!] b4^>|cis)-.
+    a8)[ a_( gis a b a] | d4-!) d,8[_( fis] d'4^> | cis4)-! d,8[_( fis] cis'4^>|b4)-!
+    e,8[_( g] a4^> ~ | a8)[ a_( gis a gis a]|b4)-! e,8[_( g!] b4^>|cis)-!
     e,8[_( g] cis4^> | d2.)
 
-    r8 a'8([ gis a b a] | d4)-. d,8[( fis] d'4^> | cis)-.
-    d,8[( fis] cis'4^> | b4)-. e,8[( g] a4^> ~ |
-    a8)[ a( gis a gis a] | b4)-. e,8[( g!] a4^> ~ |
-    a8)[ a( gis a gis a] | b4)-. d,8[ fis] a4^> ~ |
+    r8 a'8([ gis a b a] | d4)-! d,8[( fis] d'4^> | cis)-!
+    d,8[( fis] cis'4^> | b4)-! e,8[( g] a4^> ~ |
+    a8)[ a( gis a gis a] | b4)-! e,8[( g!] a4^> ~ |
+    a8)[ a( gis a gis a] | b4)-! d,8[ fis] a4^> ~ |
 
-    a8[ a( gis a b a] | d4)-. d,8[( fis] d'4^>| cis4)-.
-    d,8[( fis] cis'4^> | b4)-. e,8[( g] a4^> ~ |
-    a8)[ a( gis a gis a] | b4)-. e,8[( g] b4^> | cis)-.
+    a8[ a( gis a b a] | d4)-! d,8[( fis] d'4^>| cis4)-!
+    d,8[( fis] cis'4^> | b4)-! e,8[( g] a4^> ~ |
+    a8)[ a( gis a gis a] | b4)-! e,8[( g] b4^> | cis)-!
     e,8[( g] cis4^> | d2. ~ |
 
     d4) r cis,8[( d] b'4) b,8[( d] b'4) gis2.^> ( | a4) a,8[( cis] a'4^>) |
-    e2.^> ( |fis4) a,8[( b]  fis'4^>| fis)-. a,8[\( b] fis'4^> | e gis,8[ b e d]
+    e2.^> ( |fis4) a,8[( b]  fis'4^>| fis)-! a,8[\( b] fis'4^> | e gis,8[ b e d]
 
     cis[ a b cis d e] | b'4\) b,8[( d] b'4) | gis2.^> ( | a4)
     a,8[( cis] a'4^>) | eis2. ( | fis4) fis,8([ a] fis'4^>) |
@@ -32,22 +32,22 @@ codaUpper = \relative c'' {
   }
   %% ----
 
-  a4( | d)-. d,8[_( fis] d'4^> | cis4)-. d,8[_( fis] cis'4^> | b4)-.
-    e,8[( g] a4^> ~ | a8)[ a_( gis a gis a] | b4)-. e,8[_( g!] a4^> ~ |
-      a8)[ a_( gis a gis a] | b4)-. d,8[_( fis] a4^> ~ |   a8)[ a_( gis a b a] | 
+  a4( | d)-! d,8[_( fis] d'4^> | cis4)-! d,8[_( fis] cis'4^> | b4)-!
+    e,8[( g] a4^> ~ | a8)[ a_( gis a gis a] | b4)-! e,8[_( g!] a4^> ~ |
+      a8)[ a_( gis a gis a] | b4)-! d,8[_( fis] a4^> ~ |   a8)[ a_( gis a b a] | 
 
-        d4-.) d,8[_( fis] d'4^> | cis4)-. d,8[_( fis] cis'4^>|b4)-.
-    e,8[_( g] a4^> ~ | a8)[ a_( gis a gis a]|b4)-. e,8[_( g!] b4^>)_(|cis)-.
+        d4-!) d,8[_( fis] d'4^> | cis4)-! d,8[_( fis] cis'4^>|b4)-!
+    e,8[_( g] a4^> ~ | a8)[ a_( gis a gis a]|b4)-! e,8[_( g!] b4^>)_(|cis)-!
     e,8[_( g] cis4^> | d2.)
 
-   r8 a'8([ gis a b a] | d4)-. d,8[( fis] d'4^> | cis)-.
-    d,8[( fis] cis'4^> | b4)-. e,8[( g] a4^> ~ |
-    a8)[ a( gis a gis a] | b4)-. e,8[( g!] a4^> ~ |
-    a8)[ a( gis a gis a] | b4)-. d,8[ fis] a4^> ~ |  
+   r8 a'8([ gis a b a] | d4)-! d,8[( fis] d'4^> | cis)-!
+    d,8[( fis] cis'4^> | b4)-! e,8[( g] a4^> ~ |
+    a8)[ a( gis a gis a] | b4)-! e,8[( g!] a4^> ~ |
+    a8)[ a( gis a gis a] | b4)-! d,8[ fis] a4^> ~ |  
 
- a8[ a( gis a b a] | d4)-. d,8[( fis] d'4^>| cis4)-.
-    d,8[( fis] cis'4^> | b4)-. e,8[( g] a4^> ~ |
-    a8)[ a( gis a gis a] | b4)-. e,8[\( g] b4(^> | cis)\)-.
+ a8[ a( gis a b a] | d4)-! d,8[( fis] d'4^>| cis4)-!
+    d,8[( fis] cis'4^> | b4)-! e,8[( g] a4^> ~ |
+    a8)[ a( gis a gis a] | b4)-! e,8[\( g] b4(^> | cis)\)-!
     e,8[( g] cis4^> )
 
     \bar "||"

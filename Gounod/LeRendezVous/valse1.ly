@@ -6,32 +6,32 @@ firstValseUpper = \relative c'' {
   \time 3/4
 
   %% page 1, line 1
-  \partial 4 a4( | d-.) d,8[_( fis] d'4-> | cis4)-. d,8[_( fis] cis'4-> | b)-.
-  e,8([ g] a4^> ~ | a8)[ a_( gis a gis a] | b4)-. e,8[( g!] a4^> ~ |
+  \partial 4 a4( | d-!) d,8[_( fis] d'4-> | cis4)-! d,8[_( fis] cis'4-> | b)-!
+  e,8([ g] a4^> ~ | a8)[ a_( gis a gis a] | b4)-! e,8[( g!] a4^> ~ |
 
   %% page 1, line 2
-  a8)[ a_( gis a gis a] | b4)-. d,8[_( fis] a4^> ~ | a8)[ a_( gis a b a] | d4)-.
-  d,8[_( fis] d'4^> | cis)-. d,8[_( fis] cis'4^> | b4)-. e,8[_( g] a4^> ~ |
+  a8)[ a_( gis a gis a] | b4)-! d,8[_( fis] a4^> ~ | a8)[ a_( gis a b a] | d4)-!
+  d,8[_( fis] d'4^> | cis)-! d,8[_( fis] cis'4^> | b4)-! e,8[_( g] a4^> ~ |
   a8)[ a_( gis a gis a] |
 
   %% page 1, line 3
-  b4)-. e,8[_( g!] b4^> | cis4)-. e,8[_( g] cis4^> | d2.) |
-  r8 a'8[^( gis a b a] | d4)-. d,8[^( fis] d'4^> | cis4)-.
-  d,8[^( fis] cis'4^> | b)-. e,8[^( g] a4^> ~ 
+  b4)-! e,8[_( g!] b4^> | cis4)-! e,8[_( g] cis4^> | d2.) |
+  r8 a'8[^( gis a b a] | d4)-! d,8[^( fis] d'4^> | cis4)-!
+  d,8[^( fis] cis'4^> | b)-! e,8[^( g] a4^> ~ 
 
   %% page 1, line 4
-  a8)[ a^( gis a gis a] | b4)-. e,8[( g!] a4^> ~ | a8)[ a^( gis a gis a] | b4)-.
-  d,8[ fis] a4^>~ | a8[ a^( gis a b a] | d4)-. d,8[( fis] d'4^> |
+  a8)[ a^( gis a gis a] | b4)-! e,8[( g!] a4^> ~ | a8)[ a^( gis a gis a] | b4)-!
+  d,8[ fis] a4^>~ | a8[ a^( gis a b a] | d4)-! d,8[( fis] d'4^> |
 
   % page 1, 5 line
-  cis)-. d,8([ fis] cis'4^> | b)-. e,8[( g] a4^> ~ |
-  a8)[ a( gis a gis a] | b4)-. e,8[( g!] b4^> | cis-.) 
+  cis)-! d,8([ fis] cis'4^> | b)-! e,8[( g] a4^> ~ |
+  a8)[ a( gis a gis a] | b4)-! e,8[( g!] b4^> | cis-!) 
   e,8[( g] cis4^> | d2. ~ | d4) r 
 
   % page 1, 6 line
   \repeat volta 2 {
     cis,8[( d] | b'4) b,8([ d] b'4) | gis2.^>( | a4) a,8[( cis] a'4)^> |
-    e2.^>( | fis4) a,8([ b] fis'4^> | fis)-. a,8[( b] fis'4^> |
+    e2.^>( | fis4) a,8([ b] fis'4^> | fis)-! a,8[( b] fis'4^> |
 
     % page 2, 1 line
     e4 gis,8[ b e d] | cis[ a b cis d e] | b'4) b,8[( d] b'4) | gis2.^>( | a4)
@@ -40,28 +40,28 @@ firstValseUpper = \relative c'' {
     % page 2, 2 line
     fis8[( e)] e[( d)] d[( b)] | a2. ~ | a4 r
   }
-  a( | d)-. d,8_([ fis] d'4^> | cis-.) d,8[_( fis] cis'4^>|b)-.
+  a( | d)-! d,8_([ fis] d'4^> | cis-!) d,8[_( fis] cis'4^>|b)-!
   e,8([ g] a4^> ~ | a8)[ a_( gis a gis a] |
 
   % page 2, line 3
-  b4)-. e,8[( g!] a4^> ~ | a8)[ a_( gis a gis a] | b4)-. d,8[( fis] a4^> ~ |
-  a8)[ a_( gis a b a] | d4)-. d,8[_( fis] d'4^> | cis-.) d,8[_( fis] cis'4 | b4)-.
+  b4)-! e,8[( g!] a4^> ~ | a8)[ a_( gis a gis a] | b4)-! d,8[( fis] a4^> ~ |
+  a8)[ a_( gis a b a] | d4)-! d,8[_( fis] d'4^> | cis-!) d,8[_( fis] cis'4 | b4)-!
   e,8[( g] a4^> ~ |
 
   %% page 2, line 4
   a8)[ a_( gis a gis a] |  
-  b4)-. e,8[_( g!] b4^> | cis4)-. e,8[_( g] cis4^> | d2.) |
-  r8 a'8[^( gis a b a] | d4)-. d,8[^( fis] d'4^> | cis4)-.
+  b4)-! e,8[_( g!] b4^> | cis4)-! e,8[_( g] cis4^> | d2.) |
+  r8 a'8[^( gis a b a] | d4)-! d,8[^( fis] d'4^> | cis4)-!
   d,8[^( fis] cis'4^> |
 
   %% page 2, line 5
-  b)-. e,8[^( g] a4^> ~ 
-  a8)[ a^( gis a gis a] | b4)-. e,8[( g!] a4^> ~ | a8)[ a^( gis a gis a] | b4)-.
-  d,8[ fis] a4^>~ | a8[ a^( gis a b a] | d4)-. d,8[( fis] d'4^> |
+  b)-! e,8[^( g] a4^> ~ 
+  a8)[ a^( gis a gis a] | b4)-! e,8[( g!] a4^> ~ | a8)[ a^( gis a gis a] | b4)-!
+  d,8[ fis] a4^>~ | a8[ a^( gis a b a] | d4)-! d,8[( fis] d'4^> |
 
   % page 2, line 6
-  cis)-. d,8([ fis] cis'4^> | b)-. e,8[( g] a4^> ~ |
-  a8)[ a( gis a gis a] | b4)-. e,8[( g!] b4^> | cis-.) 
+  cis)-! d,8([ fis] cis'4^> | b)-! e,8[( g] a4^> ~ |
+  a8)[ a( gis a gis a] | b4)-! e,8[( g!] b4^> | cis-!) 
   e,8[( g] cis4^> | d2. ~ | d4) r 
 
 
