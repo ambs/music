@@ -94,7 +94,7 @@ introLower = \relative c {
   %% page 1, line 5
   \stemUp
   <cis e>2. ~ | <cis e>4 r r \repeat unfold 5 { | R1*3/4 } 
-  | R1*2/4 \bar "|."
+  | R1*1/2 \bar "|."
 }
 
 
