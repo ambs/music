@@ -79,19 +79,19 @@ fourthValseLower = \relative c' {
 %%%% DYNAMICS
 
 fourthValseDynamics = {
-  s2.\p s2.\> s2.\! s2.\> s2.\! s2.\>
-  s2.\! s2. s2. s2.\>
+  s2.\p s2\> s4\! s2. s2\> s4\! s2. s2\> s4\!
+  s2. s2. s2. s2\> s4\!
   \set crescendoSpanner = #'text 
   \set crescendoText = \markup \italic "cre"
   s2.\< s4.
   \set crescendoText = \markup \italic "scen"
   s4.\< s2.
-  s2 s4\do s2.\f s2. s8 s2\ff s8 s2.\> s2.\! s2.\>
-  s2.\! s2.\> s2.\! s2. s2. s2.\>
+  s2 s4\do s2.\f s2. s8 s2\ff s8 s2\> s4\! s2. s2\> s4\!
+  s2. s2\> s4\! s2. s2. s2. s2\> s4\!
   \set crescendoText = \markup \italic "cresc"
   s2.\<
   \set decrescendoSpanner = #'hairpin
-  s2.\> s2.\! 
+  s2\> s4\! s2.
   \set decrescendoSpanner = #'text
   \set decrescendoText = \markup \italic "dim."
   s2 s4\> s2. s4 s2\pp s2. s2.
@@ -103,7 +103,7 @@ fourthValseDynamics = {
   \set crescendoText = \markup \italic "scen"  
   s8 s8\< s4 s8 s8\do s2.\f s2.
   \set crescendoText = \markup \italic "cre"
-  s2.\< s4. 
+  s2\< s4\! s4. 
   \set crescendoText = \markup \italic "scen"
   s4.\<  s2. 
   s4 s4\do s4 s4 s2\pp s2. s2. s2. s2.

@@ -36,8 +36,11 @@ introUpper = \relative c'' {
     \omit Score.MetronomeMark
     \tempo 4=180
   a8[^\markup{Cadenza ad lib.} a, bes a d cis fis e]
+  \bar ""
   g4 ~ g8[ cis, d cis fis e a g] bes4 ~ bes8[ a b a cis a e' cis]
+  \bar ""
   g'4 ~ g16[ fis e dis fis e d cis b a g fis e d]
+  \bar ""
   cis4 \acciaccatura { d16[ cis \once \omit Accidental b] }
       \omit Score.MetronomeMark   \tempo 4=120
    } \tuplet 3/2 { cis8[ e g]} \cadenzaOff
@@ -94,7 +97,7 @@ introLower = \relative c {
   %% page 1, line 5
   \stemUp
   <cis e>2. ~ | <cis e>4 r r \repeat unfold 5 { | R1*3/4 } 
-  | R1*1/2 \bar "|."
+  | r2 \bar "|."
 }
 
 
