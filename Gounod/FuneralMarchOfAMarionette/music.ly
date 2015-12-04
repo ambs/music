@@ -73,9 +73,50 @@ upper = \relative c''' {
   cis8[-. r d-.] <e cis a> r r | 
   % M23 - M24
   r4 <d fis>8 
-  << { \voiceOne a'4( g8 <d f>8[) \oneVoice r <f a>]
-       \voiceOne c'!4( bes8}
-   \new Voice {\voiceTwo cis,4.( s8) s4 e4.( } >>
+  << {
+       \voiceOne a'4( g8 <d f>8[) \oneVoice r <f a>]
+       \voiceOne c'!4( bes8 |
+
+        % Line 5
+        % M25
+        <f a>8[) r <a c>] e'4( d8 |
+        % M26
+        \oneVoice \stemUp
+        <a cis>[) bes!-. a-.] g![-. f-. e-.] |
+     }
+   \new Voice {
+      \voiceTwo cis4.( s8) s4 e4.( |
+        \hideNotes e8) \unHideNotes s4 gis4.( | s8) s8 s2 |
+   } 
+  >>
+  % M27-M28
+  \oneVoice
+  r4 d8 \acciaccatura e d[-. cis-. b!]-. | cis[-. r d]-. <e cis a> r r|
+  % M29
+  r4 d8
+  <<
+  {
+    \voiceOne a'4.( |
+    % Line 6
+    % M30-M32
+    a4.) g( |
+    \oneVoice <d f>8)[ r <f a>] \voiceOne c'!4( bes8 |
+    a8[) g_. f_.] ees[_. g_. bes_.]
+  }
+  \new Voice {
+    \voiceTwo d,8[-. cis-. b!]-. | 
+    % Line 6
+    % M30-M32
+    cis8[-. r d]-. e[-. r cis]-. |
+    s4. e4.( |
+    f8) s8 s2 |
+  }
+  >>  
+  % M33
+  \oneVoice
+  d8[-. cis-. d]-. <e! cis a>8[ r <f cis a>] |
+  % M34
+  <e cis a>4. ( <d a>8) r r \bar "||"
 }
 
 
@@ -132,6 +173,18 @@ lower = \relative c' {
   <d, d,>8  r r <f a> r r |
   % M28-M29
   <e g a> r r <a a,> r a,( | d,)-. r r <f' a> r r |
+
+  % Line 6
+  % M30
+  <e g a>8 r r <e a a,> r r |
+  % M31
+  <f a d,>8 r r <c! g' c!>4._( ~ |
+  % M32
+  <f a c>8) r r <g bes> r r |
+  % M33
+  <a f a,> r r <g a,>[ r q] | 
+  % M34
+  q4.( <d f>8) r r \bar "||"
 }
 
 
@@ -179,6 +232,20 @@ dynamics = {
   s4\> s2\!
   % M27-M29
   s2.\p s2. s2. 
+
+  % Line 6
+  % M30
+  s2.
+  % M31-M32
+  \set crescendoSpanner = #'text
+  \set crescendoText = \markup \italic "cresc."
+  s4. s4\< s8\! s2.
+  % M33-M34
+  \set decrescendoSpanner = #'text
+  \set decrescendoText = \markup \italic "dim."
+  s8 s4\> s4.\!
+  \set decrescendoSpanner = #'hairpin 
+  s4.\> s4.\!
 }
 
 \score {
