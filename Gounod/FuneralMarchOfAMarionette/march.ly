@@ -34,6 +34,10 @@ upper = \relative c''' {
   \key f \major
   \time 6/8
 
+  %%%%%%%%%%%%
+  %% Page 1 %%
+  %%%%%%%%%%%%
+
   % M1
   <bes bes'>8 r r <e, e'>8 r r |
   % M2
@@ -117,6 +121,11 @@ upper = \relative c''' {
   d8[-. cis-. d]-. <e! cis a>8[ r <f cis a>] |
   % M34
   <e cis a>4. ( <d a>8) r r \bar "||"
+
+  %%%%%%%%%%%%
+  %% Page 2 %%
+  %%%%%%%%%%%%
+
 }
 
 
@@ -127,6 +136,10 @@ lower = \relative c' {
   \clef bass
   \key f \major
   \time 6/8
+
+  %%%%%%%%%%%%
+  %% Page 1 %%
+  %%%%%%%%%%%%
 
   % M1
   \clef treble
@@ -185,12 +198,22 @@ lower = \relative c' {
   <a f a,> r r <g a,>[ r q] | 
   % M34
   q4.( <d f>8) r r \bar "||"
+
+  %%%%%%%%%%%%
+  %% Page 2 %%
+  %%%%%%%%%%%%
+
 }
 
 
 %%%% DYNAMICS
 
 dynamics = {
+
+  %%%%%%%%%%%%
+  %% Page 1 %%
+  %%%%%%%%%%%%
+
   % M1
   s2.\ff
   % M2
@@ -246,6 +269,11 @@ dynamics = {
   s8 s4\> s4.\!
   \set decrescendoSpanner = #'hairpin 
   s4.\> s4.\!
+
+  %%%%%%%%%%%%
+  %% Page 2 %%
+  %%%%%%%%%%%%
+
 }
 
 \score {
