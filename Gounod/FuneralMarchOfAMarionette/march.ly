@@ -120,12 +120,78 @@ upper = \relative c''' {
   \oneVoice
   d8[-. cis-. d]-. <e! cis a>8[ r <f cis a>] |
   % M34
-  <e cis a>4. ( <d a>8) r r \bar "||"
+  <e cis a>4. ( <d a>8) r r |
 
   %%%%%%%%%%%%
   %% Page 2 %%
   %%%%%%%%%%%%
 
+  \repeat volta 2 {
+    % Line 1
+    % M35
+    <a' cis e a>8-. r a \acciaccatura b! a[-. gis-. a]-. |
+    % M36
+    cis8[ r b!] a[ r gis!] |
+    % M37
+    <a cis e a>8-. r a \acciaccatura b! a[-. gis-. a]-. |
+    % M38
+    cis8[ r b!] a[ r gis!] |
+    % M39
+    <a cis e a>8-. r a bes!8.[( c!16 d8] |
+    % M40
+    e8) r a, bes8.[( c!16 d8] |
+
+    % Line 2
+    % M41
+    e[) r a,] \acciaccatura bes a[-. g-. f]-. |
+    % M42
+    g[-. a-. g-.] << { \voiceOne f[ f\rest e] }
+       \new Voice { \voiceTwo <cis a>4. } >> \oneVoice|
+    % M43
+    r4 d8 \acciaccatura e d[-. cis-. b!]-. |
+    % M44
+    cis[-. r d]-. <e cis a> r r |
+    % M45-...
+    r4 d8 << {
+        \voiceOne a'4. ~ |
+
+        % Line 3
+        % M46 - M47
+        a4. g( | f8)[ f\rest a] c!4( bes8 |
+        % M48
+        \oneVoice
+        a8)[ g-. f]-. ees[-. g-. bes-.] |
+      }
+    \new Voice {
+      \voiceTwo d,8[-. cis-. b!]-.
+      % Line 3
+      % M46-47
+      cis8[-. r d]-. e[-. r cis]-. | d[ s f] e4.( |
+      % M48 
+      f8)
+    }
+    >>
+    % M49-50
+    d8[-. cis-. d]-. <e! cis a>[ r <f cis a>]| <e cis a>4.^(~ <d a>8) r r
+  }
+
+  % Line 4
+  \key d \major
+  \repeat volta 2 {
+    % M51
+    <d' fis a d>4^\markup{(Here many of the principal
+      personages stop for refreshments.)} r8 <a d fis a>4 r8 |
+    % M52
+    <fis a d fis>4 r8 <e fis cis' e>4 r8 |
+    % M53
+    <d fis b d>4 r8 \acciaccatura e' <d fis,>[ <cis fis,> <b fis>] |
+    % M54
+    <g b g'>8[ r <g b fis'>] <g cis e>[ r <a a'>] |
+    % M55
+    <d fis a d>4 r8 <a d fis a>4 r8 |
+    % M56
+    <fis a d fis>4 r8 <e fis cis' e>4 r8 |
+  }
 }
 
 
@@ -197,12 +263,47 @@ lower = \relative c' {
   % M33
   <a f a,> r r <g a,>[ r q] | 
   % M34
-  q4.( <d f>8) r r \bar "||"
+  q4.( <d f>8) r r |
 
   %%%%%%%%%%%%
   %% Page 2 %%
   %%%%%%%%%%%%
 
+  \repeat volta 2 {
+    % Line 1
+    % M35-36
+    <a a,>8-. r r << {\voiceOne <cis' e>4. | <d f> <b! d> }
+      \new Voice {\voiceTwo a4. ~ | a2.} >> 
+    % M37-38
+    <a, a,>8-. d\rest d\rest << {\voiceOne <cis' e>4. | <d f> <b! d> }
+      \new Voice {\voiceTwo a4. ~ | a2.} >> 
+    % M39-40
+    \oneVoice
+    <a, a,>8-. r r <a' d f>4._~(|<a cis e>8) r r <g d' f>4.~(
+
+    % Line 2
+    % M41-42
+    <g cis e>4.) <f a d>( | <e b'! d>) <g a,> |
+    % M43-44
+    <d d,>8 r r  <f a> r r | <e g a> r r <g a,>[ r a,](
+    % M45
+    d,)-. r r <f' a> r r |
+
+    % Line 3
+    % M46-47
+    <e g a> r r <e a a,> r r | <d f a> r r <c! g' c!>4. ~_( |
+    % M48-49
+    <f a c>8) r r <g bes> r r|<f a a,> r r <g a,>[ r q]|
+    % M50
+    q4.( <d f>8) r r
+  }
+
+  \key d \major
+  % Line 4
+  \repeat volta 2 {
+    % M51-52
+    <d a fis d>4 r8 <fis d a fis>4 r8 |
+  }
 }
 
 
@@ -273,6 +374,45 @@ dynamics = {
   %%%%%%%%%%%%
   %% Page 2 %%
   %%%%%%%%%%%%
+
+  \repeat volta 2 {
+    % Line 1
+    % M35-36
+    s4\f s2\p | s2. |
+    % M37-38
+    s4\f s2\p | s2. |
+    % M39-40
+    s2.\f | s2. |
+
+    % Line 2
+    % M41-42
+    \set decrescendoSpanner = #'text
+    \set decrescendoText = \markup \italic "dim."
+    s2. | s4\> s2\! |
+    % M43-45
+    s2.\p | s2. | s2. |
+
+    % Line 3
+    % M46-47
+    \set crescendoSpanner = #'text
+    \set crescendoText = \markup \italic "cresc."
+    s2. | s4. s4.\< |
+    % M48-49
+    \set decrescendoSpanner = #'text
+    \set decrescendoText = \markup \italic "dim."
+    s2\! s8 s8\f | s4\> s2\!
+    % M50
+    \set decrescendoSpanner = #'hairpin
+    s2\> s8\! s8
+  }
+
+  % Line 4
+  \repeat volta 2 {
+    % M51-53
+    s4.\f s4.\p | s2. | s2. |
+    % M54-56
+    s2 s8 s8\f | s4.\f s4.\p | s2. |
+  }
 
 }
 
