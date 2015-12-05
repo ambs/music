@@ -191,12 +191,20 @@ upper = \relative c''' {
     <d fis a d>4 r8 <a d fis a>4 r8 |
     % M56
     <fis a d fis>4 r8 <e fis cis' e>4 r8 |
+
+    % Line 5
+    % M57
+    <d fis b d>4 r8 \acciaccatura e'8 <d fis,>[ <cis fis,> <b fis>] |
+    % M58
+    <d ais e>[ r <cis ais e>] <b d,> r r 
   }
 }
 
-
-
+%%%%%%%%%%%%%%%%%%%%%
+%%%
 %%% LOWER VOICE
+%%%
+%%%%%%%%%%%%%%%%%%%%%
 
 lower = \relative c' {
   \clef bass
@@ -303,6 +311,18 @@ lower = \relative c' {
   \repeat volta 2 {
     % M51-52
     <d a fis d>4 r8 <fis d a fis>4 r8 |
+    <a, d fis a>4 r8 <ais cis fis ais>4 r8 |
+    % M53-54
+    <b d fis b>4 r8 <d fis b>8[ q q] |
+    <e g b>[ r q] <a cis> r r |
+    % M55-56
+    <d, a fis d>4 r8 <fis d a fis>4 r8 |
+    <a, d fis a>4 r8 <ais cis fis ais>4 r8 |
+
+    % Line 5
+    % M57-58
+    <b d fis b>4 r8 <d fis b>8 [ q q] |
+    fis8[ r <fis fis,>] <fis b,> r r 
   }
 }
 
@@ -412,7 +432,13 @@ dynamics = {
     s4.\f s4.\p | s2. | s2. |
     % M54-56
     s2 s8 s8\f | s4.\f s4.\p | s2. |
+
+    % Line 5
+    % M57-58
+    s2. s2. 
   }
+  % M59-62
+  s2.\p s2. s2. s2. |
 
 }
 
