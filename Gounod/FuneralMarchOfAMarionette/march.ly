@@ -22,6 +22,8 @@
   % }
 }
 
+miny = \tweak font-size #-2 \etc
+
 spacerVoice = \new Voice {
   \override MultiMeasureRest.transparent = ##t
   \override MultiMeasureRest.minimum-length = #16
@@ -198,6 +200,29 @@ upper = \relative c''' {
     % M58
     <d ais e>[ r <cis ais e>] <b d,> r r 
   }
+  % M59
+  <d, g b d>4 r8 <b d g b>4 r8 |
+  % M60
+  <d fis a d>8[ r a'] <a fis d>8.[ b16 c!8] |
+  % M61
+  <b g d>8[ r c!] <d b g>[ r e] |
+  % M62
+  <a, fis d>8[ r c!] <b fis d>[ r a] |
+
+  % Line 6
+  % M63
+  <d, g b d>4 r8 <b d g b>4 r8 |
+  % M64
+  <d fis a d>8[ r a'] <d, fis a>8.[ b'16 c!8] |
+  % M65
+  <d, g b>8[ r d'] <g, cis!>[ r b] |
+  % M66
+  <g a cis>8[ r d'] <g, a cis e>[ r <a a'>] |
+  % M67
+  <d fis a d>4 r8 <a d fis a>4 r8 |
+  % M68
+  <fis a d fis>4 r8 <e fis cis' e>4 r8 |
+
 }
 
 %%%%%%%%%%%%%%%%%%%%%
@@ -310,20 +335,43 @@ lower = \relative c' {
   % Line 4
   \repeat volta 2 {
     % M51-52
-    <d a fis d>4 r8 <fis d a fis>4 r8 |
-    <a, d fis a>4 r8 <ais cis fis ais>4 r8 |
+    <d a fis d>4 r8 <fis \miny d \miny a fis>4 r8 |
+    <a, \miny d \miny fis a>4 r8 <ais \miny cis \miny fis ais>4 r8 |
     % M53-54
-    <b d fis b>4 r8 <d fis b>8[ q q] |
+    <b \miny d \miny fis b>4 r8 <d fis b>8[ q q] |
     <e g b>[ r q] <a cis> r r |
     % M55-56
-    <d, a fis d>4 r8 <fis d a fis>4 r8 |
-    <a, d fis a>4 r8 <ais cis fis ais>4 r8 |
+    <d, a fis d>4 r8 <fis \miny d \miny a fis>4 r8 |
+    <a, \miny d \miny fis a>4 r8 <ais \miny cis \miny fis ais>4 r8 |
 
     % Line 5
     % M57-58
-    <b d fis b>4 r8 <d fis b>8 [ q q] |
+    <b \miny d \miny fis b>4 r8 <d fis b>8 [ q q] |
     fis8[ r <fis fis,>] <fis b,> r r 
   }
+
+  % M59
+  <g, b d g>4 r8 <d \miny g \miny b d>4 r8 |
+  % M60
+  <a' c! d fis>4 r8 <d, \miny fis \miny a \miny c d>4 r8 |
+  % M61
+  <g b d g>4 r8 <d \miny g \miny b d>4 r8 |
+  % M62
+  <a' c! d fis>4 r8 <d, \miny fis \miny a \miny b d>4 r8 |
+
+  %% Line 6
+  % M63
+  <g b d g>4 r8 <d \miny g \miny b d>4 r8 |
+  % M64
+  <a' c! d fis>4 r8 <d, \miny fis \miny a \miny c d>4 r8 |
+  % M65
+  <g b d g>4 r8 <d' g b d>4 r8 |
+  % M66
+  <e g a cis!>4 r8 <a, cis e a>4 r8 |
+  % M67
+  <d, fis a d>4 r8 <fis \miny a \miny d fis>4 r8 |
+  % M68
+  <a \miny d \miny fis a>4 r8 <ais \miny cis \miny fis ais>4 r8 |
 }
 
 
@@ -439,6 +487,14 @@ dynamics = {
   }
   % M59-62
   s2.\p s2. s2. s2. |
+
+  %% Line 6
+  % M63-66
+  \set crescendoSpanner = #'text
+  \set crescendoText = \markup \italic "cresc."
+  s2. s2.\< s2. s2.
+  % M67-68
+  s4.\f s4.\p | s2. 
 
 }
 
