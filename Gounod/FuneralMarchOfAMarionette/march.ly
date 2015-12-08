@@ -223,13 +223,73 @@ upper = \relative c''' {
   % M68
   <fis a d fis>4 r8 <e fis cis' e>4 r8 |
 
+  %%%%%%%%%%%%
+  %% Page 3 %%
+  %%%%%%%%%%%%  
+
+  % Lne 1
+  % M69
+  <d fis b d>4 r8 \acciaccatura e' <d fis,>8[ <cis fis,> <b fis>] |
+  % M70
+  <g b g'>8[ r <g b fis'>] <g cis e>8[ r <a a'>] |
+  % M71
+  <d fis a d>4 r8 <a d fis a>4 r8 |
+  % M72
+  <fis a d fis>4 r8 <e fis cis' e>4 r8 |
+  % M73
+  <d fis b d>4 r8 c![ d e] |
+  % M74
+  fis[ r fis] b, r r |
+
+  % Line 2
+  % M75
+  <d g b d>4 r8 <b d g b>4 r8 |
+  % M76
+  <d fis a d>8[ r a'] <a fis d>8.[ b16 c!8] |
+  % M77
+  <b g d>8[ r c!] <d b g>8[ r e] |
+  % M78
+  <a, fis d>8[ r c!] <b fis d>8[ r a] |
+  % M79
+  <d b g d>4 r8 <b g d b>4 r8 |
+  % M80
+  <d a fis d>8[ r a] <a fis d>8.[ b16 c!8] |
+
+  % Line 3
+  % M81
+  <d, g b>8[ r d'] <cis! g>8[ r b] |
+  % M82
+  <cis a g>8[ r d] <e cis a g>[ r <a a,>] |
+  % M83
+  <d a fis d>4 r8 <a fis d a>4 r8 |
+  % M84
+  <fis d a fis>4 r8 <e cis fis, e>4 r8 |
+  % M85
+  <d b fis d>4 r8 \acciaccatura e <d fis,>[ <cis fis,> <b fis>] |
+  % M86
+  <g b g'>[ r <g b fis'>] <g cis e>[ r <a a'>] |
+
+  % Line 4
+  % M87
+  <d fis a d>4 r8 <a d fis a>4 r8 |
+  % M88
+  <fis a d fis>4 r8 <e fis cis' e>4 r8 |
+  % M89
+  <d fis b d>4 r8 \acciaccatura e' <d fis,>8[ <cis fis,> <b fis>] |
+  % M90
+  <g b g'> r r \acciaccatura a' <g b,>[ <fis b,> <e b>] |
+  % M91
+  <cis e cis'>8 r r \acciaccatura d' cis8[ b a] |
+  % M92
+  <a a'>8 r r r4\fermata r8 |
+
 }
 
-%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%
 %%% LOWER VOICE
 %%%
-%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 lower = \relative c' {
   \clef bass
@@ -372,6 +432,66 @@ lower = \relative c' {
   <d, fis a d>4 r8 <fis \miny a \miny d fis>4 r8 |
   % M68
   <a \miny d \miny fis a>4 r8 <ais \miny cis \miny fis ais>4 r8 |
+
+  %%%%%%%%%%%%
+  %% Page 3 %%
+  %%%%%%%%%%%%  
+
+  % Line 1
+  % M69
+  <b \miny d \miny fis b>4 r8 <d fis b>8[ q q] |
+  % M70
+  <e g b>8[ r q] <a cis> r r |
+  % M71
+  <d, a fis d>4 r8 <fis \miny d \miny a fis>4 r8 |
+  % M72
+  <a \miny fis \miny d a>4 r8 <ais ais,>4 r8 |
+  % M73
+  <b \miny fis \miny d \miny b>4 r8 <c,! c,!>[ <d d,> <e e,>] |
+  % M74
+  <fis fis,>8[ r q] <b, b,>8 r r |
+
+  % Line 2
+  % M75
+  <g b d g>4 r8 <d \miny g \miny b d>4 r8 |
+  % M76
+  <a' c! d fis>4 r8 <d, \miny fis \miny a \miny c d>4 r8 |
+  % M77
+  <g b d g>4 r8 <d \miny g \miny b d>4 r8 |
+  % M78
+  <a' c! d fis>4 r8 <d, \miny fis \miny a \miny c d>4 r8 |
+  % M79
+  <g b d g>4 r8 <d \miny g \miny b d>4 r8 |
+  % M80
+  <a' c! d fis>4 r8 <d, \miny fis \miny a \miny c d>4 r8 |    
+
+  % Line 3
+  % M81
+  <g b d g>4 r8 <d' g b d>4 r8 |
+  % M82
+  <e g a cis!>4 r8 <a, cis e a>4 r8 |
+  % M83
+  <d, fis a d>4 r8 <fis \miny a \miny d fis>4 r8 |
+  % M84
+  <a \miny d \miny fis a>4 r8 <ais \miny cis \miny fis ais>4 r8 |
+  % M85
+  <b \miny d \miny fis b>4 r8 <d fis b>8[ q q] |
+  % M86
+  <e g b>8[ r q] <a cis> r r |
+
+  % Line 4
+  % M87
+  <d, a fis d>4 r8 <fis \miny d \miny a fis>4 r8 |
+  % M88
+  <a \miny fis \miny d a>4 r8 <ais \miny fis \miny cis ais>4 r8 |
+  % M89
+  <b \miny fis \miny d b>4 r8 <b d>8[ q q] |
+  % M90
+  <e b e,>8 r r \clef treble <e g>8[ q q] |
+  % M91
+  <g e a,> r r <a e' g>[ q q] | 
+  % M92
+  r4 r8 r4\fermata r8 |
 }
 
 
@@ -495,6 +615,30 @@ dynamics = {
   s2. s2.\< s2. s2.
   % M67-68
   s4.\f s4.\p | s2. 
+
+  %%%%%%%%%%%%
+  %% Page 3 %%
+  %%%%%%%%%%%%  
+
+  % Line 1
+  % M69-74
+  s2. s2 s8 s8\f s4. s4.\p s2. s4. s4.\f s2.
+
+  % Line 2
+  % M75-79
+  s2.\p s2. s2. s2. s2.
+  % M80
+  \set crescendoSpanner = #'text
+  \set crescendoText = \markup \italic "cresc."
+  s2.\<  
+
+  % Line 3
+  % M81-86
+  s2. s2. s4.\f s4.\p s2. s2. s2 s8 s8\f
+
+  % Line 4
+  % M87-M92
+  s4.\f s4.\p s2. s2. s2. s2. s2. 
 
 }
 
