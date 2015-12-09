@@ -78,7 +78,7 @@ upper = \relative c''' {
   % M22
   cis8[-. r d-.] <e cis a> r r | 
   % M23 - M24
-  r4 <d fis>8 
+  r4 \once \omit Accidental <d fis>8 
   << {
        \voiceOne a'4( g8 <d f>8[) \oneVoice r <f a>]
        \voiceOne c'!4( bes8 |
@@ -282,6 +282,34 @@ upper = \relative c''' {
   <cis e cis'>8 r r \acciaccatura d' cis8[ b a] |
   % M92
   <a a'>8 r r r4\fermata r8 |
+
+  % Line 5
+  % M93
+  \clef bass  cis,,,8 r r \acciaccatura d cis[-. b-. a]-. | 
+  % M94
+  a' r r r4 r8 |
+  % M95
+  d, r r \acciaccatura e d[-. c!-. bes]-. |
+  % M96
+  a' r r r4 r8 |
+  % M97
+  dis,8 r r \acciaccatura e dis[-. cis!-. b!]-. |
+  % M89
+  a' r r r4 r8 |
+
+  % Line 6
+  % M90
+  e8 r r \acciaccatura fis e[-. d-. c!]-. |
+  % M91
+  a' r r \acciaccatura fis e[-. d-. cis!]-. |
+  % M92
+  a'[-. e-. d]-. cis[-. a'-. e]-. |
+  % M93
+  d[-. cis-. a']-. e[-. d-. cis]-. |
+  % M94
+  a'[-. bes-. a]-. gis[-. g!-. a]-. |
+  % M95
+  fis![-. f!-. a]-. e[-. ees-. a]-. |
 
 }
 
@@ -492,6 +520,35 @@ lower = \relative c' {
   <g e a,> r r <a e' g>[ q q] | 
   % M92
   r4 r8 r4\fermata r8 |
+
+  % Line 5
+  % M93
+  \clef bass  cis,,,8 r r  cis[-. b-. a]-. | 
+  % M94
+  a' r r r4 r8 |
+  % M95
+  d, r r  d[-. c!-. bes]-. |
+  % M96
+  a' r r r4 r8 |
+  % M97
+  dis,8 r r  dis[-. cis!-. b!]-. |
+  % M89
+  a' r r r4 r8 |
+
+  % Line 6
+  % M90
+  e8 r r e[-. d-. c!]-. |
+  % M91
+  a' r r e[-. d-. cis!]-. |
+  % M92
+  a'[-. e-. d]-. cis[-. a'-. e]-. |
+  % M93
+  d[-. cis-. a']-. e[-. d-. cis]-. |
+  % M94
+  a'[-. bes-. a]-. gis[-. g!-. a]-. |
+  % M95
+  fis![-. f!-. a]-. e[-. ees-. a]-. |
+
 }
 
 
@@ -639,6 +696,15 @@ dynamics = {
   % Line 4
   % M87-M92
   s4.\f s4.\p s2. s2. s2. s2. s2. 
+
+  % Line 5
+  % M93-98
+  s2.\pp s2. s2.\pp s2. s2.\pp s2.
+
+  % Line 6
+  % M99-104
+  \set crescendoSpanner = #'hairpin
+  s2.\pp s2. s2.\< s2. s2.\> s2. 
 
 }
 
