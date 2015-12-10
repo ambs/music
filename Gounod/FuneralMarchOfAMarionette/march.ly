@@ -311,6 +311,41 @@ upper = \relative c''' {
   % M95
   fis![-. f!-. a]-. e[-. ees-. a]-. |
 
+  %%%%%%%%%%%%
+  %% Page 4 %%
+  %%%%%%%%%%%%
+
+  % M105
+  \key f \major 
+  \clef treble
+  r8^\markup{(Return to the House.)} r d \acciaccatura e d[-. cis!-. b!]-. |
+  % M106
+  cis![-. r d]-. <e cis a> r r |
+  % M107
+  r4 d8 \acciaccatura e d[-. cis!-. b!]-. |
+  % M108
+  cis![-. r d]-. <e cis a> r r |
+  % M109-110-(Line 2)-111-112
+  r4
+  <<
+    { \voiceOne f8 a4( g8 | f[) g\rest a] c!4( bes8 |
+      a8)[ bes\rest c] e4( d8 | cis8)[ bes!-. a]-.}
+    \new Voice {
+      \voiceTwo d,8 cis4.( | d8[) s f] e4.( |
+           f8[) s a] gis4.( | a8) s4
+    }
+  >> \oneVoice g!8[-. f-. e]-. |
+  % M113
+  r4 d8 \acciaccatura e d[-. cis-. b!]-. |
+  % M114
+  cis[-. r d]-. <e cis a> r r |
+  % M115-116
+  r4 d8
+  <<
+    { \voiceOne a'4. ~ | a g( }
+    \new Voice { \voiceTwo d8[-. cis-. b!]-. |
+        cis[ r d] e[ r cis] |} 
+  >>
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -549,6 +584,39 @@ lower = \relative c' {
   % M95
   fis![-. f!-. a]-. e[-. ees-. a]-. |
 
+  %%%%%%%%%%%%
+  %% Page 4 %%
+  %%%%%%%%%%%% 
+
+  % Line 1
+  \key f \major
+  % M105
+  << { \voiceOne d8 } \new Voice { \voiceTwo d, } >> \oneVoice
+  r8 r <f' a> r r |
+  % M106
+  <e g a> r r <g a,> r a,( |
+  % M107
+  d,) r r <f' a> r r |
+  % M108
+  <e g a> r r <g a,> r a,( |
+  % M109
+  d,) r r <a' e'>4. ( |
+  % M110
+  <d f>8) r r <c! g'>4. ( |
+
+  % Line 2
+  % M111
+  <f a>8) r r <e b'>4.( |
+  % M112
+  <a cis>8) r r r4 r8 |
+  % M113
+  <d, d,>8-. r r <f a> r r |
+  % M114
+  <e g a> r r <g a,> r a,( |
+  % M115
+  d,) r r <f' a> r r |
+  % M116
+  <e g a> r r <e a a,> r r |
 }
 
 
@@ -704,7 +772,42 @@ dynamics = {
   % Line 6
   % M99-104
   \set crescendoSpanner = #'hairpin
-  s2.\pp s2. s2.\< s2. s2.\> s2. 
+  s2.\pp s2. s2.\< s4. s4.\! s2.\> s2 s8 s8\! 
+
+  %%%%%%%%%%%%
+  %% Page 4 %%
+  %%%%%%%%%%%%  
+  % Line 1
+  % M105-108
+  s2.\p s2. s2. s2.
+  % M109-110
+  \set decrescendoSpanner = #'hairpin
+  \set crescendoSpanner = #'text
+  \set crescendoText = \markup \italic "cresc."
+  s4 s8\> s4. s8\< s4 s8\> s8 s8\!
+
+  % Line 2
+  % M111
+  s4. s8\> s4 
+  % M112
+  \set decrescendoSpanner = #'text
+  \set decrescendoText = \markup \italic "dim."
+  s2.\>
+  % M113-116
+  s2.\p s2. s2. s2.
+
+  % Line 3
+  % M116-117
+  s4. s4. | s2. |
+  \set decrescendoSpanner = #'hairpin
+  % M118
+  s2.\> |  
+  % M119
+  \set decrescendoSpanner = #'text
+  \set decrescendoText = \markup \italic "dim."
+  s2.\> | 
+  % M120-121
+  s2.\p s2. |
 
 }
 
