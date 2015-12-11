@@ -8,18 +8,18 @@
 \header {
   title = "Funeral March of a Marionette"
   composer = "Charles GOUNOD"
-  % copyright = \markup \left-align \center-column {
-  %   \line {
-	 %  	"© 2015 Alberto Simões"}
-  % 	\line {
-  % 		\epsfile #Y #2 #"cc-by-sa.eps" "Licensed under a Creative Commons Attribution-ShareAlike 4.0 International License."
-  % 	}
-  % }
-  % tagline = \markup \left-align \center-column {
+  copyright = \markup \left-align \center-column {
+     \line {
+	   	"© 2015 Alberto Simões"}
+   	\line {
+   		\epsfile #Y #2 #"cc-by-sa.eps" "Licensed under a Creative Commons Attribution-ShareAlike 4.0 International License."
+   	}
+  }
+   tagline = \markup \left-align \center-column {
   %   \line { "Thank you to Michael Gerdau, Abraham Lee and Brian Barker for proofreading."}
-  % 	\line { "Original document from IMSLP (http://imslp.org)." }
-  % 	\line { "Typeset with GNU LilyPond (http://lilypond.org)." }
-  % }
+   	\line { "Original document from IMSLP (http://imslp.org)." }
+   	\line { "Typeset with GNU LilyPond (http://lilypond.org)." }
+   }
 }
 
 miny = \tweak font-size #-2 \etc
@@ -329,7 +329,7 @@ upper = \relative c''' {
   r4
   <<
     { \voiceOne f8 a4( g8 | f[) g\rest a] c!4( bes8 |
-      a8)[ bes\rest c] e4( d8 | cis8)[ bes!-. a]-.}
+      a8)[ bes\rest c] e4( d8 | cis8)[ bes!_. a]_.}
     \new Voice {
       \voiceTwo d,8 cis4.( | d8[) s f] e4.( |
            f8[) s a] gis4.( | a8) s4
@@ -339,13 +339,70 @@ upper = \relative c''' {
   r4 d8 \acciaccatura e d[-. cis-. b!]-. |
   % M114
   cis[-. r d]-. <e cis a> r r |
-  % M115-116
+  % M115-116-(Line 3)-M117
   r4 d8
   <<
-    { \voiceOne a'4. ~ | a g( }
+    { \voiceOne a'4. ~ | a g( | f8[) g\rest a] c!4( bes8 | a8[) g_. f]_.}
     \new Voice { \voiceTwo d8[-. cis-. b!]-. |
-        cis[ r d] e[ r cis] |} 
-  >>
+        cis[ r d] e[ r cis] | d[ s f] e4.( | f8) s4} 
+  >> \oneVoice ees8[-. g-. bes]-. |
+  % M118
+  d,8[-. d'-. cis]-. c[-. b-. bes]-. |
+  % M119
+  a[-. a,-. bes-.] b[-. c-. cis]-. |
+  % M120
+  <d f,>8 r \change Staff = "lower" \voiceOne d,8 \acciaccatura e d[ cis d] |
+  % M121
+  ees[ g\rest a] \acciaccatura bes a[-. gis-. a]-. |
+
+  % Line 4
+  % M122
+  bes8 \change Staff = "upper" \oneVoice r e! \acciaccatura f e[-. dis-. e]-.
+  % M123
+  <a cis, a>8[ r g] <f cis g>[ r e] |
+  % M124
+  <d f,> r \change Staff = "lower" \voiceOne d, \acciaccatura e d[-. cis-. d]-. |
+  % M125
+  ees[ g\rest a] \acciaccatura bes a[-. gis-. a]-. |
+  % M126
+  bes8 \change Staff = "upper" \oneVoice r e! \acciaccatura f e[-. dis-. e]-. |
+  % M127
+  <a cis, a>[ r g] <f cis g>[ r e] |
+
+  % Line 5
+  % M128
+  <d f,>8[ d-. e]-. f[-. g-. gis]-. |
+  % M129-130
+  <<
+    { \voiceOne a2.^^^~|a8}
+    \new Voice { \voiceTwo r4 a,8 
+      << { \voiceOne e'4 f8 | s8} \new Voice { \voiceTwo cis4.( | d8)} >> }
+  >> \voiceOne \clef bass \stemDown d,[-. e-.] f[-. g-. gis]-. | \stemNeutral
+  % M131-132
+    <<
+    { \voiceOne a2.^^^~|a8}
+    \new Voice { \voiceTwo r4 a,8 
+      << { \voiceOne e'4 f8 | s8} \new Voice { \voiceTwo cis4.( | d8)} >> }
+  >> \oneVoice r8 r8 r4 r8 |
+  % M133
+  \change Staff = "lower" \stemUp
+  r d8[^. e^.] f[^. g^. gis]^. |
+
+  % Line 6
+  % M134
+  \change Staff = "upper" \clef treble
+  \change Staff = "lower"
+  a8 \change Staff = "upper" \stemNeutral d[-. e-.] f[-. g-. gis-.] |
+  % M135
+  a[-. a-. bes-.] b[-. c-. cis-.] |
+  % M136
+  d r r r4 r8 |
+  % M137
+  <a a'>8 r r r4 r8 |
+  % M138
+  <d d'>8 r r r4 r8 | 
+  % M139
+  R1*3/4^\fermataMarkup \bar "|."
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -617,6 +674,59 @@ lower = \relative c' {
   d,) r r <f' a> r r |
   % M116
   <e g a> r r <e a a,> r r |
+
+  % Line 3
+  % M117
+  <d f a> r r <c! g' c!>4. ~_( |
+  % M118
+  <f a c>8) r r <g bes> r r |
+  % M119
+  <f a a,>4 r8 r4 r8 |
+  % M120
+  <g e a,>4 r8 r4 r8 |
+  % M121
+  \voiceTwo <d d,>8 e,\rest e\rest <d f> e\rest e\rest |
+  % M122
+  <d fis> e\rest e\rest <d fis ees'> e\rest e\rest |
+
+  % Line 4
+  % M123
+  <e'! g, d>8 \oneVoice r r \stemDown <e g, d> r r | \stemNeutral
+  % M124
+  <e a, d,> r r <a, d,> r r |
+  % M125
+  \voiceTwo <d d,>8 e,\rest e\rest <d f> e\rest e\rest |
+  % M126
+  <d fis> e\rest e\rest <d fis ees'> e\rest e\rest |
+  % M127
+  <e'! g, d>8 \oneVoice r r \stemDown <e g, d> r r | \stemNeutral
+  % M128
+  <e a, d,> r r <a, d,> r r |
+
+  % Line 5
+  % M129
+  <d d,>8 r r r4 r8 |
+  % M130
+  r4 r8 <g a,>4.( |
+  % M131
+  <f d>8) r r r4 r8 |
+  % M132
+  r4 r8 <g, a,>4.( |
+  % M133
+  <f d>8[) d-. e-.] f[-. g-. gis-.] |
+  % M134
+  \voiceTwo
+  a8 g\rest g\rest d' g,\rest g\rest |
+
+  % Line 6
+  % M135-136
+  f' \oneVoice r r d r r | a r r f r r |
+  % M137-138
+  d r r r4 r8 | <a' a,> r r r4 r8 |
+  % M139-140
+  <d, d,> r r r4 r8 | R1*3/4^\fermataMarkup \bar "|."
+
+
 }
 
 
@@ -808,6 +918,19 @@ dynamics = {
   s2.\> | 
   % M120-121
   s2.\p s2. |
+
+  % Line 4
+  % M122-127
+  s2. s2. s2. s2. s2. s2. 
+
+  % Line 5
+  % M128-133
+  s2. s2. s2. s2. s2.\pp s2. 
+
+  % Line 6
+  % M134-139
+  s2. s2. s2. s8 s2\ppp s8 s8 s2\ppp s8 s2.
+
 
 }
 
