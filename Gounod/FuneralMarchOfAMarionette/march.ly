@@ -309,11 +309,12 @@ upper = \relative c''' {
   % M94
   a'[-. bes-. a]-. gis[-. g!-. a]-. |
   % M95
-  fis![-. f!-. a]-. e[-. ees-. a]-. |
+  fis![-. f!-. a]-. e[-. ees-. a]-. \bar "||"
 
   %%%%%%%%%%%%
   %% Page 4 %%
   %%%%%%%%%%%%
+
 
   % M105
   \key f \major 
@@ -424,12 +425,12 @@ lower = \relative c' {
   \clef treble
   <bes bes'>8 r r \clef bass <e e,>8 r r |
   % M2
-  R1*3/4_\fermataMarkup |
+  R1*3/4^\fermataMarkup |
   % M3 - M4
   <d, gis>2. ~ | q |
   % M5 - M6
   << { \voiceOne e2. | e4. e } \\
-     \new Voice { \voiceTwo cis2. ~ | cis4 r8 r4 r8 } >>
+     \new Voice { \voiceTwo cis2. ~ | cis!4 r8 r4 r8 } >>
   % M7 - M8
   << { \voiceOne e,2. | e4. e } \\
      \new Voice { \voiceTwo bes2. ~ | bes } >> \oneVoice
@@ -488,7 +489,7 @@ lower = \relative c' {
     <a a,>8-. r r << {\voiceOne <cis' e>4. | <d f> <b! d> }
       \new Voice {\voiceTwo a4. ~ | a2.} >> 
     % M37-38
-    <a, a,>8-. d\rest d\rest << {\voiceOne <cis' e>4. | <d f> <b! d> }
+    <a, a,>8_. d\rest d\rest << {\voiceOne <cis' e>4. | <d f> <b! d> }
       \new Voice {\voiceTwo a4. ~ | a2.} >> 
     % M39-40
     \oneVoice
@@ -567,7 +568,7 @@ lower = \relative c' {
   % M72
   <a \miny fis \miny d a>4 r8 <ais ais,>4 r8 |
   % M73
-  <b \miny fis \miny d \miny b>4 r8 <c,! c,!>[ <d d,> <e e,>] |
+  <b \miny fis \miny d b>4 r8 <c,! c,!>[ <d d,> <e e,>] |
   % M74
   <fis fis,>8[ r q] <b, b,>8 r r |
 
@@ -619,7 +620,7 @@ lower = \relative c' {
   % M94
   a' r r r4 r8 |
   % M95
-  d, r r  d[-. c!-. bes]-. |
+  d,-. r r  d[-. c!-. bes]-. |
   % M96
   a' r r r4 r8 |
   % M97
@@ -908,7 +909,10 @@ dynamics = {
 
   % Line 3
   % M116-117
-  s4. s4. | s2. |
+  \set crescendoSpanner = #'text  
+  \set crescendoText = \markup \italic "cresc."
+  s4. s4.\< | s2.\! |
+  \set crescendoSpanner = #'hairpin
   \set decrescendoSpanner = #'hairpin
   % M118
   s2.\> |  
