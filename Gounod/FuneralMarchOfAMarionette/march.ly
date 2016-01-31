@@ -377,13 +377,13 @@ upper = \relative c''' {
   <<
     { \voiceOne a2.^^^~|a8}
     \new Voice { \voiceTwo r4 a,8 
-      << { \voiceOne e'4 f8 | s8} \new Voice { \voiceTwo cis4.( | d8)} >> }
+      << { \voiceOne  \once\offset length -2 Stem e'4 f8 | s8} \new Voice { \voiceTwo cis4.( | d8)} >> }
   >> \voiceOne \clef bass \stemDown d,[-. e-.] f[-. g-. gis]-. | \stemNeutral
   % M131-132
     <<
     { \voiceOne a2.^^^~|a8}
     \new Voice { \voiceTwo r4 a,8 
-      << { \voiceOne e'4 f8 | s8} \new Voice { \voiceTwo cis4.( | d8)} >> }
+      << { \voiceOne \once\offset length -1 Stem e'4 f8 | s8} \new Voice { \voiceTwo cis4.( | d8)} >> }
   >> \oneVoice r8 r8 r4 r8 |
   % M133
   \change Staff = "lower" \stemUp
@@ -451,9 +451,9 @@ lower = \relative c' {
 
   % Line 4
   % M20-M21
-  <e g a>8 r r <g a,>[ r a,(] | d,)-. r r <f' a> r r |
+  <e g a>8 r r \stemUp <g a,>[ r a,(] | d,)-. r \stemNeutral r  <f' a> r r |
   % M22-M23
-  <e g a> r r <g a,>[ r a,(] | d,)-. r r <a' e'>4.( |
+  <e g a> r r \stemUp <g a,>[ r a,(] | d,)-. r \stemNeutral r <a' e'>4.( |
   % M24
   <d f>8) r r <c! g'>4.( |
 
@@ -933,7 +933,7 @@ dynamics = {
 
   % Line 6
   % M134-139
-  s2. s2. s2. s8 s2\ppp s8 s8 s2\ppp s8 s2.
+  s2. s2. s2. s16 s2\ppp s16 s8 s16 s2\ppp s16 s8 s2.
 
 
 }
