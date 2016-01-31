@@ -3,6 +3,7 @@
 
 \paper {
    max-systems-per-page = 6
+   page-count = 4
 }
 
 \header {
