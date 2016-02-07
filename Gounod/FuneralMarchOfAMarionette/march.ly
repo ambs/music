@@ -11,13 +11,13 @@
   composer = "Charles GOUNOD"
   copyright = \markup \left-align \center-column {
      \line {
-	   	"© 2015 Alberto Simões"}
+	   	"© 2016 Alberto Simões"}
    	\line {
    		\epsfile #Y #2 #"cc-by-sa.eps" "Licensed under a Creative Commons Attribution-ShareAlike 4.0 International License."
    	}
   }
    tagline = \markup \left-align \center-column {
-  %   \line { "Thank you to Michael Gerdau, Abraham Lee and Brian Barker for proofreading."}
+     \line { "Thank you to Abraham Lee and Brian Barker for proofreading."}
    	\line { "Original document from IMSLP (http://imslp.org)." }
    	\line { "Typeset with GNU LilyPond (http://lilypond.org)." }
    }
@@ -32,7 +32,7 @@ spacerVoice = \new Voice {
 }
 
 upper = \relative c''' {
-  \tempo "Allegro."
+  \tempo "Allegro"
   \clef treble
   \key f \major
   \time 6/8
@@ -44,11 +44,11 @@ upper = \relative c''' {
   % M1
   <bes bes'>8 r r <e, e'>8 r r |
   % M2
-  << \oneVoice R1*3/4^\fermataMarkup^\markup{\center-column{\line {(The Marionette}\line {is broken.)}}} \\
+  << \oneVoice R1*3/4^\fermataMarkup^\markup{\center-column{\line {(The Marionette}\line {is broken)}}} \\
      \spacerVoice >> |
   % M3 - M4
-  \tempo "Adagio."
-  << { \voiceOne e,2.^\markup{(Murmurs of regret from the troupe.)} | e4. e | }
+  \tempo "Adagio"
+  << { \voiceOne e,2.^\markup{(Murmurs of regret from the troupe)} | e4. e | }
      \new Voice { \voiceTwo bes2. ~ | bes } >> \oneVoice
   % M5 - M6
   <a e'>2. ~ | q4 r8 r4 r8 |
@@ -59,7 +59,8 @@ upper = \relative c''' {
   % M9-M11
   <cis, a'>4 r8 r4 r8 | a'4 r8 r4 r8 | a4 r8 r4\fermata r8 |
   % M12
-  r4 \tempo "Allegretto." a8-. \acciaccatura bes8 a8[-. g-. a]-. |
+  \tempo "Allegretto"
+  r4  a8-. \acciaccatura bes8 a8[-. g-. a]-. |
   % M13
   bes8[ r bes] g r r |
   % M14
@@ -71,7 +72,7 @@ upper = \relative c''' {
   % M18
   a r r r4 r8 \clef treble \bar "||"
   % M19
-  r4^\markup{(The procession.)} d8 \acciaccatura e d[-. cis-. b!-.]
+  r4^\markup{(The Procession)} d8 \acciaccatura e d[-. cis-. b!-.]
 
   % Line 4
   % M20-M21
@@ -183,11 +184,17 @@ upper = \relative c''' {
   \repeat volta 2 {
     % M51
     <d' fis a d>4^\markup{(Here many of the principal
-      personages stop for refreshments.)} r8 <a d fis a>4 r8 |
+      personages stop for refreshments)} r8 <a d fis a>4 r8 |
     % M52
     <fis a d fis>4 r8 <e fis cis' e>4 r8 |
-    % M53
-    <d fis b d>4 r8 \acciaccatura e' <d fis,>[ <cis fis,> <b fis>] |
+    % M53 
+
+    <d fis b d>4 r8 
+    << { \voiceOne   \slurDown \acciaccatura e' d[ cis b] | } 
+       \new Voice {\voiceTwo \stemUp 
+        \override Voice.Beam #'transparent = ##t fis8 fis fis} >>
+        \oneVoice
+%    \acciaccatura e' <d fis,>[ <cis fis,> <b fis>] |
     % M54
     <g b g'>8[ r <g b fis'>] <g cis e>[ r <a a'>] |
     % M55
@@ -197,9 +204,12 @@ upper = \relative c''' {
 
     % Line 5
     % M57
-    <d fis b d>4 r8 \acciaccatura e'8 <d fis,>[ <cis fis,> <b fis>] |
+    <d fis b d>4 r8 << { \voiceOne   \slurDown \acciaccatura e' d[ cis b] | } 
+       \new Voice {\voiceTwo \stemUp 
+        \override Voice.Beam #'transparent = ##t fis8 fis fis} >>
+        \oneVoice
     % M58
-    <d ais e>[ r <cis ais e>] <b d,> r r 
+    <d' ais e>[ r <cis ais e>] <b d,> r r 
   }
   % M59
   <d, g b d>4 r8 <b d g b>4 r8 |
@@ -230,7 +240,10 @@ upper = \relative c''' {
 
   % Lne 1
   % M69
-  <d fis b d>4 r8 \acciaccatura e' <d fis,>8[ <cis fis,> <b fis>] |
+  <d fis b d>4 r8 << { \voiceOne   \slurDown \acciaccatura e' d[ cis b] | } 
+       \new Voice {\voiceTwo \stemUp 
+        \override Voice.Beam #'transparent = ##t fis8 fis fis} >>
+        \oneVoice
   % M70
   <g b g'>8[ r <g b fis'>] <g cis e>8[ r <a a'>] |
   % M71
@@ -266,7 +279,10 @@ upper = \relative c''' {
   % M84
   <fis d a fis>4 r8 <e cis fis, e>4 r8 |
   % M85
-  <d b fis d>4 r8 \acciaccatura e <d fis,>[ <cis fis,> <b fis>] |
+  <d b fis d>4 r8 << { \voiceOne   \slurDown \acciaccatura e d[ cis b] | } 
+       \new Voice {\voiceTwo \stemUp 
+        \override Voice.Beam #'transparent = ##t fis8 fis fis} >>
+        \oneVoice
   % M86
   <g b g'>[ r <g b fis'>] <g cis e>[ r <a a'>] |
 
@@ -276,9 +292,16 @@ upper = \relative c''' {
   % M88
   <fis a d fis>4 r8 <e fis cis' e>4 r8 |
   % M89
-  <d fis b d>4 r8 \acciaccatura e' <d fis,>8[ <cis fis,> <b fis>] |
+  <d fis b d>4 r8 << { \voiceOne   \slurDown \acciaccatura e' d[ cis b] | } 
+       \new Voice {\voiceTwo \stemUp 
+        \override Voice.Beam #'transparent = ##t fis8 fis fis} >>
+        \oneVoice
   % M90
-  <g b g'> r r \acciaccatura a' <g b,>[ <fis b,> <e b>] |
+  <g b g'> r r 
+   << { \voiceOne \slurDown \acciaccatura a' g[ fis e] | \slurNeutral}
+      \new Voice { \voiceTwo \stemUp 
+        \override Voice.Beam #'transparent = ##t b b b }>> \oneVoice
+  %% \acciaccatura a' <g b,>[ <fis b,> <e b>] |
   % M91
   <cis e cis'>8 r r \acciaccatura d' cis8[ b a] |
   % M92
@@ -320,7 +343,7 @@ upper = \relative c''' {
   % M105
   \key f \major 
   \clef treble
-  r8^\markup{(Return to the House.)} r d \acciaccatura e d[-. cis!-. b!]-. |
+  r8^\markup{(Return to the House)} r d \acciaccatura e d[-. cis!-. b!]-. |
   % M106
   cis![-. r d]-. <e cis a> r r |
   % M107
@@ -884,7 +907,7 @@ dynamics = {
   % Line 6
   % M99-104
   \set crescendoSpanner = #'hairpin
-  s2.\pp s2. s2.\< s4. s4.\! s2.\> s2 s8 s8\! 
+  s2.\pp s2. s2.\< s2 s4 s2.\> s2 s8 s8\! 
 
   %%%%%%%%%%%%
   %% Page 4 %%
