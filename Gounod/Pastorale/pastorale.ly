@@ -65,6 +65,35 @@ upper = \relative c' {
   % M27-28
   <e c'>2.^^~ | <e c'>8 r r r4 r8 |
 
+  % Page 2
+  % M29-32
+  <g, d'>2.^^ | q^^ | q^^ | q^^ |
+  % M33-35
+  q8 r \clef treble d''8 e4 g8 | fis4 e8 d[ e fis] | g4 a8 b4 g8 |
+
+  % M36-38
+  a4 b8 c4 a8 | d4 d8 e4 g8 | fis4 e8 d[ e fis] |
+  % M39-41
+  g4 a8 b4 g8 | a4 b8 c4 a8 | d4 g,,8 a[ g fis] |
+
+  % M42-44
+  e4. fis | d8 r g' a[ g fis] | e4. fis4. |
+  % M45-48
+  d8 r <b g> <a c>4 <b d>8 | <c e>4.^^ <a fis'>^^ |
+  <b d>^^ <g e'>^^ | <a c>4 <g b>8 <fis a>4 <a c>8 |
+
+  % M49-50
+  <g b>8 r <fis' a> <g b>[ <a c> <b d>] | <c e>4 <b d>8 <c e>4 <a fis'>8 |
+  % M51-52
+  <b d>4 <a c>8 <b d>4 <g e'>8 | <a c>4 <g b>8 <a c>4 <fis d'>8 |
+  % M53-55
+  <g b>4. <a c>8[ <g b> <fis a>] | <e g>4. <fis a> | <g b>4. <a, c>8[ <g b> <fis a>] |
+
+  % M56-57
+  <e g>4. <fis a> | <g b>2. |
+  % M58-64
+  <d' fis d'>^> | <a e' a>^> | <d fis e'>^> | <a e' a>^> | <d fis d'>^> | <a e' a>^> | <d fis d'>^> |
+
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -93,6 +122,47 @@ lower = \relative c {
   <c g'>2.^> << { \voiceOne g'4. r4 r8 } \new Voice { \voiceTwo c,2. } >> \oneVoice
   % M27-28
   c4._> g_> | c,8 r r r4 r8 |
+
+  % Page 2
+  % M29-32
+  <g'' b d>2.^^ <g a c d>^^ <g b d>^^ <g a c d>^^ |
+  % M33-35
+  <g b d>^^ <g a c d>^^ <g b d>^^ |
+
+  % M36-38
+  <g a c d>^^ | <d g,>^^ | <g a c d>^^ |
+  % M39-41
+  <g b d>^^ <g a c d>^^ | <d g,>^^ |
+
+  % M42-44
+  <g a c d>^^ <g b d>^^ <g a c d>^^ |
+  % M45-48
+  <d g,>^^ <g a c d>^^ <g b d>^^ <g a c d>^^ |
+
+  % M49-55
+  <d g,>^^ <g a c d>^^ <g b d>^^ <g a c d>^^ <d g,>^^ <g a c d>^^ <g b d>^^ |
+
+  % M56-57
+  <g a c d>^^ <d g,>^^ |
+  % M58
+  << { \voiceOne <g a c d>2.^> } 
+    \new Voice { \voiceTwo r4 r8 g,4._> } >> \oneVoice
+  % M59
+  <g' a c e>2.^>
+  % M60
+  << { \voiceOne <g a c d>2.^> } 
+    \new Voice { \voiceTwo r4 r8 g,4._> } >> \oneVoice
+  % M61
+  <g' a c e>2.^>
+  % M62
+  << { \voiceOne <g a c d>2.^> } 
+    \new Voice { \voiceTwo r4 r8 g,4._> } >> \oneVoice
+  % M63
+  <g' a c e>2.^>
+  % M64
+  << { \voiceOne <g a c d>2.^> } 
+    \new Voice { \voiceTwo r4 r8 g,4._> } >> \oneVoice
+
 }
 
 
@@ -116,6 +186,22 @@ dynamics = {
   s2.\< s2. 
   % M21-M28
   s2.\do s2. s2.\f \repeat unfold 5 { s2. }
+
+  % Page 2
+  % M29-35
+  s2.\f s2. s2. s2. s4 s2\f s2. s2. 
+
+  % M36-41
+  s2. s2. s2. s2. s2. s2.
+
+  % M42-48
+  s2. s2. s2. s2. s2. s2. s2.
+
+  % M49-55
+  s2. s2. s2. s2. s2. s2. s2.
+
+  % M56-64
+  s2. s2. s2.\f s2. s2. s2. s2. s2. s2.
 }
 
 \score {
@@ -132,6 +218,6 @@ dynamics = {
     \set Score.doubleRepeatType = #":|.|:"
   }
   \midi { 
-    \tempo 4 = 100
+    \tempo 4 = 120
   }
 }
