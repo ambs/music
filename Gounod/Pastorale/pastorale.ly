@@ -94,7 +94,23 @@ upper = \relative c' {
   % M58-64
   <d' fis d'>^> | <a e' a>^> | <d fis e'>^> | <a e' a>^> | <d fis d'>^> | <a e' a>^> | <d fis d'>^> |
 
+
+  % Pge 3
+  % M65-66
+  <g, b g'>2. ~ | q4. ~ q8 r r |
+  % M67-68
+  <e c>4.^^ <e g> | <d b>^^ <d f> |
+  % M69-71
+  <a c>4^^ <c e>8 <c e>[ <d b> <c a>] | <b d>4 <c e>8 <d f>4 <d b>8 | <c e>4. ^^ <e g> |
+
+  % M72-78
+  <b d>4.^^ <d f>|<c a>4^^ <c e>8 <c e>[ <b d> <a c>] |
+  <b d>4^^ <c e>8 <d f>4 <e g>8 | <f a>4.^^ <b d,> |
+  <a f>4.^^ <b d,> | <a f>4^^ <b d,>8 <g e>4 <a c,>8 | 
+  <f d>4^^ <g b,>8 <e c>[ <d f> <e g>] |
+
 }
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%
@@ -163,6 +179,14 @@ lower = \relative c {
   << { \voiceOne <g a c d>2.^> } 
     \new Voice { \voiceTwo r4 r8 g,4._> } >> \oneVoice
 
+  %% Page 3
+
+  % M65-66
+  <g' d' f!>4. <f f'> | <e e'> <d d'> |
+  % M67-71
+  <c g'>2.^> | q^> | q^> | q^> | q^> |
+
+  q^> | q^> | q^> | q^> | q^> | q^> | q^> | 
 }
 
 
@@ -202,6 +226,13 @@ dynamics = {
 
   % M56-64
   s2. s2. s2.\f s2. s2. s2. s2. s2. s2.
+
+  % M65-71
+  \set decrescendoSpanner = #'text
+  \set decrescendoText = \markup \italic "dim."
+  s2. s2.\> s2.\p s2. s2. s2. s2.
+
+  s2. s2. s2. s2. s2. s2. s2. 
 }
 
 \score {
