@@ -109,6 +109,23 @@ upper = \relative c' {
   <a f>4.^^ <b d,> | <a f>4^^ <b d,>8 <g e>4 <a c,>8 | 
   <f d>4^^ <g b,>8 <e c>[ <d f> <e g>] |
 
+  % M79-85
+  <f a>4.^^ <b d,> | <f a>^^ <b d,> | <f a>4^^ <b d,>8 <e, g>4 <a c,>8 |
+  <d, f>4^^ <e g>8 <c e>8[ <d f> <e g>] |
+  << { \voiceOne <f a>2. ^^ | <e c'>^^ | <d b'>^^ } 
+    \new Voice { \voiceTwo
+      r4 r8 g4._> | s2. | r4 r8 g4._> |
+      }>>\oneVoice
+
+  % M89-95
+  <f g>2. | <e c'>4.^^ g^> | e^> g^> | <f d'>4. <g g'> |
+  <f d'>4. a8[ b c] | <d f,>4. <g g,> | <d f,> a8[ b c] |
+
+  % M96-100
+  <d f,>4. g, | <g b g'>2. | <g c e> | <e c g> | <e c g> |
+  \change Staff = "lower" \stemUp \tieUp
+  <e, c>2. | q\fermata ~ | q8 \change Staff="upper" r8 r8 r4 r8 \bar "|."
+
 }
 
 
@@ -186,7 +203,22 @@ lower = \relative c {
   % M67-71
   <c g'>2.^> | q^> | q^> | q^> | q^> |
 
+  % M72-78
   q^> | q^> | q^> | q^> | q^> | q^> | q^> | 
+
+  % M79-85
+  q^> | q^> | q^> | q^> | q^> | 
+  << { \voiceOne g'4.^> g^> } \new Voice { \voiceTwo c,2. } >> \oneVoice
+  <g' c,>2.^>
+
+  % M86-92
+  << { \voiceOne g4.^> g^> } \new Voice { \voiceTwo c,2. } >> \oneVoice
+  <c c'>4. g'^> | c^> g^> | <b g c,>4. <a e'> | <b g c,>4. <a e'>4. |
+  <c, g' b> <a' e'> | <b g c,> <a e'> |
+
+  % M93-100
+  <b g c,>4. g | <d' f> g, | <c c,> g | <c, c,>  g | <c c,>2. | \stemDown <g c,> |
+  \tieDown q2._\fermata ~ | q8 r r r4 r8 \bar "|."
 }
 
 
@@ -232,7 +264,17 @@ dynamics = {
   \set decrescendoText = \markup \italic "dim."
   s2. s2.\> s2.\p s2. s2. s2. s2.
 
+  % M72-78
   s2. s2. s2. s2. s2. s2. s2. 
+
+  % M79-85
+  \set crescendoText = \markup \italic "cres"
+  s4. s4.\< s2. 
+  \set crescendoText = \markup \italic "cen"
+  s4 s2\< s2. s4\do s2 s2. s2.\f
+
+  % M86-92
+  s2. s2.\f s2. s2.\ff s2. s2. s2.
 }
 
 \score {
