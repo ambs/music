@@ -105,7 +105,53 @@ upper = \relative c' {
     g'8[( a b! c d f)] | e[( g c a g e)] |
     % M72-73
     d8[( e fis g a b!)] | a[( g f! d a b!)] |
+
+    % M74-75
+    <c e, c>8 r <g e c>2 | <e g e'>8 r <g e c>2 |
+    % M76-77
+    <e c c'>8 r <e g>2 | <e g e'>8 r <g e c>2 |
+    % M78
+    g8[( a b! c d f)] |
+
+
+    % M79-80
+    e[( g c a g e)] | d[( f a, c b! g)] 
   }
+  \alternative {
+    % M81-82
+    { c4 r r }
+    { c r \stemUp  c8[^\( d]}
+  }
+
+  %% PAGE 4
+  % M83-M88
+  <<
+    { 
+      % M83-M88
+      \voiceOne  e4 g bes | a f d | e f8[ e d e] | c4 d f | e g bes| a f d |
+      % M89-94
+      e d8[ f e c] | f4\) r c8[\( d] | e4 g bes | a f d | e f8[ e d e] | c4 d f |
+      % M95-100
+      e4 g bes | a f d | e d8[ f e c] | f4\) r c8[\( d] | ees4 c a | bes d g |
+      % M101-106
+      f4 ees8[ d c ees] | d4 bes' g | ees c a | bes d g | a8[ g f e! d e] | f4\) r c8[\( d] |
+      % M107-112
+      ees4 c a | bes d g | f ees8[ d c ees] | d4 bes' g | ees c a | bes d g |
+    } 
+    \new Voice {
+      % M83-M88
+      \voiceTwo bes,2. | a | bes | a | bes | a |
+      % M89-94
+      bes | a | bes | a | bes | a |
+      % M95-100
+      bes | a | bes | a | f | g |
+      % M101-106
+      f | g | f | g | bes| a |
+      % M107-112
+      f g f g f g |
+    }
+  >> \voiceOne
+
 
 }
 
@@ -198,9 +244,40 @@ lower = \relative c {
     % M70-71
     <g' b! d f>8 r q r r4 | <g e c c'>8 r q r r4 |
     % M72-73
-    <a c d,>8 r q r r4 | << { \voiceOne d g f } \new Voice { \voiceTwo <b,! g>2. } >>
+    <a c d,>8 r q r r4 | << { \voiceOne d g f } \new Voice { \voiceTwo <b,! g>2. } >> \oneVoice
+
+    % M74-75
+    <c, c,>2 <b! b,!>8[ <a a,>] | <g g,>2 <c c,>8[ <d d,>] |
+    % M76-77
+    <e e,>4 <c' c,> <a a,> | <g g,> <e e,> <c c,> |
+    % M78
+    <g' b! d f>8 r q r r4 |
+
+    % M79-80
+    <c g e c>8 r q r r4 | <f b,! g>8 r <f c g> r <f d g,> r 
+  }
+  % 81-82
+  \alternative {
+    { | <e c>4 r r }
+    { | <e c>4 r r }
   }
 
+  % M83-88
+  <f, c' g'>2. <f c' f> <f c' g'> <f c' f> <f c' g'> <f c' f> |
+
+  % M89-94
+  <f c' g'> <f c' f> <f c' g'> <f c' f> <f c' g'> <f c' f> |
+
+  % M95-100
+  <f c' g'> <f c' f> <f c' g'> <f c' f> <f a c> <f bes d> |
+
+  % M101-106
+  <f a c> <f bes d> <f a c> <f bes d> 
+  << { \voiceOne e'!4 f g | f2. }
+    \new Voice { \voiceTwo <c f,>2. | q }
+    >> \oneVoice
+  % M107-112
+  <f, a c> | <f bes d> | <f a c> | <f bes d> | <f a c> | <f bes d> |
 
 }
 
@@ -230,6 +307,15 @@ dynamics = {
   s2. s2. s2. s2. s2. |
   s2. s2.\f_\markup{\italic{tre corde}} s2. s2. s2. |
   s2.\p s2. s2. s2. |
+  s2. s2. s2. s2. s2.
+  s2. s2. s2. s2 s4\f
+
+  %% page 4
+  s2. s2. s2. s2. s2. s2. 
+  s2. s2 s4\pp_\markup{\italic{una corda}} s2. s2. s2. s2.
+  s2. s2. s2. s2 s4\f_\markup{\italic{tre corde}} s2. s2. 
+  s2. s2. s2. s2. s2. s2\> s4\pp_\markup{\italic{una corda}}
+  s2. s2. s2. s2. s2. s2. 
 }
 
 \score {
