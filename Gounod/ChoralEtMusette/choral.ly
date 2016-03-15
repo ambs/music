@@ -71,6 +71,7 @@ upper = \relative c' {
   \tieUp  <c f>2^\fermata  ~ q4 r4
 
   %% PAGE 2
+  \break
 
   \time 3/4
   \repeat volta 2 {
@@ -80,15 +81,30 @@ upper = \relative c' {
          c4 d f | e g bes | a f d | e d8[ f e c] | f4\) r4 }
          \new Voice { \voiceTwo a,2. | bes | a | bes | a | bes |
            a | bes | a | bes | a2} >> 
-    %%% M41-42 - 
+    %%% M41-42 - 54... 59
     << { \voiceOne c8[\( d] | e4 g bes | a f d | e f8[ e d e] | c4 d f|e g bes|a f d|
          e d8[ f e c] | f4\) r4 c8[\( d] | ees4 c a | bes d g | f ees8[ d c ees] | d4 bes' g | ees c a |
          bes d g a8[ g f e! d e] | f4\) r c8[\( d] | ees4 c a | bes d g | 
-         % tbc
+         % page 3
+         % M60-64...65
+         f4 ees8[ d c ees] | d4 bes' g | ees c a | bes d g | a8[ g f e! d e] | f4\)
        }  
       \new Voice { \voiceTwo s4 | bes,2. | a | bes | a | bes | a | bes | a f g f g f g bes a f g 
         % tbc
-        } >>
+        % M60-64..65
+        f2.  g f g g | a4
+        } >> \oneVoice
+    r4 r |
+
+    %M66-67
+    <c, e c'>8 r <c e g>2 | <e g e'>8 r <c e g>2 |
+    % M68-69
+    <c e c'>8 r <e g>2 | <e g e'>8 r <c e g>2 |
+
+    % M70-71
+    g'8[( a b! c d f)] | e[( g c a g e)] |
+    % M72-73
+    d8[( e fis g a b!)] | a[( g f! d a b!)] |
   }
 
 }
@@ -166,7 +182,25 @@ lower = \relative c {
     <f bes d> 
     << { \voiceOne e'!4 f g } \new Voice {\voiceTwo <c, f,>2.} >> \oneVoice
     <f, c' f>2. <f a c> <f bes d>
+
+    %% Pge 3
+    %% M60-64
+    <f a c>2. <f bes d> <f a c> <f bes d>
+    << { \voiceOne e'!4 f g | f } \new Voice {\voiceTwo <c, f,>2. <f c'>4} >> \oneVoice
+    % M65...
+    r4 r4 |
+
+    % M66-67
+    <c c,>2 <b! b,!>8[ <a a,>] | <g g,>2 <c c,>8[ <d d,>] |
+    % M68-69
+    <e e,>4 <c' c,> <a a,> | <g g,> <e e,> <c c,> |
+
+    % M70-71
+    <g' b! d f>8 r q r r4 | <g e c c'>8 r q r r4 |
+    % M72-73
+    <a c d,>8 r q r r4 | << { \voiceOne d g f } \new Voice { \voiceTwo <b,! g>2. } >>
   }
+
 
 }
 
@@ -191,6 +225,11 @@ dynamics = {
   s2. s2. s2. s2. s2. s2.
   s2 s4\f_\markup{\italic{tre corde}} s2. s2. s2. s2. s2.
   s2. s2. s2 s4\pp_\markup{\italic{una corda}} s2. s2.
+
+  %% page 3
+  s2. s2. s2. s2. s2. |
+  s2. s2.\f_\markup{\italic{tre corde}} s2. s2. s2. |
+  s2.\p s2. s2. s2. |
 }
 
 \score {
