@@ -1,10 +1,10 @@
 
 \version "2.18.2"
 
-%\paper {
-%   max-systems-per-page = 6
+\paper {
+   max-systems-per-page = 6
 %   page-count = 4
-%}
+}
 
 \header {
   title = "Choral et Musette"
@@ -137,6 +137,10 @@ upper = \relative c' {
       f4 ees8[ d c ees] | d4 bes' g | ees c a | bes d g | a8[ g f e! d e] | f4\) r c8[\( d] |
       % M107-112
       ees4 c a | bes d g | f ees8[ d c ees] | d4 bes' g | ees c a | bes d g |
+
+      %% Pge 5
+      % M113-114
+      a8[ g f e! d e] | f4\)
     } 
     \new Voice {
       % M83-M88
@@ -149,8 +153,46 @@ upper = \relative c' {
       f | g | f | g | bes| a |
       % M107-112
       f g f g f g |
+
+      %% Pge 5
+      % M113-114
+      bes2. ( | a4)
     }
-  >> \voiceOne
+  >> \oneVoice r4 r
+
+  % M115-118
+  <f a c f>2. | <f bes d> | <e g c> | <f a> |
+  % M119-120
+  g8[( b! d f e d)] | c[( d e f g a)] |
+
+  %% M121-122
+  b8[( g e c d bes] |  a4) r r |
+  % M123-126
+  <f a c f>2. <f bes d> <ees g c> <fis a> |
+  % M127
+  g8[( a bes c e d)]
+
+
+  % M128-129
+  c[( c' a f c a)] | bes[( c d bes g e)] |
+  % M130
+  << {\voiceOne f4 b\rest b\rest } \new Voice { \voiceTwo f2. } >> \oneVoice
+  % M131-132
+  f8[( g a bes c d)] | ees[( f g a bes c)] |
+
+
+  % M133-134
+  \afterGrace e,!2.\startTrillSpan { d16[\stopTrillSpan e]} | f4 r r |
+  % M135-136
+  f,8[( g a bes c d)] | ees[( f g a bes c)] |
+  % M138-138
+  \afterGrace e,!2.\startTrillSpan { d16[\stopTrillSpan e]} | f4 r r |
+  % 139
+  <f c a>2. |
+
+
+  % 140-148
+  <f, a d f>2. | q | <f bes d f> ~ | q | <g bes e g> ~ | q | <a c f a>~ | q ~| q4 r r \bar "|."
 
 
 }
@@ -279,6 +321,41 @@ lower = \relative c {
   % M107-112
   <f, a c> | <f bes d> | <f a c> | <f bes d> | <f a c> | <f bes d> |
 
+
+  %% Page 5
+  % M113
+  << {\voiceOne e'!4 f g } \new Voice { \voiceTwo <c, f,>2 } >> \oneVoice
+  % M114
+  <c f f,>4 r r | 
+  % M115-118
+  <f, f,>2. | <bes bes,> | <c c,> | <d d,> |
+  % M119-120
+  <g, g,>8 r <g b d f>2 | <c, c,>8 r <a' c f>2 |
+
+
+  % M121-122
+  <c, c,>8 r <g' c e> r q r |
+  <f c' f>[ <d d'> <c c'> <bes bes'> <a a'> <g g'>] |
+  % M123-126
+  <f f'>2. | <bes bes'> | <c c'> | <d d'> |
+  % M127
+  <g, g,>8 r <g' bes d>2
+
+  % M128-129
+  <c, c,>8 r <a' c f>2 | c,8 r <g' bes e> r <c, bes' c> r |
+  % M130-132
+  <f a c>2. | <f bes d> | <f a c> |
+
+  % M133-139
+  <f g bes c>|<f a c>|<f bes d> | <f a c>|<f g bes c>|<f a c>4 r r |<f f'>2.|
+
+  % M140-145
+  <d d'> | <c c'>|<bes bes'>~|q | <g g'>~|q |
+  % M146-148
+  \stemDown
+  \repeat tremolo 12 { <f c'>32 f' }
+  \repeat tremolo 12 { <f, c'>32 f'( } |
+    <f c f,>4)  r  r \bar "|."
 }
 
 
@@ -316,6 +393,12 @@ dynamics = {
   s2. s2. s2. s2 s4\f_\markup{\italic{tre corde}} s2. s2. 
   s2. s2. s2. s2. s2. s2\> s4\pp_\markup{\italic{una corda}}
   s2. s2. s2. s2. s2. s2. 
+
+  %% Page 5
+  s2. s2. s2.\f s2. s2. s2. s2.\p s2. 
+  s2. s2.\< s2.\f s2. s2. s2. s2.\p
+  s2. s2. s2. s2.\f s2.
+  s2. s2. s2.\pp_\markup{\italic una corda} s2. s2. s2. s2.\ff_\markup{\italic{tre corde}}
 }
 
 \score {
