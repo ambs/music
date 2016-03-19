@@ -31,6 +31,25 @@ upperA = \relative c'' {
   % M1-M5
   \partial 8 * 3 d8[ ees e!] |
   \voiceOne f4 b,! ees4. d8 | d4( c) b8\rest d,8[ ees e!] | f4 b,! ees4. d8 | d4( c) b'8\rest\fermata d,8[ ees e!] 
+
+  \repeat volta 2 {
+
+    % M6-M9
+    f4 g a bes | bes a ~ a8[ bes b c] | f,4 a bes c | c bes ~ bes8[ c cis d] |
+
+    % M10-13
+    g,4 b c d | f ees d c | bes! a8[ g] d'4 a | c8[ bes a g] f![ d ees e!] |
+
+    % M14-18
+    f4 g a bes| bes a ~ a8[ bes b c] | f,4 a bes c | c bes ~ bes8[ c cis d] | g,4 b! c d |
+
+    % M19-22
+    f ees d c | bes! a8[ bes] c[ d ees a,]
+  }
+  \alternative {
+    { c2( bes8) d,8[ ees e] }
+    { c'2( bes8) f8[ g gis] }
+  }
 }
 
 upperB = \relative c'' {
@@ -40,6 +59,29 @@ upperB = \relative c'' {
   \voiceTwo
   % M1-M5
   \partial 8 * 3 s4. | s2 gis2 | a s s gis, | a s |
+
+  \repeat volta 2 {
+
+    % M6-M9
+    r8 d4 d <d f> q8 | r <ees f>4 q q q8 | r8 <ees c>4 q q q8 | r8 d4 d <d f> q8 |
+
+    % M10-13
+    r8 <b! f'>8[ r <b f' g>] r <c f g>[ r <d f g>] |
+    r <f g>[ r <ees g>] r <f g>[ r g] |
+    r8 d4 d8 r <d fis>4 q8 |
+    r8 d4 d8 f8 s4. |
+
+    % M14-18
+    r8 d4 d <d f> q8 | r <ees f>4 q q q8|r <ees c>4 q q q8 | r8 d4 d <d f> q8 |
+    r8 <b! f'>8[ r <b f' g>] r <c f g>[ r <d f g>] |
+
+    % M19-22
+    r8 <f g>[ r <ees g>] r <f g>[ r g] | r f4 f8 r f4 f8 
+  }
+  \alternative {
+    { r8 <ees f>4 q8 <d f> s4. }
+    { r8 <ees f>4 q8 <d f> s4. }
+  }
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -56,6 +98,25 @@ lowerA = \relative c' {
   % M1-M5
   \partial 8 * 3 s4. | s1 | s1 | s1 | s1 |
 
+  \repeat volta 2 {
+
+    % M6-M9
+    s1 s1 s1 s1
+
+    % M10-13
+    \voiceTwo
+    g,2 a4 b! | c c d ees | s1 | s1 |
+
+    % M14-18
+    s1 | s1 | s1 | s1 | g,2 a4 b! |
+
+    % M19-22
+    c4 c d ees | f2 f |
+  }
+  \alternative {
+    {s1} {s1}
+  }
+
 }
 lowerB = \relative c' {
   \clef bass
@@ -65,6 +126,28 @@ lowerB = \relative c' {
   \oneVoice \stemDown
   \partial 8 * 3 s4. | r2 f | <ees f,> r | r f, | <ees f,> r8\fermata r8 r4
 
+  \repeat volta 2 {
+
+    % M6-M9
+    \stemNeutral
+    bes8 <f' bes>4 q8 f, <f' bes>4 q8 | c8 f4 f8 f, f'4 f8 | a,8 f'4 f8 f,8 f'4 f8 | 
+    bes,8 f'4 f8 aes,8 f'4 f8 |
+
+    % M10-13
+    g,8 g'4 g8 a,8 g'4 g8 ~ | \stemUp g[ <g b!>] r <g c> r <g b> r <g c> | \stemNeutral
+    d <g bes!>4 q8 d,8 <d' a' c>4 q8 | g,8 <d' g bes>4 q8 a[ <f' c'>] r4 |
+
+    % M14-18
+    bes,8 <f' bes>4 q8 f,8 <f' bes>4 q8 | c f4 f8 f, f'4 f8 |
+    a,8 f'4 f8 f, f'4 f8 | bes, f'4 f8 aes, f'4 f8 | g,8 g'4 g8 a, g'4 g8 ~ |
+
+    % M19-22
+    \stemUp g8[ <g b!>] r <g c> r <g b> r <g c> | f <bes d>4 q8 f <a ees'>4 q8  \stemNeutral
+  }
+  \alternative {
+    { f,8 f'[( a f)] <bes, bes'> r r4 }
+    { f8 f'[( a f)] <bes, bes'> r r4 }
+  }
 }
 
 
@@ -72,10 +155,29 @@ lowerB = \relative c' {
 %%%% DYNAMICS
 do = #(make-dynamic-script (markup #:normal-text #:italic "do"))
 dynamics = {
+  % M1-M5
   \set decrescendoSpanner = #'text
   \set decrescendoText = \markup \italic "dim."
   s4.\f s4. s8\f s2 s2 s8 s4.\f s2 s8 s4.\> s2\p s8 s4.\p
 
+  % M6-M9
+  s1\p s1 s1 s1
+
+  % M10-13
+  \set crescendoSpanner = #'text
+  \set crescendoText = \markup \italic "cres"
+  s4 s2.\< 
+  \set crescendoText = \markup \italic "cen"
+  s1\< s4\do s2. s4 s4\> s4\! s4
+
+  % M14-18
+  s1\p s1 s1 s1
+  \set crescendoText = \markup \italic "cres"
+  s4 s2.\<
+
+  % M19-22
+  \set crescendoText = \markup \italic "cen"
+  s8 s2.\< s8 s2\do s4\> s4\! s1\p s1\p
 }
 
 \score {
