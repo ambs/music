@@ -50,6 +50,18 @@ upperA = \relative c'' {
     { c2( bes8) d,8[ ees e] }
     { c'2( bes8) f8[ g gis] }
   }
+
+  \repeat volta 2 {
+    % M23-25
+    a4 f' e! d | d cis ~ cis8[ d dis e!] | a,4 f' e! d8[ e] |
+
+    % M26-28
+    d8[ b!] cis4 ~ cis8[ d dis e!] | a,4 f' e! d | c! c c d |
+
+    % M29-31
+    g,4 a8[ bes] c4 g | a8[ c b! bes] a[ e! f g] | a4 f' e! d |
+
+  }
 }
 
 upperB = \relative c'' {
@@ -81,6 +93,17 @@ upperB = \relative c'' {
   \alternative {
     { r8 <ees f>4 q8 <d f> s4. }
     { r8 <ees f>4 q8 <d f> s4. }
+  }
+
+  \repeat volta 2 {
+    % M23-25
+    r8 f4 <f a> q q8 | r8 <g a>4 q q q8| r f4 <f a>4 q q8 |
+
+    % M26-28
+    r8 <g a>4 q q q8 | r f4 <f a>8 r <f bes>4 q8 | r8 <g bes>[ r <e! gis!>] r <f a>[ r <d f g!>] |
+
+    % M29-31
+    r8 <c f>4 q8 r <c e!>4 q8 | r <c f>4 q8 r8 cis4 cis8 | r8 f4 <f a>4 q q8 |
   }
 }
 
@@ -117,6 +140,15 @@ lowerA = \relative c' {
     {s1} {s1}
   }
 
+  \repeat volta 2 {
+    % M23-25
+    s1 s1 s1
+    % M26-28
+    s1 d2 d e8[ <bes' c>] c,[ <bes' c>] f[ <a c>] bes,[ g'] |
+    % M29-31
+    c,2 c | s1 | s1 |
+  }
+
 }
 lowerB = \relative c' {
   \clef bass
@@ -148,6 +180,19 @@ lowerB = \relative c' {
     { f,8 f'[( a f)] <bes, bes'> r r4 }
     { f8 f'[( a f)] <bes, bes'> r r4 }
   }
+
+  \repeat volta 2 {
+    % M23-25
+    d8 <a' d>4 q8 a, <a' d>4 q8 | e! <a e'!>4 q8 a, <a' cis>4 q8 | d, <a' d>4 q8 a, <a' d>4 q8 |
+
+    % M26-28
+    e!8 <a e'!>4 q8 a, <a' cis>4 q8 |
+    \stemUp
+    d, <a' d>4 q8 d, <bes' d>4 q8 | e,!4 c f bes, |
+    % M29-31
+    c8 <g' bes>4 q8 c, <g' bes>4 q8|\stemNeutral f8 a4 a8 a, <g' a>4 q8 |
+    d <a' d>4 q8 a, <a' d>4 q8 |
+  }
 }
 
 
@@ -178,6 +223,18 @@ dynamics = {
   % M19-22
   \set crescendoText = \markup \italic "cen"
   s8 s2.\< s8 s2\do s4\> s4\! s1\p s1\p
+
+  % M23-25
+  s1\p s1 
+  \set crescendoText = \markup \italic "cres"
+  s4\< s2
+  \set crescendoText = \markup \italic "cen"
+  s4\<
+
+  % M26-28
+  s4\do s2. s1\f s1
+  % M29-31
+  s1 s2 s4\> s4\! s1\p
 }
 
 \score {
