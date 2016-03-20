@@ -61,7 +61,23 @@ upperA = \relative c'' {
     % M29-31
     g,4 a8[ bes] c4 g | a8[ c b! bes] a[ e! f g] | a4 f' e! d |
 
+    % M32-34
+    d4 cis ~ cis8[ d dis e!] | a,4 f' e! d8[ e] | d[ b!] cis4 ~ cis8[ d dis e!] |
+
+    % M35-36
+    a,4 a' g f |
+    e!8[ <bes e,!>] d[ <bes d,>] c![ <a d,>] bes[ <g e!>] |
+
+    % Page 3
+
+    % M37-38
+    a8[ f] d[ e!] f4 e | d8 d'8[ dis e!] f4. e8 |
+    % M39-40
+    s2 f4. e8 | s2 f8[ a, b! cis] |
+    % M41-43
+    d8[ f, g gis] a[ d, ees! e] | f4 g a bes | bes a ~ a8[ bes b c] |
   }
+
 }
 
 upperB = \relative c'' {
@@ -104,6 +120,22 @@ upperB = \relative c'' {
 
     % M29-31
     r8 <c f>4 q8 r <c e!>4 q8 | r <c f>4 q8 r8 cis4 cis8 | r8 f4 <f a>4 q q8 |
+
+    % M32-34
+    r8 <g a>4 q q q8| r8 f4 <f a> q q8|r8 <g a>4 q <e! a> q8 |
+
+    % M35-36
+    a4 a'8[ <d, a>] g[ <a, g>] f'[ <f, a>] | e'!4 d c! bes |
+
+    %% Page 3
+    % M37-38
+    \override Staff.NoteCollision #'merge-differently-dotted = ##t
+    a4 d,8[ a] r b!4 cis8 | d s4. f'8[ bes, cis e] |
+
+    % M39-40
+    a,8[ d dis e!] f[ bes, cis e] | a,[ d dis e!] s2 |
+    % M41-43
+    s1 | r8 d,4 d <d f> q8 | r8 <ees f>4 q q q8 |
   }
 }
 
@@ -147,6 +179,19 @@ lowerA = \relative c' {
     s1 d2 d e8[ <bes' c>] c,[ <bes' c>] f[ <a c>] bes,[ g'] |
     % M29-31
     c,2 c | s1 | s1 |
+    % M32-34
+    s1 | s1 | s1 |
+    % M35-36
+    \voiceTwo f8[ <a d>] d,[ <a' f'>] e![ <a cis>] f[ <a d>] |
+    g[ <bes d>] e,![ g] f[ a] g[ <bes d>] |
+
+    %% Page 3
+    % M37-38
+    a8[ d] a,[ f'] a,2 | s1 |
+    % M39-40
+    s1 s1
+    % M41-43
+    s1 s1 s1
   }
 
 }
@@ -192,6 +237,21 @@ lowerB = \relative c' {
     % M29-31
     c8 <g' bes>4 q8 c, <g' bes>4 q8|\stemNeutral f8 a4 a8 a, <g' a>4 q8 |
     d <a' d>4 q8 a, <a' d>4 q8 |
+
+    % M32-34
+    e!8 <a e'!>4 q8 a, <a' cis>4 q8| d,8 <a' d>4 q8 a, <a' d>4 q8|
+    e!8 <a e'!>4 q8 g <a cis>4 q8 |
+
+    %M35-36
+    \voiceOne f4 d e! f | g e! f g |
+    %% Page 3
+    % M37-38
+    a4 a, a8 g'4 g8 | \oneVoice <f d> r r4 <d g bes>2( |
+    % M39-40
+    <d f a>8) r r4 <d g bes>2( | <d f a>8) r r4 r2 | 
+    % M41-43
+    R1 | bes8 <f' bes>4 q8 f, <f' bes>4 q8 |
+    c8 f4 f8 f, f'4 f8 |
   }
 }
 
@@ -235,6 +295,33 @@ dynamics = {
   s4\do s2. s1\f s1
   % M29-31
   s1 s2 s4\> s4\! s1\p
+  % M32-34
+  \set crescendoText = \markup \italic "cres"
+  s1
+  s8 s2\< s8
+  \set crescendoText = \markup \italic "cen"
+  s4\< s2 s2\do
+  % M35-36
+  s1\f s1
+
+  % Page 3
+  % M37-38
+  s2 s4\> s4\! 
+  \set crescendoSpanner = #'hairpin
+  \set decrescendoSpanner = #'hairpin
+  s8\p s4.\< s2\>
+  % M39-40
+  s2\p\< s2\> s8\p
+  \set crescendoSpanner = #'text
+  \set crescendoText = \markup \italic "cres"
+  s4\< s8\! s2\f 
+  % M41-43
+  \set decrescendoSpanner = #'hairpin
+  s2\>
+  \set decrescendoSpanner = #'text
+  \set decrescendoText = \markup \italic "dim"
+  s4\> s4\! s1\p s1
+
 }
 
 \score {
