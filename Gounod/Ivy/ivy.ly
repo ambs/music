@@ -88,6 +88,16 @@ upperA = \relative c'' {
   }
   d8^\<[ d ees e] g[ f c' bes]^\! | a![ bes ees d] c[ bes a g] |
 
+  % M53-55
+  e!8[ f a g] f[ ees d c] | <bes f'> bes_([ c cis]) d2 _~ | d8[ d ees e!] g[ f c' bes] |
+  % M56-58
+  a!8[ bes bes' a] g[ f ees d] | \oneVoice <b! ees, c>8[ c a' g] f[ e! ees c] | bes8 
+  \voiceOne bes\rest bes4\rest bes8\rest a'8[_\> d c]\!
+  % M59-60
+  s2 s8 a,8[^\> d c]\! | s2\clef bass s2 |
+  % M60-62
+  f,,8[ a] d2 c4 | bes \oneVoice r4 <bes f d> r | q2 ~ q4 r \bar "|."
+
 }
 
 upperB = \relative c'' {
@@ -157,6 +167,15 @@ upperB = \relative c'' {
     { s1 }
   }
   d2 d | ees1 |
+  % M53-55
+  c2 a | s1 | d2 d |
+  % M56-58
+  ees4 s2. | s1 | s2 s8 a'4.
+  % M59-60
+  <bes f'>8 bes,8\rest bes4\rest bes8\rest a4. |
+  <bes f'>8 bes8\rest b4\rest \clef bass d,,8\rest d8[^( ees e!)]
+  % M60-62
+  f4 fis g a | bes s2. s1
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -223,6 +242,13 @@ lowerA = \relative c' {
     { s1 }
   }
   s1 s1 |
+  bes,1 | bes8 s8 s4 s2 | bes1 |
+  % M56-58
+  s1 | bes1 ~ | <bes d bes'>8 \clef treble s4. f''2 ~ |
+  % M59-60
+  f8 \clef bass d,8[^(_\< ees e!])\! f2_~ | f8 s4. s2 |
+  % M60-62
+  f2\rest \voiceOne ees2 ( | <bes d>4) \oneVoice  r4 <bes f bes,> r | q2 ~ q4 r \bar "|."
 
 }
 lowerB = \relative c' {
@@ -276,9 +302,9 @@ lowerB = \relative c' {
     \voiceOne f4 d e! f | g e! f g |
     %% Page 3
     % M37-38
-    a4 a, a8 g'4 g8 | \oneVoice <f d> r r4 <d g bes>2( |
+    a4 a, a8 g'4 g8 | \oneVoice <f d> r r4 <d g bes>2_(^(~ |
     % M39-40
-    <d f a>8) r r4 <d g bes>2( | <d f a>8) r r4 r2 | 
+    <d f a>8) r r4 <d g bes>2_(^(~ | <d f a>8) r r4 r2 | 
     % M41-43
     R1 | bes8 <f' bes>4 q8 f, <f' bes>4 q8 |
     c8 f4 f8 f, f'4 f8 |
@@ -294,7 +320,16 @@ lowerB = \relative c' {
     { <bes f' bes>8 r8 r4 r8 \stemUp f'8[_(_\< fis g)]\! \stemNeutral }
   }
   <aes bes,>1 | <g bes,> |
-
+  % M53-55
+  \voiceOne
+  <f a!>2 <ees f>^~_( | <d f>8) d8\rest d4\rest d8\rest f8[_(_\< fis g)]\! | aes1 |
+  % M56-58
+  \stemDown <g bes,>4 ees' bes g \stemNeutral\voiceOne |
+  <f a!>2 ~ <ees a> | s8 \clef treble d'8[^\< ees e!]\! r4 ees' ( |
+  % M59-60
+  f8) \clef bass s4. s4 ees,4 ( | bes8) d,,8[_( ees e]) f2  _~ |
+  % M60-62
+  f1
 }
 
 
@@ -372,6 +407,17 @@ dynamics = {
   % M50-52
   \set crescendoText = \markup \italic "cres"
   s1\p s8\< s8\! s2. s8\< s8\! s2.
+  % M53-55
+  s8 s8\> s4\! s2 s1\p s8\< s8\! s2. |
+  % M56-58
+  s1\f s8 s8\> s4\! s2 s1\p |
+  % M59-60
+  s1 | s1
+  % M60-62
+  \set crescendoSpanner = #'hairpin
+  \set decrescendoSpanner = #'hairpin
+  
+  s8\< s8 s8 s8\! s8\> s8 s8 s8\! s1\p
 
 }
 
