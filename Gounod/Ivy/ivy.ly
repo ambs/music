@@ -76,7 +76,17 @@ upperA = \relative c'' {
     s2 f4. e8 | s2 f8[ a, b! cis] |
     % M41-43
     d8[ f, g gis] a[ d, ees! e] | f4 g a bes | bes a ~ a8[ bes b c] |
+    % M44-46
+    f,4 a bes c | c bes ~ bes8[ c cis d] | g,4 b! c d |
+    % M47-49
+    f4 ees d c | bes! a8[ bes] c[ d ees a,]
   }
+  \alternative {
+    { c2( bes8) f[ g gis]}
+    % M50-52
+    { <d bes'>8 bes8[_( c cis)] d2 _~ }
+  }
+  d8^\<[ d ees e] g[ f c' bes]^\! | a![ bes ees d] c[ bes a g] |
 
 }
 
@@ -136,7 +146,17 @@ upperB = \relative c'' {
     a,8[ d dis e!] f[ bes, cis e] | a,[ d dis e!] s2 |
     % M41-43
     s1 | r8 d,4 d <d f> q8 | r8 <ees f>4 q q q8 |
+    % M44-46
+    r8 <c ees>4 q q q8 | r8 d4 d <d f> q8 | r8 <b! f'>[ r <b f' g>] r <c f g>[ r <d f g>] |
+    % M47-49
+    r8 <f g>[ r <ees g>] r <f g>[ r g] | r f4 f8 r f4 f8 |
   }
+  \alternative {
+    { r8 <ees f>4 q8 <d f> s4. }
+    % M50-52
+    { s1 }
+  }
+  d2 d | ees1 |
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -192,7 +212,17 @@ lowerA = \relative c' {
     s1 s1
     % M41-43
     s1 s1 s1
+    % M44-46
+    s1 s1 | g2 a4 b! |
+    % M47-49
+    c4 c d ees | f2 f |
   }
+  \alternative {
+    { s1}
+    % M50-52 
+    { s1 }
+  }
+  s1 s1 |
 
 }
 lowerB = \relative c' {
@@ -252,7 +282,19 @@ lowerB = \relative c' {
     % M41-43
     R1 | bes8 <f' bes>4 q8 f, <f' bes>4 q8 |
     c8 f4 f8 f, f'4 f8 |
+    % M44-46
+    a,8 f'4 f8 f, f'4 f8 | bes, f'4 f8 aes, f'4 f8 | \voiceOne g, g'4 g8 a, g'4 g8 ~ |
+    % M47-49
+    g8[ <g b!>] r <g c> r <g b!> r <g c> |
+    f <bes d>4 q8 f <a ees'>4 q8 |
   }
+  \alternative {
+    { \oneVoice f,8 f'[ a f] <bes, bes'> r r4 }
+    % M50-52
+    { <bes f' bes>8 r8 r4 r8 \stemUp f'8[_(_\< fis g)]\! \stemNeutral }
+  }
+  <aes bes,>1 | <g bes,> |
+
 }
 
 
@@ -321,6 +363,15 @@ dynamics = {
   \set decrescendoSpanner = #'text
   \set decrescendoText = \markup \italic "dim"
   s4\> s4\! s1\p s1
+  % M44-46
+  \set crescendoText = \markup \italic "cres"
+  s1 s1 s4 s2.\<
+  % M47-49
+  \set crescendoText = \markup \italic "cen"
+  s1\< s2\do s4\> s4\! s1\p
+  % M50-52
+  \set crescendoText = \markup \italic "cres"
+  s1\p s8\< s8\! s2. s8\< s8\! s2.
 
 }
 
