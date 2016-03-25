@@ -4,6 +4,7 @@
 ------
 
    * Original document from [IMSLP](http://burrito.whatbox.ca:15263/imglnks/usimg/4/41/IMSLP62420-PMLP05016-Gounod-FuMarchMarionette.pdf).
+   * Thanks to Abraham Lee and Brian Barker for corrections and typesetting suggestions.
    * Transcribed by Alberto Simões.
  
 --------

@@ -17,6 +17,7 @@
    	}
   }
    tagline = \markup \left-align \center-column {
+    \line { "Thanks to Ana Iriarte for proofreading"}
    	\line { "Original document from IMSLP (http://imslp.org)." }
    	\line { "Typeset with GNU LilyPond (http://lilypond.org)." }
    }
@@ -52,18 +53,25 @@ upper = \relative c' {
   <f d'>2\fermata ~ q4 r
 
   % M16-M17
+  \stemUp
   <a c!>2 <a d> | <gis e'> <e c'> |
+  \stemNeutral
   % M18-19
   << { \voiceOne a4 d c a | b1 } \new Voice { \voiceTwo f2 e f e4 d } >> \oneVoice
   % M20-22
-  <c a'>2\fermata ~ q4 r | <f c'>2 <f f'> | <g e'> <c a'> |
+  <c a'>2\fermata ~ q4 r |
+  \stemDown
+   <f c'>2 <f f'> | <g e'> <c a'> |
+   \stemNeutral
   % M23
   << { \voiceOne g'4 f e c } \new Voice { \voiceTwo b2 e, } >> \oneVoice
 
   % M24-25
   << {\voiceOne d'1 | c2\fermata ~ c4 } \new Voice { \voiceTwo a2 g4 f | e2 ~ e4 } >> \oneVoice r4 |
   % M26
+  \stemUp
   <f f'>2 <f d'> |
+  \stemNeutral
   % M27-29
   << {\voiceOne c'2 f, | bes a4 f | g1 }
     \new Voice { \voiceTwo e2 d4 c | d e f2 | f e } >> \oneVoice
@@ -166,7 +174,7 @@ upper = \relative c' {
   g8[( b! d f e d)] | c[( d e f g a)] |
 
   %% M121-122
-  b8[( g e c d bes] |  a4) r r |
+  bes8[( g e c d bes] |  a4) r r |
   % M123-126
   <f a c f>2. <f bes d> <ees g c> <fis a> |
   % M127
@@ -274,12 +282,12 @@ lower = \relative c {
     %% Pge 3
     %% M60-64
     <f a c>2. <f bes d> <f a c> <f bes d>
-    << { \voiceOne e'!4 f g | f } \new Voice {\voiceTwo <c, f,>2. <f c'>4} >> \oneVoice
+    << { \voiceOne e'!4 f g | f } \new Voice {\voiceTwo <c f,>2. <c f,>4} >> \oneVoice
     % M65...
     r4 r4 |
 
     % M66-67
-    <c c,>2 <b! b,!>8[ <a a,>] | <g g,>2 <c c,>8[ <d d,>] |
+    <c, c,>2 <b! b,!>8[ <a a,>] | <g g,>2 <c c,>8[ <d d,>] |
     % M68-69
     <e e,>4 <c' c,> <a a,> | <g g,> <e e,> <c c,> |
 
@@ -328,16 +336,20 @@ lower = \relative c {
   % M114
   <c f f,>4 r r | 
   % M115-118
+ \stemDown
   <f, f,>2. | <bes bes,> | <c c,> | <d d,> |
+  \stemNeutral
   % M119-120
-  <g, g,>8 r <g b d f>2 | <c, c,>8 r <a' c f>2 |
+  <g,, g,>8 r <g' b d f>2 | <c, c,>8 r <a' c f>2 |
 
 
   % M121-122
   <c, c,>8 r <g' c e> r q r |
   <f c' f>[ <d d'> <c c'> <bes bes'> <a a'> <g g'>] |
   % M123-126
+  \stemDown
   <f f'>2. | <bes bes'> | <c c'> | <d d'> |
+  \stemNeutral
   % M127
   <g, g,>8 r <g' bes d>2
 

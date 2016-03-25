@@ -4,6 +4,7 @@
 ------
 
    * Original document from [IMSLP](http://imslp.org/wiki/Choral_et_musette_%28Gounod,_Charles%29).
+   * Thanks to Ana Iriarte for corrections and typesetting suggestions.
    * Transcribed by Alberto Simões.
  
 --------
