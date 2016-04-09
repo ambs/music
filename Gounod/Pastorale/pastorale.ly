@@ -17,6 +17,7 @@
    	}
   }
    tagline = \markup \left-align \center-column {
+    \line { "Thanks to Ana Iriarte for proofreading."}
    	\line { "Original document from IMSLP (http://imslp.org)." }
    	\line { "Typeset with GNU LilyPond (http://lilypond.org)." }
    }

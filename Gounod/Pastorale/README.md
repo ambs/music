@@ -4,6 +4,7 @@
 ------
 
    * Original document from [IMSLP](http://imslp.org/wiki/Pastorale_%28Gounod,_Charles%29).
+   * Thanks to Ana Iriarte for transcription verification.
    * Transcribed by Alberto Simões.
  
 --------
