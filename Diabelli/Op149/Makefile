@@ -1,6 +1,7 @@
 
 LYTEX=primo.lytex secondo.lytex
-FILES=1.primo.ly 1.secondo.ly 2.primo.ly 2.secondo.ly
+FILES=1.primo.ly 1.secondo.ly 2.primo.ly 2.secondo.ly \
+      3.primo.ly 3.secondo.ly
 
 lbook=/Applications/LilyPond.app/Contents/Resources/bin/lilypond-book --pdf
 

@@ -8,6 +8,7 @@
 }
 
 \begin{document}
+\thispagestyle{empty}
 \pagestyle{empty}
 
 \section{1.}
@@ -15,5 +16,8 @@
 
 \section{2.}
 \lilypondfile{2.secondo.ly}
+
+\section{3.}
+\lilypondfile{3.secondo.ly}
 
 \end{document}
