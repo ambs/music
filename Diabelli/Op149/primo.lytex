@@ -1,0 +1,20 @@
+\documentclass[a4paper]{book}
+
+\usepackage[a4paper,left=18mm,right=18mm,top=20mm,bottom=20mm]{geometry}
+
+\renewcommand{\section}[1]{
+	\begin{center}
+		\LARGE\sf\bf #1
+	\end{center}
+}
+
+\begin{document}
+\pagestyle{empty}
+
+\section{1.}
+\lilypondfile{1.primo.ly}
+
+\section{2.}
+\lilypondfile{2.primo.ly}
+
+\end{document}
