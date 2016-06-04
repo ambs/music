@@ -36,6 +36,9 @@ primoAllegroUp =  {
 	    c4.-1 c8 c4
 	    c2 r4
 	}
+
+\break %17
+
 	\repeat volta 2 {
 	    d8-2( e) d4-. d-.
 	    g2.-5-.
@@ -45,6 +48,9 @@ primoAllegroUp =  {
 	    ees8-3( f) ees4-. r
 	    d-2( g) g-.
 	    g( f d)
+
+\break %25
+
 	    e8-3( f g4-.) g-.
 	    g-. g-. g-.
 	    g2( f4)
@@ -102,14 +108,80 @@ primoAllegroDown =  {
 }
 
 
+primoTrioDynamics =  {
+    s2.\p s2. s2. s2. s2.\f s2. s2. s2.
+    s2.\p s2. s2. \cresc s2. s2 \endcresc s4 s2\f s2 s2_\markup{Da Capo al fine}
+}
+
+primoTrioUp =  {
+	\tempo "Trio"
+    \time 3/4
+    \clef treble
+    \key ees \major
+    \relative c''' {
+    
+      	\ottava #1
+
+
+	\repeat volta 2 {
+	    ees2-3( f8-4 ees-3)
+	    d2-2( ees8-3 d-2)
+	    c2-1 ees8-3( f)
+	    g2.-5
+	    g2 fis4^^
+	    g2 fis4^^
+	    g2 fis4^^
+	    g2 r4
+	    ees2-3( d8 ees)
+	    f2-4( ees8 f)
+	    g2.-5
+	    f4-.-4 ees-. d-.
+	    ees-.-3 d-. c-.
+	    d4.-2 g8 g4
+	    c,2.-1 ~ c4 r r
+	}
+    }
+}
+
+primoTrioDown =  {
+    \time 3/4
+    \clef treble
+    \key ees \major
+    \relative c'' {
+	\repeat volta 2 {
+	    ees2-3( f8-2 ees-3)
+	    d2-4( ees8-3 d-4)
+	    c2-5 ees8-3( f)
+	    g2.-1
+	    g2 fis4^^
+	    g2 fis4^^
+	    g2 fis4^^
+	    g2 r4
+	    ees2-3( d8 ees)
+	    f2-2( ees8 f)
+	    g2.-1
+	    f4-.-2 ees-. d-.
+	    ees-.-3 d-. c-.
+	    d4.-4 g8 g4
+	    c,2.-5 ~ c4 r r
+	}
+    }
+}
 
   
 
 \score{    
     \new PianoStaff <<
-	\new Staff = "up"   \primoAllegroUp
-	\new Dynamics = "dynamics" \primoAllegroDynamics
-	\new Staff = "down" \primoAllegroDown
+	\new Staff = "up"   {\primoAllegroUp }
+	\new Dynamics = "dynamics" {\primoAllegroDynamics }
+	\new Staff = "down" {\primoAllegroDown }
     >>
+  }
 
+  \score{    
+    \new PianoStaff <<
+	\new Staff = "up"   { \primoTrioUp}
+	\new Dynamics = "dynamics" {\primoTrioDynamics}
+	\new Staff = "down" { \primoTrioDown}
+    >>
   }
