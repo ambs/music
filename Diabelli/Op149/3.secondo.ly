@@ -11,6 +11,7 @@ secondoDynamics =  {
 }
 
 secondoUp =  {
+	\tempo "Moderato"
     \time 2/4
     \clef bass
     \relative c {
@@ -25,6 +26,8 @@ secondoUp =  {
 	    b-2([ g c-3 g)]
 	    b-2([ g g'-5 f-4)]
 
+\break
+
 	    \clef treble
 	    e-3([ g-5 c,-1 g')]
 	    e-3([ g c,-1 g')]
@@ -36,6 +39,9 @@ secondoUp =  {
 	    <c, e>4 r
 	    \clef bass
 	}
+
+\break
+
 	\repeat volta 2 {
 	    c8-3([ e-5 c-3 a)]
 	    b-2([ d-4 b-2 e-5)]
@@ -45,15 +51,25 @@ secondoUp =  {
 	    a,([ d-2 a'-5 d,)]
 	    a([ a' a, a')]
 	    gis-4([ b, e-2 gis-4)]
+
+
 	    g-5([ b, f'-4 b,)]
+	    \break
+
 	    e-3([ g c,-1 g')]
 	    e([ g c, g')]
 	    d-2([ g b,-1 g')]
 	    d-2([ g d g)]
 	    c,-1([ g' c, g')]
 	    <b,-1 f'-4>([ g' <b, d f> g')]
+
+
 	    <c,-1 e-3>([ g' <c, e> g')]
 	    <c, e>4 r
+
+\break
+
+
 	    \clef bass
 	}
 	d8-4([ g, cis-3 g)]
@@ -62,9 +78,14 @@ secondoUp =  {
 	g'_>-5([ g, e'-4 g,)]
 
 	<b-2 f'-5>([ g <b f'> g)]
+
+
+
 	<b f'>([ g <b f'> g)]
 	<c-3 e-5>([ g <c e> g)]
 	<c e>([ g <c e> g)]
+
+\break
 
 	d'-4([ g, cis g)]
 	d'-4([ g, b-2 g)]
@@ -72,15 +93,21 @@ secondoUp =  {
 	r g-1([ <c-3 e-5> g)]
 	r a-1([ <c-3 e-5> a)]
 
+
+
 	\set fingeringOrientations = #'(left)
 	r <a-1 c-2 d-4> r <a c d>
 	r <g-1 c-3 e-5> r <g c e>
 	r <g-1 b-2 f'-5> r <g b f'> 
 
 	r <g-1 c-3 e-5>-.([ <g c e>-. <g c e>-.)]
+
+	\break
 	r <g-1 b-2 f'-5>-.([ <g b f'>-. <g b f'>-.)]
 	r <g c e>-.([ <g c e>-. <g c e>)-.]
 	r <g b f'>-.([ <g b f'>-. <g b f'>-.)]
+
+
 
 	<c-2 e-4>([ g g'-5 g,)]
 	e'-4([ g, g'-5 g,)]

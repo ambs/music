@@ -8,6 +8,7 @@ secondoDynamics =  {
 }
 
 secondoUp =  {
+	\tempo "Allegro"
     \time 4/4
     \clef bass
     \relative c' {
@@ -17,6 +18,9 @@ secondoUp =  {
 	<b-2 d-3>( g <b d> g)
 	<c-2 e-4>4( g <c e> g)
 	<c e>( g <c e> g)
+
+\break % 7
+
 	<b-2 g'-5>( g <b g'> g)
 	<g-1 c-3 e-5> <g c e> <g c e> r
 
@@ -25,6 +29,9 @@ secondoUp =  {
 	    <g b d>-.( <g b d>-. <g b d>-. <g b d>-.)
 	    <a-2 c-4 d-5>-.( <a c d>-. <a c d>-. <a c d>-.)
 	    <g-1 b-3 d-5>-.( <g b d>-. <g b d>-. <g b d>-.)
+
+\break % 13
+
 	    <g b d>-.( <g b d>-. <g b d>-. <g b d>-.)
 	    <g b d>-.( <g b d>-. <g b d>-. <g b d>-.)
 	    <a-2 c-4 d-5>-. \clef treble <d-1 fis-3> <cis-2 g'-4> <c-1 a'-5>
@@ -33,6 +40,9 @@ secondoUp =  {
 	    \clef bass
 	    <c,-2 e-4>4( g-1 <c e> g)
 	    <c e>( g <c e> g)
+
+\break % 19
+
 	    <d'-3 f-5>( g, <c-2 e-4> g)
 	    <b-2 d-3>( g <b d> g)
 	    <c-2 e-4>4( g <c e> g)

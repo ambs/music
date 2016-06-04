@@ -8,6 +8,7 @@ primoDynamics =  {
 }
 
 primoUp =  {
+	\tempo "Allegro"
     \time 4/4
     \clef treble
     \relative c''' {
@@ -21,6 +22,9 @@ primoUp =  {
 	c,8-1[( d e d] c-1[ d e f-4)]
 
 	g4-.-5 e-.-3 c-. e-.
+
+\break % 7
+
 	d-.-2 g-.-5 f8-4([ e f-4 d-2)]
 	c4-1-. e-3-. c-. r
 
@@ -30,6 +34,8 @@ primoUp =  {
 	    fis4-4-. d-2-. e-. fis-.
 	    g2( d2)
 
+\break % 13
+
 	    d8-2( e fis g) r2
 	    d8-2( e fis g) r2
 	    fis4-4-. d-2-. e-. fis-.
@@ -37,6 +43,9 @@ primoUp =  {
 	    
 	    c8-1[( d e d] c-1[ d e f-4])
 	    g4-.-5 e-.-3 c-. e-.
+
+\break % 19
+
 	    f8-4[( e d f]) e-3[( d c e])
 	    d4-.-2 g-5-. d-. g-.
 	    c,8-1[( d e d] c-1[ d e f-4)]

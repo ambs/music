@@ -12,6 +12,7 @@ primoDynamics =  {
 }
 
 primoUp =  {
+	\tempo "Moderato"
     \time 2/4
     \clef treble
     \relative c''' {
@@ -20,6 +21,8 @@ primoUp =  {
 	    c4-1( e-3	g-5 e	f-4 d	g2)
 	    e4-3( c   f-4 e     d e     d2)
 
+\break
+
 	    r8 c-1 r e-3
 	    r g-5 r e
 	    r f-4 r d
@@ -29,6 +32,9 @@ primoUp =  {
 	    r c,-1 r e-3
 	    c4 r
 	}
+
+\break
+
 	\repeat volta 2 {
 	    e-3 e
 	    f-4( e8 d)
@@ -37,38 +43,54 @@ primoUp =  {
 	    d4-2 d
 	    e8-3( d c d)
 	    e2-3(
-	    f4 d)
 
+
+
+	    f4 d)
+\break
 	    r8 c-1 r e-3
 	    r g-5 r e
 	    r f-4 r d
 	    r g-5 r f
 	    r e-3 r g
 	    r d-2 r g
+
+
+
 	    r c,-1 r e-3
 	    c4 r
 	}
-
+\break
 	f-4( e f g)
 	g-5( e8) r
 	e4-3( c8) r
 	d4-2-. d-.
 	\grace{d16[( e])} f4-4^^( e8) d-.
+
+
+
 	c-1-. d-. e-. f-.
 	g4-5-- r
-
+\break
 	r8 f4->-4( e8)
+
+
+
 	r f4->( g8)
 	r e4-3->(  g8)
 	r c,4-1->( e8) 
+
+
 
 	d4-2 d8. d16(
 	e4) e
 	g4-5( f8.) d16-2
 	c4( e8.-3) f16
+		\break
 	g4( f8.) d16-1
 	c4-1( e8.-3) f16
 	g4-5( f8.-4) d16-2
+
 	c4-1-. e-3-.
 	c-. e-.
 	c-1 r

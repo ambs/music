@@ -16,6 +16,7 @@ primoDynamics =  {
 }
 
 primoUp =  {
+	\tempo "Andante cantabile"
     \time 4/4
     \clef treble
     \relative c''' {
@@ -74,9 +75,13 @@ primoDown =  {
 
 
 \score{
-    \new PianoStaff <<
-	\new Staff = "up"    \primoUp 
+  \new PianoStaff <<
+	\new Staff    = "up"       \primoUp 
 	\new Dynamics = "dynamics" \primoDynamics
-	\new Staff = "down"  \primoDown 
-    >>
+	\new Staff    = "down"     \primoDown 
+  >>
+  
+  \layout {
+  	\override NonMusicalPaperColumn #'page-break-permission = ##f
   }
+}

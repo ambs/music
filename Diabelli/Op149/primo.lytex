@@ -1,6 +1,6 @@
 \documentclass[a4paper]{book}
-
-\usepackage[a4paper,left=18mm,right=18mm,top=20mm,bottom=20mm]{geometry}
+\usepackage{ifthen}
+\usepackage[a4paper,left=16mm,right=16mm,top=20mm,bottom=20mm]{geometry}
 
 \renewcommand{\section}[1]{
 	\begin{center}
@@ -8,20 +8,35 @@
 	\end{center}
 }
 
+\def\betweenLilyPondSystem[1]{}
+
+\newcommand{\breakAt}[1]{\renewcommand{\betweenLilyPondSystem}[1]{\ifthenelse{##1 = #1}{\newpage}{\linebreak\vfill}}}
+
 \begin{document}
 \thispagestyle{empty}
 \pagestyle{empty}
 
+\breakAt{0}
 \section{1.}
 \lilypondfile{1.primo.ly}
 
-\section{2.}
+\breakAt{1}
+
+\vfill\section{2.}\vfill
 \lilypondfile{2.primo.ly}
 
-\section{3.}
+\breakAt{2}
+
+\vfill\section{3.}\vfill
 \lilypondfile{3.primo.ly}
 
+\breakAt{0}
+\newpage
 \section{4.}
 \lilypondfile{4.primo.ly}
+
+\breakAt{1}
+\section{5.}
+\lilypondfile{5.primo.ly}
 
 \end{document}
