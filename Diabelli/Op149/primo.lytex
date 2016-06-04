@@ -39,4 +39,8 @@
 \section{5.}
 \lilypondfile{5.primo.ly}
 
+\breakAt{1}
+\section{6.}
+\lilypondfile{6.primo.ly}
+
 \end{document}

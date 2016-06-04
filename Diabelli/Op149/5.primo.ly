@@ -19,7 +19,12 @@ primoUp =  {
 	    c4-1 c8 c[( d e)]
 	    e4.-3( d)
 	    e-3( g8-5[) f e]
+
+
 	    d4.-2( f8[) e d]
+
+\break %7
+
 	    c4-1( e8) d4-2( g8-5)
 	    c,4-1 r8 r4 r8
 	}
@@ -28,6 +33,8 @@ primoUp =  {
 	    d4.-2( g4.)
 	    d4-2( f8) [e d c]
 	    d2.---2
+
+\break %13
 	    e4.-3( g8[) f e]
 	    d4.-2( f8[) e d]
 	    c4-1( e8) d4-2( g8)
@@ -37,6 +44,9 @@ primoUp =  {
 	    {c4-1 r8 c([ d e)]}
 	}
 	f4-4( c8-1) f4( c8)
+
+\break %19
+
 	e4.---3 c8-1([ d e)]
 
 	d4-2 d8 d([ e d)]

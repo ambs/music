@@ -23,7 +23,7 @@ secondoUp =  {
 	    f-4( d-2 a-1) aes-2( d-4 f-5)
 
 \break %7
-	    
+
 	    e-4( g, g'-5) << {f8-4( g f)}\\{b,4.-1} >>
 
 	    <c-2 e-3>8( g' e c4) r8
@@ -33,6 +33,8 @@ secondoUp =  {
 	    b,( d g) b,( d g)
 	    d( d g) c,( e g)
 	    b,( d g) f-4( b, g')
+
+\break %13
 	    c,-1( e-3 g) bes,-1( e-3 g)
 	    f-4( d-2 a) aes-2( d-4 f)
 	    e-4( g, g') << {f8-4( g f)}\\{b,4.-1} >>
@@ -42,6 +44,8 @@ secondoUp =  {
 	    { <c-2 e-3>8 <c e> <c e> <c-1 e-3 g-5> <c e g> <c e g> }
 	}
 	<c-1 f-4> <c f> <c f> <c f> <c f> <c f>
+
+\break %19	
 	<c-1 e-3> <c e> <c e> <c e> <c e> <c e>
 	<a-2 c-4 d-5> <a c d> <a c d> <g-1 b-3 d-5> <g b d> <g b d>
 	g-1( c-3 e-5) <c g'-2 bes-4> <c g' bes> <c g' bes>

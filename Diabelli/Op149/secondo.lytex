@@ -40,4 +40,8 @@
 \section{5.}
 \lilypondfile{5.secondo.ly}
 
+\breakAt{1}
+\section{6.}
+\lilypondfile{6.secondo.ly}
+
 \end{document}
