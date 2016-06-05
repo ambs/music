@@ -1,4 +1,5 @@
 \documentclass[a4paper]{book}
+
 \usepackage{ifthen}
 \usepackage[a4paper,left=16mm,right=16mm,top=20mm,bottom=20mm]{geometry}
 
@@ -44,8 +45,8 @@
 \lilypondfile{6.primo.ly}
 
 \newpage
-\breakAt{0}
+\breakAt{5}
 \section{7.}
-% \lilypondfile{7.primo.ly}
+\lilypondfile{7.primo.ly}
 
 \end{document}

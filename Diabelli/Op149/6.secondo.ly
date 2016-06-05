@@ -179,6 +179,7 @@ secondoTrioDown =  {
 
 \score{
     \new PianoStaff  <<
+    \set Score.currentBarNumber = #33
 	\new Staff = "up"  {  \secondoTrioUp}
 	\new Dynamics = "dynamics" { \secondoTrioDynamics}
 	\new Staff = "down" { \secondoTrioDown}

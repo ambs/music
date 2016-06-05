@@ -45,9 +45,9 @@
 \lilypondfile{6.secondo.ly}
 
 \newpage
-\breakAt{0}
+\breakAt{5}
 \section{7.}
-% \lilypondfile{7.primo.ly}
+\lilypondfile{7.secondo.ly}
 
 
 \end{document}

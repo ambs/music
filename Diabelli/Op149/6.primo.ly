@@ -180,6 +180,7 @@ primoTrioDown =  {
 
   \score{    
     \new PianoStaff <<
+    \set Score.currentBarNumber = #33 
 	\new Staff = "up"   { \primoTrioUp}
 	\new Dynamics = "dynamics" {\primoTrioDynamics}
 	\new Staff = "down" { \primoTrioDown}
