@@ -54,7 +54,7 @@
 \section{8.}
 \lilypondfile{8.secondo.ly}
 
-\breakAt{0}
+\breakAt{4}
 \section{9.}
 \lilypondfile{9.secondo.ly}
 
