@@ -6,9 +6,13 @@ FILES=1.primo.ly  1.secondo.ly  2.primo.ly  2.secondo.ly \
       7.primo.ly  7.secondo.ly  8.primo.ly  8.secondo.ly \
       9.primo.ly  9.secondo.ly 10.primo.ly 10.secondo.ly \
      11.primo.ly 11.secondo.ly 12.primo.ly 12.secondo.ly \
-     13.primo.ly 13.secondo.ly 
+     13.primo.ly 13.secondo.ly 14.primo.ly 14.secondo.ly \
+     15.primo.ly 15.secondo.ly 16.primo.ly 16.secondo.ly \
+     17.primo.ly 17.secondo.ly 18.primo.ly 18.secondo.ly \
+     19.primo.ly 19.secondo.ly 20.primo.ly 20.secondo.ly \
 
-LATEX=latex -interaction=batchmode
+XLATEX=latex -interaction=batchmode
+LATEX=latex
 
 lbook=/Applications/LilyPond.app/Contents/Resources/bin/lilypond-book
 

@@ -1,6 +1,5 @@
 \documentclass[a4paper]{book}
-
-\usepackage{ifthen}
+\usepackage{etoolbox}
 \usepackage[a4paper,left=16mm,right=16mm,top=20mm,bottom=20mm]{geometry}
 
 \renewcommand{\section}[1]{
@@ -10,8 +9,13 @@
 }
 
 \def\betweenLilyPondSystem[1]{}
-
-\newcommand{\breakAt}[1]{\renewcommand{\betweenLilyPondSystem}[1]{\ifthenelse{##1 = #1}{\newpage}{\linebreak\vfill}}}
+\def\mylist{}
+\newcommand{\breakAt}[1]{%
+	\renewcommand\mylist{}
+	\forcsvlist{\listadd\mylist}{#1}
+	\renewcommand{\betweenLilyPondSystem}[1]{%
+		\ifinlist{##1}{\mylist}{\newpage}{\linebreak\vfill}
+	    }}
 
 \begin{document}
 \thispagestyle{empty}
@@ -73,6 +77,38 @@
 \breakAt{3}
 \section{13.}
 \lilypondfile{13.primo.ly}
+
+\breakAt{3}
+\section{14.}
+\lilypondfile{14.primo.ly}
+
+\newpage
+\breakAt{0}
+\section{15.}
+\lilypondfile{15.primo.ly}
+
+
+\newpage
+\breakAt{5,10}
+\section{16.}
+\lilypondfile{16.primo.ly}
+
+\section{17.}
+\breakAt{3}
+\lilypondfile{17.primo.ly}
+
+\section{18.}
+\breakAt{1}
+\lilypondfile{18.primo.ly}
+
+\section{19.}
+\breakAt{1}
+\lilypondfile{19.primo.ly}
+
+\section{20.}
+\breakAt{1}
+\lilypondfile{20.primo.ly}
+
 
 \vfill~
 \end{document}

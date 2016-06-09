@@ -1,5 +1,5 @@
 \documentclass[a4paper]{book}
-\usepackage{ifthen}
+\usepackage{etoolbox}
 \usepackage[a4paper,left=16mm,right=16mm,top=20mm,bottom=20mm]{geometry}
 \renewcommand{\section}[1]{
 	\begin{center}
@@ -9,8 +9,14 @@
 
 
 \def\betweenLilyPondSystem[1]{}
-
-\newcommand{\breakAt}[1]{\renewcommand{\betweenLilyPondSystem}[1]{\ifthenelse{##1 = #1}{\newpage}{\linebreak\vfill}}}
+\def\mylist{}
+\newcommand{\breakAt}[1]{%
+	\renewcommand\mylist{}
+	\forcsvlist{\listadd\mylist}{#1}
+	\renewcommand{\betweenLilyPondSystem}[1]{%
+		\ifinlist{##1}{\mylist}{\newpage}{\linebreak\vfill}
+	    }}
+		
 
 \begin{document}
 \thispagestyle{empty}
@@ -74,5 +80,36 @@
 \section{13.}
 \lilypondfile{13.secondo.ly}
 
+\breakAt{3}
+\section{14.}
+\lilypondfile{14.secondo.ly}
+
+
+\newpage
+\breakAt{0}
+\section{15.}
+\lilypondfile{15.secondo.ly}
+
+
+\newpage
+\breakAt{5,10}
+\section{16.}
+\lilypondfile{16.secondo.ly}
+
+\section{17.}
+\breakAt{3}
+\lilypondfile{17.secondo.ly}
+
+\section{18.}
+\breakAt{1}
+\lilypondfile{18.secondo.ly}
+
+\section{19.}
+\breakAt{1}
+\lilypondfile{19.secondo.ly}
+
+\section{20.}
+\breakAt{1}
+\lilypondfile{20.secondo.ly}
 \vfill~
 \end{document}
