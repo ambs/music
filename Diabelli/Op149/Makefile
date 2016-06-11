@@ -10,13 +10,18 @@ FILES=1.primo.ly  1.secondo.ly  2.primo.ly  2.secondo.ly \
      15.primo.ly 15.secondo.ly 16.primo.ly 16.secondo.ly \
      17.primo.ly 17.secondo.ly 18.primo.ly 18.secondo.ly \
      19.primo.ly 19.secondo.ly 20.primo.ly 20.secondo.ly \
+     21.primo.ly 21.secondo.ly 22.primo.ly 22.secondo.ly \
+     23.primo.ly 23.secondo.ly 24.primo.ly 24.secondo.ly
 
 XLATEX=latex -interaction=batchmode
 LATEX=latex
 
 lbook=/Applications/LilyPond.app/Contents/Resources/bin/lilypond-book
 
-all: primo.pdf secondo.pdf
+all: shuffled.pdf
+
+shuffled.pdf: primo.pdf secondo.pdf
+	pdftk A=secondo.pdf B=primo.pdf shuffle A B output shuffled.pdf
 
 out/primo.dvi: out/primo.tex
 	cd out; $(LATEX) primo; $(LATEX) primo; $(LATEX) primo
