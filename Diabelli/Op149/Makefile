@@ -18,7 +18,10 @@ LATEX=latex
 
 lbook=/Applications/LilyPond.app/Contents/Resources/bin/lilypond-book
 
-all: shuffled.pdf
+all: main.pdf
+
+main.pdf: shuffled.pdf main.tex	
+	xelatex main.tex
 
 shuffled.pdf: primo.pdf secondo.pdf
 	pdftk A=secondo.pdf B=primo.pdf shuffle A B output shuffled.pdf

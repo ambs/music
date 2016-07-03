@@ -1,11 +1,49 @@
 \documentclass{book}
-
+\usepackage{fontspec}
 \usepackage[a4paper,left=20mm,right=18mm,top=20mm,bottom=20mm]{geometry}
+\usepackage{pdfpages}
 
 \title{28 Melodic Exercises}
 \author{Anton Diabelli}
 \date{Piano --- Four Hands}
+
+%Scriptina
 \begin{document}
-\maketitle
+
+
+\thispagestyle{empty}
+\mbox{}\vfill
+\begin{center}
+	
+	\huge\bfseries\fontspec[Variant=2,Color=333333FF,Scale=1]{Zapfino}
+	\huge  28 Melodic Exercises 
+	\vskip 1cm
+	\huge\bfseries\fontspec[Variant=1,Color=666666FF,Scale=1]{Zapfino}
+	\Large $\sim$ Four Hands / Piano $\sim$
+\end{center}
+\vfill\vfill
+\begin{center}
+	\huge\bfseries\fontspec[Variant=2,Color=DDDDDDFF,Scale=1.8]{Zapfino}
+	Anton Diabelli
+	\vskip -22mm
+	\huge\bfseries\fontspec[Variant=2,Color=000000FF,Scale=1.4]{Zapfino}
+	Anton Diabelli
+\end{center}
+\vfill
+\mbox{}\newpage
+\pagestyle{plain}
+
+
+
+\includepdf[fitpaper=true,pagecommand={\thispagestyle{plain}},pages=-]{shuffled.pdf}
+
+\mbox{}\vfill
+\begin{tabular}{p{1.2cm}p{.85\linewidth}}
+\begin{minipage}{1cm}
+\vskip 3mm
+\includegraphics[scale=.1]{ccbysa.png}
+\end{minipage} & The transcription was performed using Lilypond typesetting system, and is available under the\newline Creative Commons Attribution-ShareAlike 4.0, by Alberto Simões.
+\end{tabular}
+
 
 \end{document}
