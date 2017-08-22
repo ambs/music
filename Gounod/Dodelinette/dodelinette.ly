@@ -43,8 +43,20 @@ upperA = \relative c' {
 						      
   % M4  
   <d-3 c fis,>[ <e-4 g,> <fis-5 c a>\) <b-4 d, b>]( a[-5 d,-3 d-3 g-5]) 
-						    }
 
+  % M5	      
+  <g-3 b,>4\( <a-4 b,> <b-5 b,> a8[-4 b]-5 |
+
+  % M6	      
+  g8[-3 a-4 <b-5 g d>\) d](-4 e[-5 d-4 b-5 g-4]) |
+
+  % M7
+  <a-3 g cis,>4 <b-4 g d>8[\( <cis-5 e,>] <d-5 fis,-2>[ <e-5 g,-1> <fis-5 a,-2> <g-5 b,-1>]
+
+  % M8							
+  <fis-5 a,-2>[ <e-5 g,-1>\) <e-5 g,-2>( <a,-3 g e>]) a[-3( d-5]) <d fis, d>4 |
+						      }
+   
 upperB = \relative c' {
   \clef treble
   \key g \major
@@ -53,6 +65,9 @@ upperB = \relative c' {
 
   % M1-M4
   s2. b4 | b s4 <g' b> b, | s1 | s2 <a c>4 <b g> |
+
+  % M5-M8
+  s2. b4 | b s4 <g' b> b, | s1 | s2 <e g>4 s4 |
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -75,6 +90,15 @@ lower = \relative c {
   <d a-2> <d d,> <d a> <d d,> |
   % M4
   <d a> <d d,> <d g,-3> <d d,> |
+
+  % M5
+  <d g,> <d d,> <d g,> <d d,> |
+  % M6
+  <d g,> <d d,> <d g,> <d d,> |
+  % M7
+  <e-2 a> <a, a'> <d-3 a'> <a a'> |
+  % M8
+  <cis-4 a'> <a a'> <d-3 a'> <d a'> |
 }
 
 %%%% DYNAMICS
@@ -86,9 +110,11 @@ dynamics = {
   s1
   s8\< s4 s8\! s8\> s4 s8\!
 
-
-  % % M6-M9
-  % s1\p s1 s1 s1
+  % M5-M8
+  s1
+  s8\< s4 s8\! s8\> s4 s8\!
+  s4 s8\< s2 s8\!
+  s8\> s4. s8\! s8 s4
 
   % % M10-13
   % \set crescendoSpanner = #'text
