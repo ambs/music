@@ -55,7 +55,19 @@ upperA = \relative c' {
 
   % M8							
   <fis-5 a,-2>[ <e-5 g,-1>\) <e-5 g,-2>( <a,-3 g e>]) a[-3( d-5]) <d fis, d>4 |
-						      }
+
+  % M9
+  <b, g'-3>\( <b a'-4> <b b'-5> a'8[-4 b]-5 |
+
+  % M10
+  g[-3 a-4 <b-5 g d>\) d](-4 e[-5 d-4 b-5 g-4]) |
+
+  % M11
+  <d-3 c fis,>4\( <e-4 c g> <fis-5 c a> <e-4 c g>8[ <fis-5 a,>] |
+
+  % M12						  
+  <d-3 c fis,>8[ <e-4 g,> <fis-5 c a>\) <b-5 d, b>]( a8[-5 d,-3 d-3 g])-5 |
+						}
    
 upperB = \relative c' {
   \clef treble
@@ -68,6 +80,10 @@ upperB = \relative c' {
 
   % M5-M8
   s2. b4 | b s4 <g' b> b, | s1 | s2 <e g>4 s4 |
+
+  % M9-M12
+  s2. b4 | b s4 <g' b> b, | s1 | s2 <a c>4 <b g> |
+
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -99,6 +115,16 @@ lower = \relative c {
   <e-2 a> <a, a'> <d-3 a'> <a a'> |
   % M8
   <cis-4 a'> <a a'> <d-3 a'> <d a'> |
+
+  % M9
+  <d g,-3>4 <d d,> <d g,> <d d,> |
+  % M10
+  <d g,> <d d,> <d g,> <d d,> |
+  % M11
+  <d a-2> <d d,> <d a> <d d,> |
+  % M12
+  <d a> <d d,> <d g,> <d d,> |
+
 }
 
 %%%% DYNAMICS
@@ -116,6 +142,13 @@ dynamics = {
   s4 s8\< s2 s8\!
   s8\> s4. s8\! s8 s4
 
+  % M9-M12
+  s1
+  s8\< s4 s8\! s8\> s4 s8\!
+  s1
+  s8\< s4 s8\! s8\> s4 s8\!
+  
+  
   % % M10-13
   % \set crescendoSpanner = #'text
   % \set crescendoText = \markup \italic "cres"
