@@ -35,7 +35,7 @@ upperA = \relative c' {
   <b g'-3>4\(
     <b a'-4> <b b'-5> a'8[-4 b]-5 |
 
-  %  M2
+  % M2
   g8[-3 a-4 <d, g b-5>\) d'](-4  e[-5 d-4 b-5 g])-4 |
 
   % M3
@@ -67,7 +67,32 @@ upperA = \relative c' {
 
   % M12						  
   <d-3 c fis,>8[ <e-4 g,> <fis-5 c a>\) <b-5 d, b>]( a8[-5 d,-3 d-3 g])-5 |
-						}
+
+  % M13
+  <g-3 b,>4\( <a-4 b,> <b-5 b,> a8[-4 b]-5 |
+
+  % M14	      
+  g8[-3 a-4 <b-5 g d>\) d](-4 e[-5 d-4 b-5 g-4]) |
+
+  % M15
+  <a-3 g cis,>4 <b-4 g d>8[\( <cis-5 e,>] <d-5 fis,-2>[ <e-5 g,-1> <fis-5 a,-2> <g-5 b,-1>]
+
+  % M16							
+  <fis-5 a,-2>[ <e-5 g,-1>\) <e-5 g,-2>( <a,-3 g e>]) a[-3( d-5]) <d fis, d>4 |
+
+  % M17
+  <b, d g-4>\( <c e a-5> <d f b-4> <e g c-5> |
+
+  % M18	      
+  <f g d'-5>\) e'8[(-5 c])-4 b[(-4 d)-5 c(-5 a])-4 |
+
+  % M19
+  <b, d g-4>4\( <c e a-5> <d f b-4> <e g c-5>\) |
+ 
+  % M20
+  d'8[(-3 g-5 e-5 c]-4 b[-3 g-2 c-4 e])-5
+		
+	      }
    
 upperB = \relative c' {
   \clef treble
@@ -84,6 +109,12 @@ upperB = \relative c' {
   % M9-M12
   s2. b4 | b s4 <g' b> b, | s1 | s2 <a c>4 <b g> |
 
+  % M13-M16
+  s2. b4 | b s4 <g' b> b, | s1 | s2 <e g>4 s4 |
+
+  % M17-M20
+  s1 | s4 <e g>4 \once \override Accidental #'stencil = ##f <d  f> <c e> |
+  s1 | <f\finger \markup \tied-lyric #"1~1" g>4 <e g> d e |
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -125,6 +156,25 @@ lower = \relative c {
   % M12
   <d a> <d d,> <d g,> <d d,> |
 
+  % M13
+  <d g,> <d d,> <d g,> <d d,> |
+  % M14
+  <d g,> <d d,> <d g,> <d d,> |
+  % M15
+  <e-2 a> <a, a'> <d-3 a'> <a a'> |
+  % M16
+  <cis-4 a'> <a a'> <d-3 a'> <d a'> |
+
+  % M17
+  <g-1 f-2 d-3 g,-5>4 <g-1 e-2 c-3 g-5> <g-1 d-2 b-4 g-5> <g-1 c,-2 a-4 g-5>
+  % M18
+  <g-1 d-2 b-4 g-5> <g-1 e-2 c-3 g-5> <g-1 f-2 d-3 g,-5> <g-1 e-2 g,>
+  % M19
+  <g f d g,>4 <g e c g> <g d b g> <g c, a g>
+  % M20
+  <g d b g> <g e c g> <g f d g,> <g e g,>
+
+  
 }
 
 %%%% DYNAMICS
@@ -140,14 +190,25 @@ dynamics = {
   s1
   s8\< s4 s8\! s8\> s4 s8\!
   s4 s8\< s2 s8\!
-  s8\> s4. s8\! s8 s4
+  s8\> s4 s8\! s4 s4
 
   % M9-M12
-  s1
+  s1\p
   s8\< s4 s8\! s8\> s4 s8\!
   s1
   s8\< s4 s8\! s8\> s4 s8\!
-  
+
+  % M13-M16
+  s1
+  s8\< s4 s8\! s8\> s4 s8\!
+  s4 s8\< s2 s8\!
+  s8\> s4 s8\! s4 s4
+
+  % M17-M20
+  s8\p s8\< s2 s8 s8\! |
+  s4 s8\> s4. s4\! |
+  s8\< s2 s4 s8 |
+  s8\! s8 s8\> s2 s8\! |
   
   % % M10-13
   % \set crescendoSpanner = #'text
