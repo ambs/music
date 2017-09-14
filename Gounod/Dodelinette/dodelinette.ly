@@ -90,9 +90,21 @@ upperA = \relative c' {
   <b, d g-4>4\( <c e a-5> <d f b-4> <e g c-5>\) |
  
   % M20
-  d'8[(-3 g-5 e-5 c]-4 b[-3 g-2 c-4 e])-5
-		
-	      }
+  d'8[(-3 g-5 e-5 c]-4 b[-3 g-2 c-4 e])-5 |
+
+  % M21
+  <fis, a d-4>4\( <g b e-5> <a c fis-4> <b d g-5> |		
+
+  % M22
+  <c d a'-5>\) b'8[(-5 g-4]) fis[(-4 a)-5 g-5( e)-4] |
+
+  % M23
+  <fis, a d-4>4\( <g b e-5> <a c fis-4> <b d g-5>\) |
+
+  % M24		 
+  a'8[(-3 d-5 b-5 g]-4 e[-5 c-4 a-3 fis])-2 |
+		 
+		}
    
 upperB = \relative c' {
   \clef treble
@@ -115,6 +127,10 @@ upperB = \relative c' {
   % M17-M20
   s1 | s4 <e g>4 \once \override Accidental #'stencil = ##f <d  f> <c e> |
   s1 | <f\finger \markup \tied-lyric #"1~1" g>4 <e g> d e |
+
+  % M21-M24
+  s1 | s4 <b' d>4 <a c> <g b> | s1 | <c\finger \markup \tied-lyric #"1-1" d>4 <b d> e, d |
+  
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -174,6 +190,15 @@ lower = \relative c {
   % M20
   <g d b g> <g e c g> <g f d g,> <g e g,>
 
+
+  % M21 
+  <d'-1 c-2 a-3 d,-5>4 <d-1 b-2 g-3 d-5> <d-1 a-2 fis-4 d-5> <d-1 g,-2 e-4 d-5> |
+  % M22
+  <d-1 a-2 fis-4 d-5> <d-1 b-2 g-3 d-5> <d-1 c-2 a-3 d,-5> <d-1 b-2 d,-5> |
+  % M23
+  <d c a d,> <d b g d> <d a fis d> <d g, fis d> |
+  % M24
+  <d a fis d> <d b g d> <c a g d> <c a fis d> |
   
 }
 
@@ -209,6 +234,11 @@ dynamics = {
   s4 s8\> s4. s4\! |
   s8\< s2 s4 s8 |
   s8\! s8 s8\> s2 s8\! |
+
+  % M21-M24
+  s4 s4\< s4 s4 s4 s4\! s4\> s4 s4\!
+  s4\< s4 s4 s8 s8\! s8 s8\> s4 s8 s8\! |
+
   
   % % M10-13
   % \set crescendoSpanner = #'text
