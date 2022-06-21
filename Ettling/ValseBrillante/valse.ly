@@ -76,9 +76,59 @@ upper = \relative c'' {
     q4 r8 <a a'>8 q4 |
   }
   \alternative {
-    { q4 \acciaccatura e'8 fis[( cis d e]) |}
+    { q4 \acciaccatura e'8 d[( cis d e]) |}
     { <a, a'>4 r4 a4 | }
   }
+
+  %% Page 3
+
+  \tuplet 3/2 {fis'8[( g fis]} e4) d-. |
+  b'8 r a2 |
+  \tuplet 3/2 {fis8[( g fis]} e4) d-. |
+  d8 r cis2 |
+  g'8[( a] g4) e |
+  g8[( a] g4) e |
+  cis'8[( b a g fis e]) |
+  d[( e] fis4) a, |
+
+
+
+  \tuplet 3/2 {fis'8[( g fis]} e4) d-. |
+  b'8 r a2 |
+  \tuplet 3/2 {fis8[( g fis]} e4) d-. |
+  e'8 r d2 |
+  e8[( d cis b a g)] |
+  fis[( b a fis] d4) |
+  a fis'4. e8 | 
+  d4 \bar "||"
+
+
+   \key g \major
+   d d 
+   \repeat volta 2 {
+    \acciaccatura d8 b'4 r4 b |
+    r4 \acciaccatura d,8 a'4. g8 |
+    << {\voiceOne g2( fis4) }\\ \new Voice {\voiceTwo <a, c>2. }>> |
+    \oneVoice
+    r4 d d |
+    \acciaccatura d8 c'4 r c  |
+    r4 \acciaccatura b,8 b'4. a8 |
+    << { \voiceOne a2( g4) } \\ \new Voice {\voiceTwo <d b>2. }>>
+    \oneVoice
+    r4 d d |
+
+    \acciaccatura d8 d'4 r d |
+    r <c c,>4. <b b,>8 |
+    q2 <a a,>4 ~ |
+    q <g g,> <e e,> |
+    <d d,> <fis fis,> <g g,> |
+    <b d, b>2 <a c, a>4 |
+    <g b, g> \acciaccatura d8 d'[( c b a])
+   }
+   \alternative {
+    { g4 d d} { g r b }
+   }
+
 
 }
 
@@ -150,6 +200,53 @@ lower = \relative c, {
     { <e a cis>4 r r | }
     { <e a cis>4 r r | }
    }
+
+   % Page 3
+
+   d4 <fis a d> q |
+   d <fis a d> q |
+   d <fis a d> q |
+   e <g a cis> q |
+   a, <g' a cis> q |
+   a, <g' a cis> q |
+   a, <g' a cis> q |
+   d <fis a d> q |
+
+   d <fis a d> q |
+   d <fis a d> q |
+   b, <fis' b d> q |
+   g, <g' b e> q |
+   g, <g' b e> q |
+   a, <fis' a d> q |
+   a, <g' a cis> q |
+   <d fis a d>
+   \bar "||"
+
+  \key g \major
+  r4 r 
+  \repeat volta 2 {
+    \grace s8
+    g,4 <d' g b> q | 
+    g,4 <d' g b> q |
+    d <fis a c> q |
+    d <fis a c> q |
+    d, <fis' a c> q |
+    d <fis a c> q |
+    g, <d' g b> q |
+    g, <d' g b> q |
+
+    b <d g b> q |
+    b <d g b> q |
+    c <e a c> q |
+    cis <e g bes> q |
+    d <g b> q |
+    d <fis a c> q |
+    <g b> r <d fis a d> |
+  }
+  \alternative {
+    { <g b d> r r } { <g b d> r r }
+  }
+
 
 }
 
