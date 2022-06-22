@@ -129,8 +129,53 @@ upper = \relative c'' {
     { g4 d d} { g r b }
    }
 
+  % Page 4
 
-}
+  c8[-. d-.] e4-. a,8[-. b-.] |
+  c4-. fis,8[-. g-.] a4-. |
+  d,( b') b-. |
+  b-. a8[( g fis g]) |
+  d4( c') c-. |
+  c b8[( a gis a)] |
+  g4-. e'-. d~ |
+  d b-. b-. |
+
+
+  c8[-. d-.] e4-. a,8[-. b-.] |
+  c4-. fis,8[-. g-.] a4-. |
+  d,( b') b-. |
+  b-. a8[( g fis g]) |
+  fis4-. b-. d-. |
+  fis, ais cis | 
+  b r r |
+  <d a fis d>8 d,[ e fis g a] |
+
+  \acciaccatura d,8 b'4 r b |
+  r4 \acciaccatura  d,8 a'4. g8 |
+  << { \voiceOne g2( fis4) } \\ \new Voice {\voiceTwo <c a>2. }>> |
+  \oneVoice
+  r4 d d |
+  \acciaccatura d8 c'4 r c |
+  r \acciaccatura b,8 b'4. a8 |
+  << {\voiceOne a2( g4)} \\ \new Voice{\voiceTwo <d b>2.}>> |
+  \oneVoice
+  r4 d d |
+
+  \acciaccatura d8 d'4 r d |
+  r <c c,>4. <b b,>8 |
+  q2 <a a,>4~ |
+  q <g g,> <e e,> |
+  <d d,> <fis fis,> <g g,> |
+  <b b,>2 <a a,>4 |
+  <g g,> \acciaccatura d8 d'[( c b a)] | 
+  g4 r4 \bar "||"
+  \key d \major 
+  a4
+
+
+ 
+ }
+
 
 lower = \relative c, {
   \clef bass
@@ -247,7 +292,43 @@ lower = \relative c, {
     { <g b d> r r } { <g b d> r r }
   }
 
+  % Page 4
+  d4 <fis a d> q |
+  d <fis a d> q |
+  g <b d> q |
+  d, <b' d> q |
+  fis <a c d> q |
+  d, <a' c d> q |
+  g <b d> q |
+  g, <g' b d> q |
 
+  d <fis a d> q |
+  d <fis a d> q |
+  g, <d' g b> q |
+  e, <e' g b> q |
+  fis, <d' fis b> q |
+  fis, <e' fis ais> q |
+  <b d fis b> r r |
+  <d a fis d> r r |
+
+  g, <d' g b> q |
+  g, <d' g b> q |
+  d <fis a c> q |
+  d <fis a c> q |
+  d, <fis' a c> q |
+  d <fis a c> q |
+  g, <d' g b> q |
+  g, <d' g b> q |
+
+  b <d g b> q |
+  b <d g b> q |
+  c <e a c> q |
+  cis <e g bes> q |
+  d <g b> q |
+  d < fis a c> q |
+  <g b> r <d fis a d> | 
+  <g b d> r \bar "||"
+  \key d \major r4
 }
 
 \score {
