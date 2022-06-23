@@ -172,8 +172,52 @@ upper = \relative c'' {
   \key d \major 
   a4
 
-
+  %% PAGE 5
  
+  \repeat volta 2 {
+    \tuplet 3/2 {fis8[( g fis]} e4) d-. |
+    b'8 r a2 |
+    \tuplet 3/2 {fis8[( g fis]} e4) d-. |
+    d8 r cis2 |
+    g'8[( a] g4) e-. |
+    g8[( a] g4) e-. |
+    cis'8[ b a g fis e] |
+    d[( e] fis4) a, |
+
+    \tuplet 3/2 {fis'8[( g fis]} e4) d-. |
+    b'8 r a2 |
+    \tuplet 3/2 {fis8[( g fis]} e4) d-. |
+    e'8 r d2 |
+    e8[( d cis b a g]) |
+    fis[( b a fis)] d4 |
+    a fis'4.(-> e8)
+  }
+  \alternative { { d4 r a } { d \acciaccatura e8 d[( cis d e)]}}
+
+
+  \repeat volta 2 {
+    <d fis>4 r8 q q4 |
+    q4 \acciaccatura g8 fis[( e fis g] |
+    a4) r8 <fis a>8 q4 |
+    q <g b> <fis a> |
+    q r8 <e g>8 q4 |
+    q <fis a> <e g> |
+    q r8 <d fis> q4 |
+    q4 \acciaccatura e8 d[( cis d e] |
+
+
+    <d fis>4) r8 q q4 |
+    q4 \acciaccatura g8 fis[( e fis g] |
+    <fis a>4) r8 q q4 |
+    q fis4 <d d'> |
+    q r8 <cis cis'>8 q4 |
+    q r8 <b b'>8 q4 |
+    q4 r8 <a a'>8 q4 |
+  }
+  \alternative {
+    { q4 \acciaccatura e'8 d[( cis d e)] } {<a a,>4 r a,}
+  }
+
  }
 
 
@@ -329,6 +373,49 @@ lower = \relative c, {
   <g b> r <d fis a d> | 
   <g b d> r \bar "||"
   \key d \major r4
+
+
+  % PAGE 5
+  \repeat volta 2 {
+    d4 <fis a d> q |
+    d <fis a d> q |
+    d <fis a d> q |
+    e <g a cis> q |
+    a, <g' a cis> q |
+    a, <g' a cis> q |
+    a, <g' a cis> q |
+    d <fis a d> q |
+
+    d <fis a d> q |
+    d <fis a d> q |
+    b, <fis' a d> q |
+    g, <g' b e> q |
+    g, <g' b e> q |
+    a, <fis' a d> q |
+    a, <g' a cis> q |
+  }
+  \alternative { {<d fis a d>4 r r } {q r r}}
+  \repeat volta 2 {
+    <d d,>4 r <d fis a d> |
+    q r r |
+    <d d,>4 r <d fis a d> |
+    q r r |
+    a <e' g a cis> q |
+    a, <e' g a cis> q |
+    d <fis a d> q |
+    d <fis a d> q |
+
+    <d d,>4 r <d fis a d> |
+    q r r |
+    <d d,> r <d fis a d> |
+    q r r |
+    <e e,> <a cis e> q |
+    <e e,> <e gis b d> q |
+    a, <e' a cis> q | 
+  }  
+  \alternative {{ q r r }{q r r}}
+
+  
 }
 
 \score {
