@@ -250,6 +250,55 @@ upper = \relative c'' {
     { e4 r8 <e e'>8 q4 | d'8[ cis b a gis fis]}
     { e4 r8 <e e'>8 q4 | q q <dis dis'>4 }
  }
+  \repeat volta 2 {
+  \set doubleSlurs = ##t
+
+    <d! d'!>4 r8 q q4 |
+    r <cis cis'> <b b'> |
+    q2( <a a'>4) |
+    r <gis gis'> <fis fis'> |
+    q2( <e e'>4) |
+    r <fis fis'> <e e'> |
+    <d d'>2( <cis cis'>4) |
+    r <dis dis'> <e e'> |
+    <d'! d'!> r8 q8 q4 |
+
+    r <cis cis'> <b b'> |
+    <b b'>2( <a a'>4) |
+    \set doubleSlurs = ##f
+    <b b'>4.( a'8[ gis fis]) |
+    e[( cis e a cis e)] |
+    <fis fis,>2 <e e,>4 |
+  }
+  \alternative {
+    { <a, a,>4 r <e e'> | <a a'> dis,8[( e gis b)]}
+    { <a a,>4 gis,8[( a cis e] | a4) r}
+  }
+  \bar "||"
+  \key d \major 
+  a,4 
+  \repeat volta 2 {
+     \tuplet 3/2 { fis'8[( g fis]} e4) d-. |
+     b'8 r a2 |
+     \tuplet 3/2 { fis8[( g fis]} e4) d-. |
+     d8 r cis2 |
+     g'8[( a] g4) e-. |
+     g8[( a] g4) e-. |
+     cis'8[ b a g fis e] |
+     d[( e] fis4) a, |
+
+
+     \tuplet 3/2 { fis'8[( g fis]} e4) d-. |
+     b'8 r a2 |
+     \tuplet 3/2 { fis8[( g fis]} e4) d-. |
+     e'8 r d2 |
+     e8[( d cis b a g)] |
+     fis8[( b a fis)] d4 |
+     a fis'4.( e8) |
+  }
+
+
+
 }
 
 
@@ -465,7 +514,32 @@ lower = \relative c, {
     {<e gis> r8 <e e,> q4 | r2.}
     {<e gis>4 r8 <e e,> q4 | q4 r r }
   }
+
+
+  %% PAGE 7
+  \repeat volta 2 {
+    <e e,>4 <e gis b d> q | q2. |
+    a,4 <cis e a> q | a <cis e a> q | gis <d' e gis> q |
+    e, <d' e gis> q | a <cis e a> q | a <cis e a> q | <e e,>4 r8 <e gis b d>8 q4 | 
+
+    <eis gis b d>2. | fis4 <a cis> q |dis, <fis a b> q |e <a cis> q |<e e,> <e gis b d> q
+  }
+  \alternative {
+    {<a cis>4 r <e e,> | <a a,> r r } { q4 r <a, cis e a  > | q r }
+  }
+  \bar "||"
+  \key d \major
+  r4 
+
+  \repeat volta 2 {
+    d4 <fis a d> q | d <fis a d> q |d <fis a d> q | e <g a cis> q|a, <g' a cis> q|a, <g' a cis> q|a, <g' a cis> q|
+    d <fis a d> q |
+
+
+    d <fis a d> q|d <fis a d> q|b, <fis' b d> q|g, <g' b e> q|g, <g' b e> q|a, <fis' a d> q|a, <g' a cis> q|
+  }
 }
+
 
 \score {
   \new PianoStaff \with { instrumentName = "Introduction." }
