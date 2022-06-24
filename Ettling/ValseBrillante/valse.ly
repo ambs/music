@@ -218,7 +218,39 @@ upper = \relative c'' {
     { q4 \acciaccatura e'8 d[( cis d e)] } {<a a,>4 r a,}
   }
 
+  % PAGE 6
+  \tuplet 3/2 {fis'8[( g fis]} e4) d-. |
+  b'8 r a2 |
+  \tuplet 3/2 {fis8[( g fis]} e4) d-. |
+  d8 r cis2 |
+  g'8[( a] g4) e |
+  g8[( a] g4) e |
+  cis'8[ b a g fis e] |
+  d[( e] fis4) a, |
+
+ \tuplet 3/2 {fis'8[( g fis]} e4) d-. |
+  b'8 r a2 |
+  \tuplet 3/2 {fis8[( g fis]} e4) d-. |
+  e'8 r d2 |
+  e8[( d cis b a g]) |
+  fis[( b a fis)] d4 |
+  a fis'4.(-> e8) |
+
+  d4 r r 
+
+ \bar "|."
+
+ \key a \major
+ \repeat volta 2 {
+  e2. | cis4 a4. fis'8 | e2. cis4 a4. d8 | cis2( b4) | b e,4. cis'8 | b2( a4)~ | a8[ e cis e a cis] | e2. |
+
+  cis4 a4. fis'8 | e2. ~ | e4 e fis | gis4. a8 gis4 | fis4. gis8 fis4 | 
  }
+ \alternative {
+    { e4 r8 <e e'>8 q4 | d'8[ cis b a gis fis]}
+    { e4 r8 <e e'>8 q4 | q q <dis dis'>4 }
+ }
+}
 
 
 lower = \relative c, {
@@ -415,7 +447,24 @@ lower = \relative c, {
   }  
   \alternative {{ q r r }{q r r}}
 
+
+  d4 <fis a d> q | d <fis a d> q | d <fis a d> q | e <g a cis> q | a, <g' a cis> q |a, <g' a cis> q |a, <g' a cis> q |d <fis a d> q |
+
+  d4 <fis a d> q | d <fis a d> q | b, <fis' b d> q | g, <g' b e> q|g, <g' b e> q|a, <fis' a d> q|a, <g' a cis> q| <d fis a d> r r
   
+  \bar "|."
+
+  \key a \major
+
+  \repeat volta 2 {
+    a <cis e a> q|a <cis e a> q|a <cis e a> q|a <cis e a> q|e, <d' e gis> q|e, <d' e gis> q|a <cis e a> q|a <cis e a> q|a <cis fis a> q|
+
+    a <cis e a> q|a <cis e a> q|a <cis e a> q|b <e gis> q|b <dis fis b> q|   
+  }
+  \alternative { 
+    {<e gis> r8 <e e,> q4 | r2.}
+    {<e gis>4 r8 <e e,> q4 | q4 r r }
+  }
 }
 
 \score {
