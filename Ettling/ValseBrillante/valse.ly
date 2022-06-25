@@ -20,6 +20,32 @@ dynamics = {
   s s s s s s s s4 
   s2\p s2. s s s s s s s 
   s s s s s s s s s2 s4\p
+  % PAGE 4
+  s2-\markup{\teeny Scherzando.} s4 s2. s s s s s s 
+  s s s s4 s8\< s8 s4 s2. s2. s4\! s2 s2.\sf
+  s2. s s s s s s s 
+  s s s s s s s s2 s4 
+  % PAGE 5
+  s2-\markup{\teeny Leggiero.} s4 s2. s s s s s s 
+  s2. s s s s s s s 
+  s4 s2\f s2. s s s s s s s 
+  s2. s s s s s s s s2 s4\p
+  % PAGE 6
+  s2-\markup{\teeny Leggiero.} s4 s2. s s s s s s 
+  s s s s s s s s
+  s4\p s2-\markup{\teeny cantabile} s2. s s s s s s s 
+  s s4\< s2 s2. s2. s2. s8 s8\! s8 s8\> s4 s4 s4 s8 s8\! s2. s2. 
+  % PAGE 7
+  s2.\f s s s s s s s s 
+  s s s s s s s s s2 
+  s4\p s2-\markup{\teeny Leggiero.} s2. s s s s s s 
+  s s s s s s s 
+  % PAGE 8
+  s2. s2. s4 s4-\markup{\teeny Scherzando.} s2 s2. s s s s
+  s2. s s s s4-\markup{\teeny Animato.} s2 s2. s s 
+    \set crescendoSpanner = #'text
+    \set crescendoText = \markup { \italic \small { cresc. } }
+  s2. s2. s4 s8 s8\< s4 s2. s2. s2 s4\! s2.\ff
 }
 
 upper = \relative c'' {
@@ -27,9 +53,8 @@ upper = \relative c'' {
   \key d \major
   \time 3/4
 
-  
+    \mark \markup{ \small \smallCaps Introduction}  
   <d fis a d>8[ r16 d,] 
-    \mark \markup{ \small \smallCaps Introduction}
   d4 
   \tuplet 3/2 { fis8[ e d] } | 
   << { \voiceOne \stemUp \tieUp  a'2. ~ | a2. ~ | a2. \fermata }
@@ -60,8 +85,9 @@ upper = \relative c'' {
 
   % PAGE 2
   \break
-  a'4
   \mark \markup{ \small \smallCaps Valse}
+
+  a'4
   \repeat volta 2 {
     \tuplet 3/2 {fis'8([ g fis]} e4) d-. |
     b'8 r a2 | 
@@ -132,7 +158,7 @@ upper = \relative c'' {
 
   \break
    \key g \major
-   d   \mark \markup{ \small \smallCaps {1º Trio}} d 
+   \mark \markup{ \small \smallCaps {1º Trio}} d d 
    \repeat volta 2 {
     \acciaccatura d8 b'4 r4 b |
     r4 \acciaccatura d,8 a'4. g8 |
@@ -198,12 +224,12 @@ upper = \relative c'' {
   <g g,> \acciaccatura d8 d'[( c b a)] | 
   g4 r4 \bar "||"
   \key d \major 
-  a4
+  a,4
 
   %% PAGE 5
  
   \repeat volta 2 {
-    \tuplet 3/2 {fis8[( g fis]} e4) d-. |
+    \tuplet 3/2 {fis'8[( g fis]} e4) d-. |
     b'8 r a2 |
     \tuplet 3/2 {fis8[( g fis]} e4) d-. |
     d8 r cis2 |
@@ -264,13 +290,16 @@ upper = \relative c'' {
   fis[( b a fis)] d4 |
   a fis'4.(-> e8) |
 
-  d4 r r 
+  d4 r\mark \markup{\small \smallCaps  "Fin"} r 
 
  \bar "|."
+  \break
 
  \key a \major
  \repeat volta 2 {
-  e2. | cis4 a4. fis'8 | e2. cis4 a4. d8 | cis2( b4) | b e,4. cis'8 | b2( a4)~ | a8[ e cis e a cis] | e2. |
+  \mark \markup{  \small \smallCaps  "2º Trio"}
+  e2. 
+  | cis4 a4. fis'8 | e2. cis4 a4. d8 | cis2( b4) | b e,4. cis'8 | b2( a4)~ | a8[ e cis e a cis] | e2. |
 
   cis4 a4. fis'8 | e2. ~ | e4 e fis | gis4. a8 gis4 | fis4. gis8 fis4 | 
  }
@@ -303,8 +332,11 @@ upper = \relative c'' {
     { <a a,>4 gis,8[( a cis e] | a4) r}
   }
   \bar "||"
+  \break
   \key d \major 
-  a,4 
+
+  \mark \markup{ \small \smallCaps Coda}
+  a,4   
   \repeat volta 2 {
      \tuplet 3/2 { fis'8[( g fis]} e4) d-. |
      b'8 r a2 |
@@ -624,7 +656,7 @@ lower = \relative c, {
 
 \score {
   \new PianoStaff = "PianoStaff_pf" <<
-    \new Staff = "upper" <<  \upper \dynamics>>
+    \new Staff = "upper" <<  \upper \dynamics >>
     \new Staff = "lower" <<  \lower \dynamics >>
   >>
   \midi { 
