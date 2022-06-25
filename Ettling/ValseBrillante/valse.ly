@@ -1,5 +1,17 @@
 \version "2.20.0"
 
+\header {
+  title = "Lel Délices du Bal"
+  composer = "Émile Ettling"
+  subtitle = "Valse Brillante"
+}
+
+dynamics = {
+  s2.\f s\mf s s s\f s\mf 
+  s s s\f s s s s
+  s s s s4\> s2 s4. s4.-\markup{\teeny Ritard.} s2 s8 s8\! s2
+}
+
 upper = \relative c'' {
   \clef treble
   \key d \major
@@ -297,8 +309,22 @@ upper = \relative c'' {
      a fis'4.( e8) |
   }
 
+  % PAGE 8
 
+  d4 <a a'>8[ q] q4 | q q q |
+  g'8[-. a-.] b4-. e,8[-. fis-.] | g4-. cis,8[-. d-.] e4-. |
+  a,( fis') fis | fis e8[( d cis d)] | a4( g') g-. | g fis8[( e dis e)] |
 
+  d!4 b' a~ | a fis fis | g8[ a] b4 e,8[ fis] | g4 cis,8[ d] e4 |
+  a,( fis') fis\mordent |
+  g,( e') e\mordent |
+  fis,( d') d\mordent | 
+  e,( cis') cis\mordent |
+
+  d4 r8 <d fis,>8 q4 | q d8[( cis d e)] | <d fis>4 r8 q q4 |
+  q4 fis8[( e fis g] | <fis a>4) r8 q q4 | q gis8[( a b cis)] | <d, fis d'>4 a' <e g cis> |
+  <d fis d'> a' <e g cis> | <d fis d'> a' <e g cis>  | <d fis d'> a' <e g cis> |
+   <d fis d'> r4 \stemUp <a d>8[ q] |q4 q q | q r r | <fis a d fis> r r | d2\fermata r4
 }
 
 
@@ -537,23 +563,55 @@ lower = \relative c, {
 
 
     d <fis a d> q|d <fis a d> q|b, <fis' b d> q|g, <g' b e> q|g, <g' b e> q|a, <fis' a d> q|a, <g' a cis> q|
+
+
+    %% PAGE 8
+
+    <d fis a d> r r | r2.
+    a4 <g' a cis> q |
+    a, <g' a cis> q|
+    d <fis a d> q |
+    a, <fis' a d> q |
+    cis <g' a cis> q |
+    a, <g' a cis> q |
+
+    d <fis a d> q|
+    d <fis a d> q|
+    a, <g' a cis> q|
+    a, <g' a cis> q|
+    d, <d' fis a d> q |
+    g, <e' g b> q|
+    a, <d fis a> q|
+    a <e' g a> q |
+
+    <d fis a> q q| q q q|
+    <d fis a d> q q| q q q| q q q| q r <a cis e a> | <d fis a> r <a cis e a> |
+
+
+    <a d fis a> r q | <d fis a> r <a cis e a> | <d fis a> r <a cis e a> | <d fis a> r <d' fis>8[ q] |
+    q4 q q | q r r |<d, fis a d> r r |
+    \autoBeamOff
+    << {\voiceOne \crossStaff{<fis a>2}} \\ \new Voice {\voiceTwo <d d,>2_\fermata} >> r4
+
   }
 }
 
 
 \score {
-  \new PianoStaff \with { instrumentName = "Introduction." }
-  <<
-    \new Staff = "upper" \upper
-    \new Staff = "lower" \lower
+  \new PianoStaff = "PianoStaff_pf" <<
+    \new Staff = "upper" << \upper >>
+    \new Dynamics = "dynamics" \dynamics
+    \new Staff = "lower" <<  \lower >>
   >>
-  \layout { 
-    \context {
-      \PianoStaff
-      \consists "Span_stem_engraver"
-    }
-  }
-  \midi {
-    \tempo 4 = 80
+  \layout { }
+}
+
+\score {
+  \new PianoStaff = "PianoStaff_pf" <<
+    \new Staff = "upper" <<  \upper \dynamics>>
+    \new Staff = "lower" <<  \lower \dynamics >>
+  >>
+  \midi { 
+    \tempo 4 = 90
   }
 }
