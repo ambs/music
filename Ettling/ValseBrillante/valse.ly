@@ -10,6 +10,16 @@ dynamics = {
   s2.\f s\mf s s s\f s\mf 
   s s s\f s s s s
   s s s s4\> s2 s4. s4.-\markup{\teeny Ritard.} s2 s8 s8\! s2
+  % PAGE 2
+  s4\p s2-\markup{\teeny Leggiero.} s4 s2. s s s s s s
+  s s s s s s s s 
+  s4 s2\f s2. s s s s s s s 
+  s s s s s s s s s2 s4\p
+  % PAGE 3
+  s2-\markup{\teeny Leggiero.} s4 s2. s s s s s s 
+  s s s s s s s s4 
+  s2\p s2. s s s s s s s 
+  s s s s s s s s s2 s4\p
 }
 
 upper = \relative c'' {
@@ -17,7 +27,11 @@ upper = \relative c'' {
   \key d \major
   \time 3/4
 
-  <d fis a d>8[ r16 d,] d4 \tuplet 3/2 { fis8[ e d] } | 
+  
+  <d fis a d>8[ r16 d,] 
+    \mark \markup{ \small \smallCaps Introduction}
+  d4 
+  \tuplet 3/2 { fis8[ e d] } | 
   << { \voiceOne \stemUp \tieUp  a'2. ~ | a2. ~ | a2. \fermata }
      \new Voice { \voiceTwo s4. <d, fis>8[ <cis e> <d fis>] |
       <e g>4. 
@@ -44,7 +58,10 @@ upper = \relative c'' {
   <e g>[ <dis fis> <e g> <d fis> <cis e> <bis dis>]) |
   <cis e>2\fermata \bar "||" 
 
+  % PAGE 2
+  \break
   a'4
+  \mark \markup{ \small \smallCaps Valse}
   \repeat volta 2 {
     \tuplet 3/2 {fis'8([ g fis]} e4) d-. |
     b'8 r a2 | 
@@ -104,7 +121,6 @@ upper = \relative c'' {
   d[( e] fis4) a, |
 
 
-
   \tuplet 3/2 {fis'8[( g fis]} e4) d-. |
   b'8 r a2 |
   \tuplet 3/2 {fis8[( g fis]} e4) d-. |
@@ -114,9 +130,9 @@ upper = \relative c'' {
   a fis'4. e8 | 
   d4 \bar "||"
 
-
+  \break
    \key g \major
-   d d 
+   d   \mark \markup{ \small \smallCaps {1º Trio}} d 
    \repeat volta 2 {
     \acciaccatura d8 b'4 r4 b |
     r4 \acciaccatura d,8 a'4. g8 |
