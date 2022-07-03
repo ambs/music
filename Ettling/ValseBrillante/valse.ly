@@ -646,7 +646,10 @@ lower = \relative c, {
 
 
 \score {
-  \new PianoStaff = "PianoStaff_pf" <<
+  \new PianoStaff = "PianoStaff_pf"  \with {
+      \consists "Span_stem_engraver"
+    } 
+    <<
     \new Staff = "upper" << \upper >>
     \new Dynamics = "dynamics" \dynamics
     \new Staff = "lower" <<  \lower >>
