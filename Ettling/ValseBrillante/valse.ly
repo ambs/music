@@ -2,8 +2,19 @@
 
 \header {
   title = "Lel Délices du Bal"
-  composer = "Émile Ettling"
+  composer = "Émile ETTLING"
   subtitle = "Valse Brillante"
+
+  copyright = \markup \left-align \center-column {
+    \line {
+	  	"© 2015-2022 Alberto Simões"}
+  	\line {
+  		\epsfile #Y #2 #"../../cc-by-sa.eps" "Licensed under a Creative Commons Attribution-ShareAlike 4.0 International License."
+  	}
+  }
+  tagline = \markup \left-align \center-column {
+  	\line { "Typeset with GNU LilyPond (http://lilypond.org)." }
+  }    
 }
 
 dynamics = {
@@ -666,3 +677,13 @@ lower = \relative c, {
     \tempo 4 = 90
   }
 }
+
+\paper {
+    max-systems-per-page = 6
+    top-margin = 15\mm
+    bottom-margin = 15\mm
+    left-margin = 15\mm
+    right-margin = 15\mm
+}
+
+    

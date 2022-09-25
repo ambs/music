@@ -1,2 +1,2 @@
 valse.pdf: valse.ly
-	lilypond valse.ly
+	lilypond -dpreview='#t' valse.ly
