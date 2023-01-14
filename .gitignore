@@ -1,2 +1,14 @@
 *~
 *midi
+.DS_Store
+*.aux
+*-?.eps
+*latexmk
+*.fls
+*.log
+.vscode
+*.preview.???
+*.count
+*.texi
+*.tex
+*.pdf
