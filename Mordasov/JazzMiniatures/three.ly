@@ -1,7 +1,7 @@
 
 upperThree = \relative c'' {
   \clef treble
-  \key c \major
+  \key f \major
   \time 4/4
 
   % 1
@@ -12,22 +12,32 @@ upperThree = \relative c'' {
 
   % 2
   r4 c8.[\( d16] c8.[ <a e'-> >16] ~ q4\) |
-  a8.[ b16 a8. <e c'>16] ~ q4 f |
+  a8.[ bes16 a8. <e c'>16] ~ q4 f |
   g2 d'8.[ c16 g8. a16] ~ |
 
   % 3
   a2. r4 |
   <<
-    \new Voice {\voiceOne b2 c8( b4_.) }
+    \new Voice {\voiceOne bes2 c8( bes4_.) }
     \\
     \new Voice {\voiceTwo r4 <d, f>2  }
   >>
-  \oneVoice <des f des'^> >8 ~ | q2 f8.[ g16 a8. b16] |
+  \oneVoice <des f des'^> >8 ~ | q2 f8.[ g16 a8. bes16] |
+
+  % 4
+  <<
+    \new Voice {\voiceOne \stemNeutral <g c>4 <aes d> <bes e>8( <c f>4) \tieNeutral <b e g^> >8 ~ | <b g'>1 }
+    \\
+    \new Voice {\voiceTwo s2 s4. \once   \hide Stem e8 ~ | \stemUp     \once \override NoteColumn.force-hshift = #0.3 e4 ees d2 }
+  >>
+  \oneVoice f8.[ d16 bes8. d16] ~ d8 r d8.([ bes16] |
+
+  g8. bes16 ~ bes8) r a8.[ aes16 g8. f16] ~ | f8 r r4 <ees bes>2( | <a d>1\fermata)
 }
 
 lowerThree = \relative c' {
   \clef bass
-  \key c \major
+  \key f \major
   \time 4/4
 
   <<
@@ -55,8 +65,18 @@ lowerThree = \relative c' {
   >>
   \oneVoice
   \set tieWaitForNote = ##t
-  g8.[~ f'16~] <g, f' b>2 <f' b>4 |
-  g,8.[ f'16] b4 <g b des>2 |
+  g8.[~ f'16~] <g, f' bes>2 <f' bes>4 |
+  g,8.[ f'16] bes4 <g bes des>2 |
+
+  % 4
+  <a e'>4 <b! f'> <cis g'>8( <d a'>4) <g, f'^> >8 ~ |
+  q2. g,4 |
+  <<
+    \new Voice { \voiceOne <bes' d f>1 ~ q s1 s1}
+    \\
+    \new Voice { \voiceTwo r4 r4 a2 <g bes>2 <e bes' des>4. <f a c>8 ~ | q r r4 \stemUp  \slurUp <ges, des'>2( <f c'>1_\fermata)}
+  >>
+  \bar "|."
 }
 
 
