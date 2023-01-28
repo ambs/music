@@ -14,6 +14,7 @@
 \include "four.ly"
 \include "five.ly"
 \include "six.ly"
+\include "seven.ly"
 
 \paper {
     max-systems-per-page = 6
