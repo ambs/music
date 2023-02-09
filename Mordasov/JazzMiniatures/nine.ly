@@ -29,15 +29,15 @@ upperNine = \relative c'' {
   %2 
   \slurDown \myT c'( gis a4_.) f_- r | \slurNeutral
   \myT f'( a, \myT bes f' e8 d4.) |
-  r8 c( \myT a' c, \myT b aes' \myT g bes, |
+  r8 c( \myT a' c, \myT b aes' \myT g bes, | \break
 
   %3 
   <a f'>4) r8 <c c'>^>_\sf ~ q2 | \slurDown
   r8 c( \myT gis a \myT f c_.) r4 |
-  \myT d( f \myT g f \myT aes g \myT f d |
+  \myT d( f \myT g f \myT aes g \myT f d | \break
 
   %[4
-  \myT c c'_.) r8 c8^> ~ \myT c a \myT g f |
+  \myT c c'_.) r8 c8^> ~ \myT c a \myT g f |  
   \myT  <aes b,>4 f8 \myT <aes b,>4 <g bes,>8_> ~  q8 r r4 | 
   \myT c4( <a f'>8 \myT d4 des8 \myT c4 f,8) r8 f8( |
 
