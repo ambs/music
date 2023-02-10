@@ -1,13 +1,11 @@
 
-% agile
-
 upperEleven = \relative c' {
   \clef treble
   \key g \major
   \time 4/4
 
   % 1
-  <b_. e g^^>4 r q8.([ a'16 ais8. b16)]  |
+  <b_. e g^^>4^\markup{\italic{Agile}} r q8.([ a'16 ais8. b16)]  |
   <g e b_->8. q16_. r8. q16_> ~ q2 |
   q4^^ r q8.[ a16 ais8. b16] |
 
