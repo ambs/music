@@ -40,6 +40,7 @@ myT = #(define-music-function (pa pb) (ly:music? ly:music?)
 \include "fourteen.ly"
 \include "fifteen.ly"
 \include "sixteen.ly"
+\include "seventeen.ly"
 
 \paper {
     max-systems-per-page = 6
